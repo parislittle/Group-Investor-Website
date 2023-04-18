@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkout Cart</title>
+	<style>
+		/* CSS styles for the checkout cart page */
+		body {
+			background-color: rgb(255, 223, 223);
+			color: rgb(43, 39, 39);
+			font-family: Arial;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid rgb(11, 10, 10);
+		}
+
+		tr:hover {
+			background-color: #b99696;
+		}
+
+		.total {
+			font-weight: bold;
+		}
+
+		.item-photo {
+			width: 50px;
+			height: 50px;
+			object-fit: contain;
+			margin-right: 10px;
+		}
+
+		.item-name {
+			font-style: italic;
+		}
+
+		button {
+			background-color: lightpink;
+			color: white;
+			font-weight: bold;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			display: block;
+			margin: 0 auto;
+		}
+
+	</style>
+</head>
+<body>
+    <br>
+
+	<h1>Checkout Cart</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+
+				<th>Price</th>
+                
+
+				<th>Quantity</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody id="cart-items">
+			<!-- Dynamically generated table rows for each item in the cart -->
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3" class="total">Total:</td>
+				<td id="cart-total">0.00</td>
+			</tr>
+		</tfoot>
+	</table>
+    <br>
+    <br>
+
+	<button onclick="checkout()">Checkout</button>
+	<script>
+		// JavaScript code for the checkout cart page
+
+		// Sample cart data (can be replaced with data from a server)
+		const cartItems = [
+			{
+				name: 'Mango Mosaiac',
+				price: 24.00,
+				quantity: 1
+			},
+			{
+				name: 'Citrus Symphony',
+				price: 24.00,
+				quantity: 1
+			},
+			{
+				name: 'Grapefruit Gusto',
+				price: 48.00,
+				quantity: 2
+			}
+		];
+
+		// Function to calculate the total cost of the cart
+		function calculateTotal() {
+			let total = 0;
+			for (const item of cartItems) {
+				total += item.price * item.quantity;
+			}
+			return total.toFixed(2);
+		}
+
+		// Function to generate the table rows for the cart items
+		function generateCartItems() {
+			let cartItemsHtml = '';
+			for (const item of cartItems) {
+				const itemTotal = (item.price * item.quantity).toFixed(2);
+				cartItemsHtml += `
+					<tr>
+						<td>${item.name}</td>
+						<td>${item.price.toFixed(2)}</td>
+						<td>${item.quantity}</td>
+						<td>${itemTotal}</td>
+					</tr>
+				`;
+			}
+			return cartItemsHtml;
+		}
+
+		// Function to initialize the checkout cart page
+		function initCheckoutCart() {
+			document.getElementById('cart-items').innerHTML = generateCartItems();
+			document.getElementById('cart-total').innerHTML = calculateTotal();
+		}
+
+		// Function to handle the checkout button click event
+		function checkout() {
+			// Add code here to handle the checkout process
+			alert('Checkout successful!');
+		}
+
+		// Initialize the checkout cart page
+		initCheckoutCart();
+	</script>
+</body>
+</html>
