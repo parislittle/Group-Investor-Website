@@ -18,29 +18,34 @@ h1 {
 }
 
 h2 {
-    font-weight: 300;
+    font-style: normal;
+    font-weight: 469;
+    font-family: "Agrandir Variable";
+    font-size: 2vw;
     margin: 0;
 }
 
 h3 {
     font-weight: 400;
-    font-size: 16pt;
+    font-size: 2vw;
     text-transform: uppercase;
-    margin: 5px;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: #222222;
 }
 
 a:visited { 
     text-decoration: none; 
-    color: #222222; 
 }   
 
 a:hover {
     text-decoration: underline;
+}
+
+a.navbar {
+    color: #222222; 
 }
 
 @font-face {
@@ -67,28 +72,57 @@ a:hover {
     src: url(PPObjectSans-Heavy.woff2);
 }
 
-#hero-section {
-    height: 100vh;
-    text-align: center;
-    
+@font-face {
+    font-family: "Agrandir Variable";
+    src: url(fonts/PPAgrandir-Variable.ttf);
 }
 
-.hero-text {
+
+#hero-section {
+    height: 100vh;
+    text-align: right;
+}
+
+.hero-wrapper {
+    padding: 8vw;
+}
+
+.hero-text-wrapper {
+    z-index: 1;
     position: absolute;
+    left: 0;
     bottom: 0;
-    text-transform: uppercase;
-    text-align: left;
     padding: 4vw;
+    text-align: left;
+}
+
+.hero-img {
+    width: 50%;
+    border-radius: 25px;
 }
 
 .hero-title {
-    font-size: 22vw;
-    line-height: 80%;
+    font-family: "Agrandir Variable";
+    font-style: italic;
+    font-weight: 617;
+    font-size: 8vw;
+    line-height: 100%;
+    text-align: left;
 }
 
 .hero-subtitle {
-    font-weight: 600;
-    font-size: 3vw;
+    font-family: "Object Sans";
+    font-weight: 400;
+    font-size: 2vw;
+    padding-bottom: 1vw;
+}
+
+.learn-more-button {
+    display: inline-block;
+    background: #222222;
+    border-radius: 50px;
+    color: white;
+    padding: 1vw 2vw 1vw 2vw;
 
 }
 
@@ -185,6 +219,50 @@ a:hover {
 .hr-transparent {
     opacity: 0.5;
 }
+
+.essentials-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.year {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.essentials-title {
+    font-family: "Agrandir Variable";
+    padding-bottom: 1vw;
+}
+
+.essentials-wrapper {
+    width: 100vw;
+    overflow-x: scroll;
+    margin-left: 4vw;
+
+}
+
+.gallery-wrapper {
+    height: 50vh;
+    display: flex;
+    gap: 1vw;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+
+.gallery-img {
+    height: 100%;
+    width: 25vw;
+    border-radius: 25px;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url(Screen Shot 2023-04-03 at 4.35.png);
+    background-blend-mode: multiply, normal;
+}
+
 
 #footer-ip {
     padding: 2vw;
