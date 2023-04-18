@@ -4,7 +4,10 @@
         <script></script>
         <link rel="stylesheet" href="tabbed-style.css">
         <style>
-            #about{
+          body {
+            padding-top: 6vw;
+          }
+            .about-section{
                 display:flex;
                 margin:5%;
                 margin-top: 20px;
@@ -28,6 +31,7 @@
               border: black solid 1px;
               border-radius:5px;
             }
+
             .title{
               font-size:10pt;
             }
@@ -58,11 +62,13 @@
         <img class="tabbed-logo" src="TABBED.svg">    
     </a>
     <div class="nav-right">
-        <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
-        <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
-        <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+      <a class="nav-item" id="about" href="shop.html">Shop</a>
+      <a class="nav-item" id="about" href="about_us.html">About Us</a>
+      <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
+      <a class="nav-item" id="cart" href="cart.html">Cart</a>
     </div>
-</div>
+  </div>
+
 <br> <h1> ABOUT US</h1>
 
     <div id="blurb">
@@ -76,7 +82,7 @@
    <h2> <strong>MEET THE TEAM</strong></h2>
 
 
-   <div id="about">
+   <div class="about-section">
       <div class="member">
         <img src="joanna_pfp.jpeg" class="meet" alt="Joanna Poon" style="width:80%">
         <div class="container">
