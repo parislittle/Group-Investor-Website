@@ -2,28 +2,69 @@
     <head>
         <title>About Us - Tabbed</title>
         <script></script>
+        <link rel="stylesheet" href="tabbed-style.css">
         <style>
             #about{
                 display:flex;
-                Margin
+                margin:5%;
+                margin-top: 20px;
+
+            }
+            .member{
+              width:90%;
+            }
+            .meet{
+              border-radius: 90px;
+            }
+            #blurb{
+              font-size: 12pt;
+              width: 70%
+            }
+            .button{
+              font-family: "Object Sans";
+              font-weight:300;
+              src: url(PPObjectSans-Thin.woff2);
+              background-color: #FFFDF5;
+              border: black solid 1px;
+              border-radius:5px;
+            }
+            .title{
+              font-size:10pt;
             }
         </style>
     </head>
     <body>
 <center>
-    <h1> About Us</h1>
 
-    <p> blurb about tabbed goes here</p>
+  <div class="navbar">
+    <a class="nav-left" href="tabbed-investor-site.html">
+        <img class="tabbed-logo" src="TABBED.svg">    
+    </a>
+    <div class="nav-right">
+        <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
+        <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
+        <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+    </div>
+</div>
+<br> <h1> ABOUT US</h1>
 
-    <br><br><br>
-   <h2> Meet the Team</h2>
+    <div id="blurb">
+
+    <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to prevents drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
+      Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture! Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small device that can be attached to any drink container. It detects common date rape drugs and alerts the user in real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink safety and hello to a fun and safe party experience with Tabbed - the must-have product for any college student looking to take control of their own safety. Join us in our mission to empower and protect young adults with this revolutionary product!
+    </p>
+    </div>
+
+    <br><br>
+   <h2> <strong>MEET THE TEAM</strong></h2>
 
 
    <div id="about">
       <div class="member">
-        <img src="joanna_pfp.jpeg" alt="Joanna Poon" style="width:80%">
+        <img src="joanna_pfp.jpeg" class="meet" alt="Joanna Poon" style="width:80%">
         <div class="container">
-          <h2>Joanna Poon</h2>
+          <br>
+          <h3>Joanna Poon</h3>
           <p class="title">Co-founder &amp; Designer </p>
           <p>jhpoon@usc.edu</p>
           <p><button class="button">Contact</button></p>
@@ -31,9 +72,10 @@
       </div>
 
       <div class="member">
-        <img src="kyler_pfp2.jpg" alt="Kyler Caldwell" style="width:80%">
+        <img src="kyler_pfp2.jpg" class="meet" alt="Kyler Caldwell" style="width:80%">
         <div class="container">
-          <h2>Kyler Caldwell</h2>
+          <br>
+          <h3>Kyler Caldwell</h3>
           <p class="title">Co-founder &amp; Product Manager </p>
           <p>kncaldwe@usc.edu </p>
           <p><button class="button">Contact</button></p>
@@ -41,9 +83,10 @@
       </div>
 
       <div class="member">
-        <img src="jaden_pfp.png" alt="Jaden Steinhoff" style="width:80%">
+        <img src="jaden_pfp.png" class="meet" alt="Jaden Steinhoff"  style="width:82%">
         <div class="container">
-          <h2>Jaden Steinhoff</h2>
+          <br>
+          <h3>Jaden Steinhoff</h3>
           <p class="title">Co-founder &amp; Website Designer </p>
           <p>jsteinho@usc.edu</p>
           <p><button class="button">Contact</button></p>
@@ -51,32 +94,31 @@
       </div>
 
       <div class="member">
-        <img src="lauren_pfp.png" alt="Lauren Graham" style="width:80%">
+        <img src="lauren_pfp.png" class="meet" alt="Lauren Graham" style="width:80%">
         <div class="container">
-          <h2>Lauren Graham</h2>
+          <br>
+          <h3>Lauren Graham</h3>
           <p class="title">Co-founder &amp; Designer </p>
-          <p>jlggraham@usc.edu</p>
-          <p><button class="button">Contact</button></p>
+          <p>lggraham@usc.edu</p>
+          <p><button class="button" >Contact</button></p>
         </div>
       </div>
 
       <div class="member">
-        <img src="mia_pfp.jpeg" alt="Mia Wang" style="width:80%">
+        <img src="mia_pfp2.jpeg" class="meet" alt="Mia Wang" style="width:80%">
         <div class="container">
-          <h2>Mia Wang</h2>
+          <br>
+          <h3>Mia Wang</h3>
           <p class="title">Co-founder &amp; Designer </p>
           <p>mingxinw@usc.edu</p>
-          <p><button class="button">Contact</button></p>
+          <p><button class="button" >Contact</button></p>
         </div>
       </div>
- 
-    
  
  
     </div>
   
 </center>
-
 
     </body>
 </html>
