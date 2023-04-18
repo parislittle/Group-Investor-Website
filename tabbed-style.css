@@ -46,25 +46,25 @@ a:hover {
 @font-face {
     font-family: "Object Sans";
     font-weight:300;
-    src: url(fonts/PPObjectSans-Thin.woff2);
+    src: url(PPObjectSans-Thin.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
     font-weight:400;
-    src: url(fonts/PPObjectSans-Regular.woff2);
+    src: url(PPObjectSans-Regular.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
     font-weight:600;
-    src: url(fonts/PPObjectSans-Bold.woff2);
+    src: url(PPObjectSans-Bold.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
     font-weight:700;
-    src: url(fonts/PPObjectSans-Heavy.woff2);
+    src: url(PPObjectSans-Heavy.woff2);
 }
 
 #hero-section {
