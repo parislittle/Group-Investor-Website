@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.missionBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1vh 0px;
+    /*max-width: 1068px;*/
+    width: 94vw;
+    min-height: 100vh;
+    padding: 2vw;
+    border-radius: 7vh;
+    color: white;
+    background-color: black;
+}
+
+.missionBox h2 {
+    margin: 1vh 0px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 2vw;
+}
+
+.description p {
+    line-height: 250%;
+}
+
+#outercontainer {
+    text-align: center;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 352px;
+    height: 90vh;
+}

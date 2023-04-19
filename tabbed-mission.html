@@ -1,0 +1,286 @@
+<html>
+    <head>
+        <title>Mission</title>
+        <link rel="stylesheet" href="mission-style.css">
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: #FFFDF5;
+                color: #222222;
+                font-family: "Object Sans";
+                padding: 0;
+                margin: 0;
+
+                text-transform: uppercase;
+
+                overflow-x: hidden;
+
+            }
+
+            h1 {
+                font-weight: 600;
+                font-size: 64pt;
+                margin: 0;
+            }
+
+            h2 {
+                font-weight: 300;
+                margin: 0;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 16pt;
+                text-transform: uppercase;
+                margin: 5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #222222;
+            }
+
+            a:visited { 
+                text-decoration: none; 
+                color: #222222; 
+            }   
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @font-face {
+                font-family: "Object Sans";
+                font-weight:300;
+                src: url(PPObjectSans-Thin.woff2);
+            }
+
+            @font-face {
+                font-family: "Object Sans";
+                font-weight:400;
+                src: url(PPObjectSans-Regular.woff2);
+            }
+
+            @font-face {
+                font-family: "Object Sans";
+                font-weight:600;
+                src: url(PPObjectSans-Bold.woff2);
+            }
+
+            @font-face {
+                font-family: "Object Sans";
+                font-weight:700;
+                src: url(PPObjectSans-Heavy.woff2);
+            }
+
+            #hero-section {
+                text-align: center;
+                
+            }
+
+            .hero-text {
+                position: absolute;
+                bottom: 0;
+                text-transform: uppercase;
+                text-align: left;
+                padding: 4vw;
+            }
+
+            .hero-title {
+                font-size: 22vw;
+                line-height: 80%;
+            }
+
+            .hero-subtitle {
+                font-weight: 600;
+                font-size: 3vw;
+
+            }
+
+            .navbar {
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 2vw;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .nav-item {
+                text-align: center;
+                justify-content: center;
+                font-family: "Object Sans";
+                font-weight: 400;
+                color: #222222;
+                opacity: 100%;
+                padding-left: 8px;
+                padding-right: 8px;
+                /* mix-blend-mode: difference; */
+            }
+
+            .nav-item.active {
+                opacity: 50%;
+            }
+
+            .nav-left {
+                text-align: left;
+            }
+
+            .nav-right {
+                text-align: right;
+            }
+
+            .tabbed-logo {
+                width: 6.5vw;
+            }
+
+            .footer {
+                color: #FFFDF5;
+            }
+
+            #newsletter-wrapper{
+                height: 80vh;
+                background-color: #101010;;
+                padding: 0 65vw 0 8vw;
+                justify-content: center;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .newsletter-text-wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #newsletter-text {
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 20pt;
+            }
+
+            .newsletter-button-wrapper {
+                display: flex;
+                justify-content: left;
+                
+            }
+
+            .newsletter-button {
+                width: 100%;
+            }
+
+            .newsletter-button-text {
+                background-color: #101010;
+                border: none;
+                padding: 0;
+                font-size: 16pt;
+                font-weight: 300;
+            }
+
+            .arrow {
+                opacity: 0.5;
+            }
+
+            .hr-transparent {
+                opacity: 0.5;
+            }
+
+            #footer-ip {
+                padding: 2vw;
+                text-align: right;
+                background-color: #101010;
+                color: #FFFDF5;
+            }
+
+            .lil-links {
+                padding-left: 1vw;
+                color: #FFFDF5;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="random-photo.js"></script>
+    </head>
+    <body>
+        <div id="hero-section">
+            
+            <div class="navbar">
+                <a class="nav-left" href="tabbed-investor-site.html">
+                    <img class="tabbed-logo" src="TABBED.svg">    
+                </a>
+                <div class="nav-right">
+                    <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
+                    <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
+                    <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+                </div>
+            </div>
+
+            <div id="outerContainer">
+                <div id="title">
+                    <h1>Our Mission</h1>
+                    <br>
+                    <h3>Drink Spiking is our Problem</h3>
+                </div>
+                <div class="missionBox">
+                    <h2>Our Problem</h2>
+                    <div class="description">
+                        <p>Drink spiking in colleges across America is a serious and pervasive problem that puts students' safety and well-being at risk. 
+                            Each year, countless students fall victim to this disturbing practice, which often goes unreported and leaves lasting physical and emotional trauma. 
+                            It is time for us to take action and create a culture of awareness, prevention, and support for all those affected by this issue.
+                        </p>
+                    </div>
+                </div>
+                <div class="missionBox">
+                    <h2>Our Solution</h2>
+                    <div class="description">
+                        <p>We have took this problem personally with our team. Too many friends and family members either know someone who has expereienced drink spiking or has expreienced drink spiking first hand.
+                            We aim to change this through a simple and innovate solution, TABBED. TABBED is an ingenious and deceptively simple can design that requires no external objects, using the lid as a covering for your drink.
+                            All you gotta do is pop it open and turn the tab around when your not drinking, and enojy 100% worry free.
+                        </p>
+                    </div>
+                </div>
+                <div class="missionBox">
+                    <h2>Our Ask</h2>
+                    <div class="description">
+                        <p>To stop this pervasive issue our ask is for each and every Individual to take the issue of drink spiking personally. 
+                            Keep vigilant at parties, talk to your friends, and take care of those in need. 
+                            If you're ready to take this mission, we ask that you invest your time and money to change the colleg drinking scene one drink at a time.
+                        </p>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div id="newsletter-wrapper">
+                <div id="newsletter-text-wrapper">
+                    <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+                </div>
+
+                <div class="newsletter-button-wrapper">
+                    <div class="newsletter-button">
+                        <div class="newsletter-text-wrapper">
+                            <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+                            </input>
+                            <h3 class="arrow">↗</h3>
+                        </div>
+                        <hr class="hr-transparent">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="footer-ip">
+                COPYRIGHT © TABBED 2023
+                <a class="lil-links" href="">Privacy Policy</a>
+                <a class="lil-links" href="">Legal Terms</a>
+            </div> -->
+        </div>
+    </body>
+</html>
