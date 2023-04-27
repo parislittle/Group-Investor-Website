@@ -334,6 +334,11 @@
 
         </div>
         <script>
+            // Event listener for the DOMContentLoaded event
+            document.addEventListener('DOMContentLoaded', function () {
+                // Update the cart when the page loads
+                updateCart();
+            });
             let shoppingCart = [];
 
             // Load the cart from the cookie if it exists
