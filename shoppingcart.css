@@ -1,0 +1,35 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between elements */
+    margin-bottom: 10px;
+}
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.cart-item-details {
+    display: flex;
+    align-items: center;
+}
+.shopping-cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.shopping-cart-icon {
+    width: 24px;
+    vertical-align: center;
+}
+
+.cart-quantity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px; /* Adjust the font size as needed */
+    color: black; /* Adjust the color as needed */
+    border-radius: 50%; /* Make the background circular */
+    padding: 2px 4px; /* Add some padding to the quantity number */
+}

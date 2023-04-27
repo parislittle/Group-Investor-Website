@@ -5,6 +5,32 @@
     <meta charset="UTF-8">
     <title>Shop</title>
     <style>
+        /* Shopping Cart */
+        .shopping-cart-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .shopping-cart-icon {
+            width: 24px;
+            vertical-align: center;
+        }
+
+        .cart-quantity {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            /* Adjust the font size as needed */
+            color: black;
+            /* Adjust the color as needed */
+            border-radius: 50%;
+            /* Make the background circular */
+            padding: 2px 4px;
+            /* Add some padding to the quantity number */
+        }
+
         /* Add to cart button */
         .flavors .add-to-cart-btn {
             display: none;
@@ -45,6 +71,7 @@
             border-radius: 25px;
         }
 
+        /* Product Page */
         #drink1 {
             background-image: url("drink1.jpeg");
             background-size: 115%;
@@ -152,14 +179,18 @@
                     <a class="nav-item" id="about" href="about_us.html">About Us</a>
                     <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
                     <a class="nav-item" id="cart" href="cart.html">Cart</a>
+                    <div class="nav-item shopping-cart-wrapper">
+                        <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                        <span id="cart-quantity" class="cart-quantity">0</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-            <div id = "header">
-                <h2 class="year">2023</h2>
-                <p class = "essentials-title">SUMMERTIME SIPPING ESSENTIALS</p>
-            </div>
+        <div id="header">
+            <h2 class="year">2023</h2>
+            <p class="essentials-title">SUMMERTIME SIPPING ESSENTIALS</p>
+        </div>
 
 
 
@@ -173,19 +204,22 @@
                 <div class="flavors" id="drink2">
                     <div class="flavorname">MANGO MOSAIC</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add to
+                        Cart</button>
                 </div>
 
                 <div class="flavors" id="drink3">
                     <div class="flavorname">GRAPEFRUIT GUSTO</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add to
+                        Cart</button>
                 </div>
 
                 <div class="flavors" id="drink1">
                     <div class="flavorname">CITRUS SYMPHONY</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add
+                        to Cart</button>
                 </div>
 
                 <div class="flavors" id="drink4">
@@ -241,6 +275,40 @@
             </div>
 
         </div>
+        <script>
+            let shoppingCart = [];
+    
+            // Load the cart from the cookie if it exists
+            const storedCart = document.cookie.split('; ').find(row => row.startsWith('shoppingCart='));
+            if (storedCart) {
+                shoppingCart = JSON.parse(decodeURIComponent(storedCart.split('=')[1]));
+            }
+    
+            function addToCart(id, name, price, iconUrl) {
+                // Check if the item is already in the cart
+                const itemIndex = shoppingCart.findIndex(item => item.id === id);
+                if (itemIndex !== -1) {
+                    // If the item is already in the cart, increment its quantity
+                    shoppingCart[itemIndex].quantity += 1;
+                } else {
+                    // If the item is not in the cart, add it with quantity 1
+                    shoppingCart.push({ id, name, price, iconUrl, quantity: 1 });
+                }
+                updateCart();
+            }
+    
+            function updateCart() {
+                // Update the quantity indicator
+                const totalQuantity = shoppingCart.reduce((acc, item) => acc + item.quantity, 0);
+                document.getElementById('cart-quantity').textContent = totalQuantity;
+    
+                // Save the cart to a cookie
+                document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
+            }
+    
+            // Initial update of the quantity indicator
+            updateCart();
+        </script>
 
 </body>
 
