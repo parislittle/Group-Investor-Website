@@ -15,6 +15,7 @@
             }
             .member{
               width:90%;
+              padding:1%;
             }
             .meet{
               border-radius: 90px;
@@ -31,10 +32,71 @@
               border: black solid 1px;
               border-radius:5px;
             }
+            h2{
+              
+              margin-left:10%;
+              text-decoration:solid;
+              margin:auto;
+
+            }
+            h3{
+              font-size: 30px;
+              text-decoration:solid;
+              
+            }
 
             .title{
               font-size:10pt;
+              text-align: center;
             }
+            .blurb{
+              margin:7%;
+            }
+            #blurb{
+                font-size: 11pt;
+                width: 85%;
+              }
+              .strong{
+                font-size: 19pt;
+              }
+              .strong2{
+                font-size: 19pt;
+                text-align:right;
+              }
+              /*.fixed-image {
+                position: fixed;
+                background-image: url("joanna_pfp.jpeg");
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 999;
+                width:100%;
+                display:inline-block*/
+            
+            /*#behind{
+              background-image: url("tabbed5.jpeg");
+              background-size: 100%;
+              width: 100%;
+              margin:none;
+              display: flex;
+
+            }*/
+          
+  .anec{
+    width:30%;
+    padding:10px;
+    
+  }
+  #story{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+  .tag{
+    font-size: 30px;
+    text-decoration:solid;
+    text-align: left;
+  }
            /* Media query for devices with a pixel width of a phone */
             @media (max-width: 767px) {
               /* Your CSS styles for mobile devices go here */
@@ -47,11 +109,9 @@
               .member{
                 width:90%;
               }
-              #blurb{
-                font-size: 11pt;
-                width: 85%;
-              }
-            }
+              
+}
+
         </style>
     </head>
     <body>
@@ -71,15 +131,10 @@
 
 <br> <h1> ABOUT US</h1>
 
-    <div id="blurb">
-
-    <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to prevents drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
-      Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture! Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small device that can be attached to any drink container. It detects common date rape drugs and alerts the user in real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink safety and hello to a fun and safe party experience with Tabbed - the must-have product for any college student looking to take control of their own safety. Join us in our mission to empower and protect young adults with this revolutionary product!
-    </p>
-    </div>
+    
 
     <br><br>
-   <h2> <strong>MEET THE TEAM</strong></h2>
+   <!--<h2> <strong>MEET THE TEAM</strong></h2><br><br>-->
 
 
    <div class="about-section">
@@ -88,8 +143,8 @@
         <div class="container">
           <br>
           <h3>Joanna Poon</h3>
-          <p class="title">Co-founder &amp; Designer </p>
-          <p>jhpoon@usc.edu</p>
+          <p class="title">Co-founder <br>&amp;<br> Designer </p>
+          <!--<p>jhpoon@usc.edu</p>-->
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -99,8 +154,8 @@
         <div class="container">
           <br>
           <h3>Kyler Caldwell</h3>
-          <p class="title">Co-founder &amp; Product Manager </p>
-          <p>kncaldwe@usc.edu </p>
+          <p class="title">Co-founder <br>&amp;<br> Product Manager </p>
+         <!-- <p>kncaldwe@usc.edu </p>-->
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -110,8 +165,8 @@
         <div class="container">
           <br>
           <h3>Jaden Steinhoff</h3>
-          <p class="title">Co-founder &amp; Website Designer </p>
-          <p>jsteinho@usc.edu</p>
+          <p class="title">Co-founder <br>&amp;<br> Website Designer </p>
+          <!--<p>jsteinho@usc.edu</p>-->
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -121,8 +176,8 @@
         <div class="container">
           <br>
           <h3>Lauren Graham</h3>
-          <p class="title">Co-founder &amp; Designer </p>
-          <p>lggraham@usc.edu</p>
+          <p class="title">Co-founder <br>&amp;<br> Designer </p>
+          <!--<p>lggraham@usc.edu</p>-->
           <p><button class="button" >Contact</button></p>
         </div>
       </div>
@@ -131,17 +186,74 @@
         <img src="mia_pfp2.jpeg" class="meet" alt="Mia Wang" style="width:80%">
         <div class="container">
           <br>
-          <h3>Mia Wang</h3>
-          <p class="title">Co-founder &amp; Designer </p>
-          <p>mingxinw@usc.edu</p>
+          <h3>Mia<br> Wang</h3>
+          <p class="title">Co-founder <br>&amp;<br> Designer </p>
+          <!--<p>mingxinw@usc.edu</p>-->
           <p><button class="button" >Contact</button></p>
         </div>
       </div>
- 
- 
+  </div>
+ <div class="blurb">
+  <h3 class="tag"><strong>Our Story</strong></h3>
+    <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to prevents drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
+      Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture! Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small device that can be attached to any drink container. It detects common date rape drugs and alerts the user in real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink safety and hello to a fun and safe party experience with Tabbed - the must-have product for any college student looking to take control of their own safety. Join us in our mission to empower and protect young adults with this revolutionary product!
+    </p>
     </div>
+   
+<div id="behind">
+
   
+ 
+      <img src="tabbed1.jpeg" class="fixed-image"width="30%" alt="Photo 1">
+    
+      <img src="tabbed2.jpeg"  class="fixed-image"width="30%" alt="Photo 2">
+   
+      <img src="tabbed3.jpeg" class="fixed-image"width="30%" alt="Photo 3">
+  
+      <div class="blurb">
+ <h3 class="tag"><strong>Behind the Scenes</strong></h3><br> 
+ <p>Behind the scenes of our startup, Tabbed, created by five college students passionate about creating a solution to prevent drink spiking. Our team has been working hard to develop a product that is both effective and affordable, while also raising awareness about the dangers of drink spiking. Through our journey, we've faced many challenges, but we've also had many successes. These photos capture some of the highlights and moments from our journey so far.</p>
+</div>
+      <img src="tabbed4.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
+      <img src="tabbed5.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
+      <img src="tabbed1.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
+    
+    <br><br>
+   <!--<div class="column">
+      <img src="photo5.jpg" alt="Photo 5">
+    </div>
+    <div class="column">
+      <img src="photo6.jpg" alt="Photo 6">
+    </div>
+  </div>--> 
+
+</div><!--behind-->
+
+<div class="flex" id="story">
+<div id="s1" class="anec">
+
+<p><strong class="strong">" </strong>Our team was working on the anti-drink spiking product when the web developer on our team suggested a brilliant feature. He proposed that we add a "safe word" option to the app, where users could set a word that would alert their friends or emergency contacts if they suspected their drink had been spiked. We were all so excited about the idea, and we ended up celebrating with a virtual dance party on Zoom. It was amazing to see how much fun we could have while working on such an important project.<strong class="strong2">" </strong></p>
+<h4>-JOANNA POON</h4>
+</div>
+<div id="s1" class="anec">
+
+<p><strong class="strong">" </strong> One day during a team meeting, our product designer unveiled her latest concept for the anti-drink spiking product. It was a small, sleek device that could detect certain drugs in the user's drink and alert them with a vibration or flashing light. We were all amazed by the simplicity and elegance of the design, and we couldn't help but feel a sense of pride and excitement for what we were creating. After the meeting, we decided to treat ourselves to some delicious cupcakes to celebrate our progress.
+  <strong class="strong2">" </strong>
+
+</p>
+<h4>-LAUREN GRAHAM</h4>
+</div>
+<div id="s1" class="anec">
+
+<p><strong class="strong">" </strong> As a team, we were working on the branding for our anti-drink spiking product. One of the designers suggested the name "Guardian," which we all loved. It perfectly embodied the idea of protection and safety that we wanted to convey. We spent the afternoon designing a logo and creating a website around the "Guardian" brand, and we couldn't help but feel a sense of joy and satisfaction at the progress we were making. Later that day, we all went out for a picnic in the park to celebrate our hard work and enjoy some time together in the sunshine.<strong class="strong2">" </strong></p>
+ <h4>-KYLER CALDWELL</h4>
+</div>
+  
+</div>
+
+
 </center>
+
 
     </body>
 </html>
