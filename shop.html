@@ -13,22 +13,17 @@
 
         .shopping-cart-icon {
             width: 24px;
-            vertical-align: center;
+            vertical-align: middle;
         }
 
         .cart-quantity {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -35%);
             font-size: 14px;
             /* Adjust the font size as needed */
             color: black;
-            /* Adjust the color as needed */
-            border-radius: 50%;
-            /* Make the background circular */
-            padding: 2px 4px;
-            /* Add some padding to the quantity number */
         }
 
         /* Add to cart button */
@@ -69,6 +64,59 @@
             transition: 1s;
             text-align: center;
             border-radius: 25px;
+        }
+
+        /* Shopping Cart Overlay */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: #ffffff;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .cart-overlay-content {
+            max-width: 100%;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .cart-item-price {
+            margin-left: auto;
+        }
+
+        .cart-total-price {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .view-full-cart-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0c14b;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
         }
 
         /* Product Page */
@@ -166,6 +214,16 @@
 </head>
 
 <body>
+    <!-- Add this HTML structure inside the body tag -->
+    <div id="cart-overlay" class="cart-overlay hidden">
+        <div class="cart-overlay-content">
+            <h3>Your Cart</h3>
+            <div id="cart-overlay-items"></div>
+            <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+            <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        </div>
+    </div>
+
 
     <div id="outercontainer">
 
@@ -277,13 +335,13 @@
         </div>
         <script>
             let shoppingCart = [];
-    
+
             // Load the cart from the cookie if it exists
             const storedCart = document.cookie.split('; ').find(row => row.startsWith('shoppingCart='));
             if (storedCart) {
                 shoppingCart = JSON.parse(decodeURIComponent(storedCart.split('=')[1]));
             }
-    
+
             function addToCart(id, name, price, iconUrl) {
                 // Check if the item is already in the cart
                 const itemIndex = shoppingCart.findIndex(item => item.id === id);
@@ -296,16 +354,61 @@
                 }
                 updateCart();
             }
-    
+
             function updateCart() {
                 // Update the quantity indicator
                 const totalQuantity = shoppingCart.reduce((acc, item) => acc + item.quantity, 0);
                 document.getElementById('cart-quantity').textContent = totalQuantity;
-    
+
                 // Save the cart to a cookie
                 document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
             }
-    
+            // Shopping Cart overlay
+            function toggleCartOverlay() {
+                const overlay = document.getElementById('cart-overlay');
+                overlay.classList.toggle('hidden');
+                updateCartOverlayItems();
+            }
+
+            function updateCartOverlayItems() {
+                const cartOverlayItems = document.getElementById('cart-overlay-items');
+                cartOverlayItems.innerHTML = '';
+                let total = 0;
+                if (shoppingCart.length === 0) {
+                    cartOverlayItems.innerHTML = '<p>Your cart is empty.</p>';
+                } else {
+                    shoppingCart.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'cart-item';
+                        itemDiv.innerHTML = `
+                            <img src="${item.iconUrl}" alt="${item.name}">
+                            <span>${item.name} x ${item.quantity}</span>
+                            <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                        `;
+                        cartOverlayItems.appendChild(itemDiv);
+                        total += item.price * item.quantity;
+                    });
+                }
+                document.getElementById('cart-total').textContent = total.toFixed(2);
+            }
+
+            // Attach the toggleCartOverlay function to the click event of the shopping cart icon
+            document.querySelector('.shopping-cart-icon').addEventListener('click', function (event) {
+                // Prevent the event from bubbling up to the document
+                event.stopPropagation();
+                toggleCartOverlay();
+            });
+            // Event listener for clicks on the document
+            document.addEventListener('click', function (event) {
+                // Get the overlay element
+                const overlay = document.getElementById('cart-overlay');
+                // Check if the click target is outside the overlay and the overlay is visible
+                if (!overlay.contains(event.target) && !overlay.classList.contains('hidden')) {
+                    // Hide the overlay
+                    toggleCartOverlay();
+                }
+            });
+
             // Initial update of the quantity indicator
             updateCart();
         </script>
