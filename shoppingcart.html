@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tabbed-style.css">
+    <link rel="stylesheet" href="shoppingcart.css">
+    <style>
+        body {
+            background-color: #FFFDF5;
+            color: #222222;
+            font-family: "Object Sans";
+            padding: 0;
+            margin: 0;
+
+            text-transform: uppercase;
+
+            overflow-x: hidden;
+
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 64pt;
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 16pt;
+            text-transform: uppercase;
+            margin: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222222;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #222222;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 300;
+            src: url(PPObjectSans-Thin.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 400;
+            src: url(PPObjectSans-Regular.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 600;
+            src: url(PPObjectSans-Bold.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 700;
+            src: url(PPObjectSans-Heavy.woff2);
+        }
+
+        #hero-section {
+            text-align: center;
+
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 0;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 4vw;
+        }
+
+        .hero-title {
+            font-size: 22vw;
+            line-height: 80%;
+        }
+
+        .hero-subtitle {
+            font-weight: 600;
+            font-size: 3vw;
+
+        }
+
+        .navbar {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2vw;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .nav-item {
+            text-align: center;
+            justify-content: center;
+            font-family: "Object Sans";
+            font-weight: 400;
+            color: #222222;
+            opacity: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+            /* mix-blend-mode: difference; */
+        }
+
+        .nav-item.active {
+            opacity: 50%;
+        }
+
+        .nav-left {
+            text-align: left;
+        }
+
+        .nav-right {
+            text-align: right;
+        }
+
+        .tabbed-logo {
+            width: 6.5vw;
+        }
+
+        .footer {
+            color: #FFFDF5;
+        }
+
+        #newsletter-wrapper {
+            height: 80vh;
+            background-color: #101010;
+            ;
+            padding: 0 65vw 0 8vw;
+            justify-content: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .newsletter-text-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #newsletter-text {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 20pt;
+        }
+
+        .newsletter-button-wrapper {
+            display: flex;
+            justify-content: left;
+
+        }
+
+        .newsletter-button {
+            width: 100%;
+        }
+
+        .newsletter-button-text {
+            background-color: #101010;
+            border: none;
+            padding: 0;
+            font-size: 16pt;
+            font-weight: 300;
+        }
+
+        .arrow {
+            opacity: 0.5;
+        }
+
+        .hr-transparent {
+            opacity: 0.5;
+        }
+
+        #footer-ip {
+            padding: 2vw;
+            text-align: right;
+            background-color: #101010;
+            color: #FFFDF5;
+        }
+
+        .lil-links {
+            padding-left: 1vw;
+            color: #FFFDF5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hero-section">
+
+        <div class="navbar">
+            <a class="nav-left" href="tabbed-investor-site.html">
+                <img class="tabbed-logo" src="TABBED.svg">
+            </a>
+            <div class="nav-right">
+                <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
+                <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
+                <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+                <div class="nav-item shopping-cart-wrapper">
+                    <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                    <span id="cart-quantity" class="cart-quantity">0</span>
+                </div>
+            </div>
+        </div>
+        <h1>Products</h1>
+        <div>
+            <button onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add Citrus Symphony ($24)</button>
+            <button onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add Mango Mosaic ($24)</button>
+            <button onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add Grapefruit Gusto ($24)</button>
+        </div>
+        <h1>Shopping Cart</h1>
+        <h2>Your cart total is $<span id="total"></span></h2>
+        <hr>
+        <div id="cart"></div>
+    </div>
+
+    <div class="footer">
+        <div id="newsletter-wrapper">
+            <div id="newsletter-text-wrapper">
+                <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+            </div>
+
+            <div class="newsletter-button-wrapper">
+                <div class="newsletter-button">
+                    <div class="newsletter-text-wrapper">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+                        </input>
+                        <h3 class="arrow">↗</h3>
+                    </div>
+                    <hr class="hr-transparent">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="footer-ip">
+                COPYRIGHT © TABBED 2023
+                <a class="lil-links" href="">Privacy Policy</a>
+                <a class="lil-links" href="">Legal Terms</a>
+            </div> -->
+    </div>
+
+    <script>
+        let shoppingCart = [];
+
+        // Load the cart from the cookie if it exists
+        const storedCart = document.cookie.split('; ').find(row => row.startsWith('shoppingCart='));
+        if (storedCart) {
+            shoppingCart = JSON.parse(decodeURIComponent(storedCart.split('=')[1]));
+        }
+
+        function addToCart(id, name, price, iconUrl) {
+            // Check if the item is already in the cart
+            const itemIndex = shoppingCart.findIndex(item => item.id === id);
+            if (itemIndex !== -1) {
+                // If the item is already in the cart, increment its quantity
+                shoppingCart[itemIndex].quantity += 1;
+            } else {
+                // If the item is not in the cart, add it with quantity 1
+                shoppingCart.push({ id, name, price, iconUrl, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function removeFromCart(id) {
+            // Remove the item from the cart
+            shoppingCart = shoppingCart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        function updateItemQuantity(itemId, newQuantity) {
+            // Find the item in the shopping cart
+            const item = shoppingCart.find(item => item.id === itemId);
+            if (item) {
+                // Update the quantity
+                item.quantity = newQuantity;
+
+                // Update the total price for that product type
+                const itemTotalPrice = document.getElementById(`item-total-price-${itemId}`);
+                itemTotalPrice.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
+
+                // Update the overall cart total
+                const total = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+                document.getElementById('total').textContent = total.toFixed(2);
+
+                // Save the updated cart to a cookie
+                document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
+            }
+        }
+
+        function updateCart() {
+            // Update the cart display
+            const cartDiv = document.getElementById('cart');
+            cartDiv.innerHTML = '';
+            let total = 0;
+            let totalQuantity = 0;
+            for (const item of shoppingCart) {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+
+                // Create a div to group the product details
+                const productDetailsDiv = document.createElement('div');
+                productDetailsDiv.className = 'product-details';
+
+                // Product Icon
+                const itemIcon = document.createElement('img');
+                itemIcon.src = item.iconUrl;
+                productDetailsDiv.appendChild(itemIcon);
+
+                // Product Name
+                const itemName = document.createElement('span');
+                itemName.textContent = item.name;
+                productDetailsDiv.appendChild(itemName);
+
+                // Quantity Dropdown
+                const quantitySelect = document.createElement('select');
+                for (let i = 1; i <= 10; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.textContent = i;
+                    if (i === item.quantity) {
+                        option.selected = true;
+                    }
+                    quantitySelect.appendChild(option);
+                }
+                quantitySelect.addEventListener('change', (event) => {
+                    const newQuantity = parseInt(event.target.value);
+                    updateItemQuantity(item.id, newQuantity);
+                });
+                productDetailsDiv.appendChild(quantitySelect);
+
+                // Add the product details to the itemDiv
+                itemDiv.appendChild(productDetailsDiv);
+
+                // Total Price of Product Type
+                const itemTotalPrice = document.createElement('span');
+                itemTotalPrice.id = `item-total-price-${item.id}`; // Assign a unique ID to this element
+                itemTotalPrice.textContent = ` $${(item.price * item.quantity).toFixed(2)}`;
+                itemDiv.appendChild(itemTotalPrice);
+
+                // Remove Button
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => removeFromCart(item.id);
+                itemDiv.appendChild(removeButton);
+
+                cartDiv.appendChild(itemDiv);
+                total += item.price * item.quantity;
+                totalQuantity += item.quantity; // Update the total quantity
+            }
+            document.getElementById('total').textContent = total.toFixed(2);
+            document.getElementById('cart-quantity').textContent = totalQuantity; // Update the quantity indicator
+            // Save the cart to a cookie
+            document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
+        }
+        // Initial update of the cart display
+        updateCart();        
+    </script>
+</body>
+
+</html>
