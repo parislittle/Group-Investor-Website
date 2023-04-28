@@ -212,6 +212,30 @@ a.navbar {
     font-weight: 300;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+  }
+
+.problem {
+    text-align: center;
+    background-color: #b3b3b3;
+    color:white;   
+     padding: 20px;
+  height: 200px;
+  width: fit-content;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+}
+  .logo-space {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .arrow {
     opacity: 0.5;
 }
