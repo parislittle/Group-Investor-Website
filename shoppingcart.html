@@ -217,25 +217,28 @@
                 <img class="tabbed-logo" src="TABBED.svg">
             </a>
             <div class="nav-right">
-                <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
-                <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
-                <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+                <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                <a class="nav-item" id="business" href="business.html">Business</a>
+                <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
                 <div class="nav-item shopping-cart-wrapper">
                     <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
                     <span id="cart-quantity" class="cart-quantity">0</span>
                 </div>
             </div>
         </div>
-        <h1>Products</h1>
-        <div>
-            <button onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add Citrus Symphony ($24)</button>
-            <button onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add Mango Mosaic ($24)</button>
-            <button onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add Grapefruit Gusto ($24)</button>
+
+        <div id="outercontainer">
+            <div id="cart-container">
+                <h1>Shopping Cart</h1>
+                <br>
+                <h2>Your cart total is $<span id="total"></span></h2>
+                <br>
+                <hr>
+                <div id="cart"></div>
+            </div>
         </div>
-        <h1>Shopping Cart</h1>
-        <h2>Your cart total is $<span id="total"></span></h2>
-        <hr>
-        <div id="cart"></div>
+
     </div>
 
     <div class="footer">
@@ -264,6 +267,11 @@
     </div>
 
     <script>
+        // Event listener for the DOMContentLoaded event
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update the cart when the page loads
+            updateCart();
+        });
         let shoppingCart = [];
 
         // Load the cart from the cookie if it exists
@@ -309,6 +317,7 @@
                 // Save the updated cart to a cookie
                 document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
             }
+            updateCart();
         }
 
         function updateCart() {
@@ -375,9 +384,7 @@
             document.getElementById('cart-quantity').textContent = totalQuantity; // Update the quantity indicator
             // Save the cart to a cookie
             document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
-        }
-        // Initial update of the cart display
-        updateCart();        
+        }       
     </script>
 </body>
 
