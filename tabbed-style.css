@@ -280,13 +280,13 @@ a.navbar {
 }
 
 
-.gallery-img {
+ .gallery-img {
     height: 100%;
     width: 25vw;
     border-radius: 25px;
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url(Screen Shot 2023-04-03 at 4.35.png);
-    background-blend-mode: multiply, normal;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url('Screen Shot 2023-04-03 at 4.35.png');
+   background-blend-mode: multiply, normal;
 }
 
 

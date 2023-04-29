@@ -12,11 +12,11 @@
                 margin:5%;
                 margin-top: 20px;
                 flex-direction: row;
-
             }
             .member{
               width:90%;
               padding:1%;
+              display:inline-block;
             }
             .meet{
               border-radius: 90px;
@@ -51,7 +51,7 @@
               margin:auto;
 
             }
-            h3{
+            .h3{
               font-size: 30px;
               text-decoration:solid;
               
@@ -93,6 +93,16 @@
               display: flex;
 
             }*/
+            .container{
+              flex-direction:column;
+            }
+            .container * {
+                display:block;
+}
+
+
+  
+
           
   .anec{
     width:30%;
@@ -109,6 +119,11 @@
     text-decoration:solid;
     text-align: left;
   }
+  .nav-item{
+    background-color:  #FFFDF5;
+    border-radius: 3px;
+    border: black solid 1px;
+  }
            /* Media query for devices with a pixel width of a phone */
             @media (max-width: 767px) {
               /* Your CSS styles for mobile devices go here */
@@ -120,8 +135,8 @@
               }
               .member{
                 width:90%;
+                margin-top: 20%;
               }
-              
 }
 
         </style>
@@ -154,7 +169,7 @@
         <img src="joanna_pfp.jpeg" class="meet" alt="Joanna Poon" >
         <div class="container">
           <br>
-          <h3>Joanna Poon</h3>
+          <h3>Joanna <br>Poon</h3>
           <p class="title">Co-founder <br>&amp;<br> Designer </p>
           <!--<p>jhpoon@usc.edu</p>-->
           <a class="a" href="mailto: jhpoon@usc.edu" target="-new">
@@ -273,9 +288,24 @@
   
 </div>
 
-
 </center>
-/
+
+<div id="newsletter-wrapper">
+  <div id="newsletter-text-wrapper">
+      <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+  </div>
+
+  <div class="newsletter-button-wrapper">
+      <div class="newsletter-button">
+          <div class="newsletter-text-wrapper">
+              <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+              
+              <h3 class="arrow">↗</h3>
+          </div>
+          <hr class="hr-transparent">
+      </div>
+  </div>
+</div>
 
     </body>
 </html>
