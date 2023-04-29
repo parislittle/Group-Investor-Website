@@ -36,39 +36,39 @@ a {
     text-decoration: none;
 }
 
-a:visited { 
-    text-decoration: none; 
-}   
+a:visited {
+    text-decoration: none;
+}
 
 a:hover {
     text-decoration: underline;
 }
 
 a.navbar {
-    color: #222222; 
+    color: #222222;
 }
 
 @font-face {
     font-family: "Object Sans";
-    font-weight:300;
+    font-weight: 300;
     src: url(PPObjectSans-Thin.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
-    font-weight:400;
+    font-weight: 400;
     src: url(PPObjectSans-Regular.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
-    font-weight:600;
+    font-weight: 600;
     src: url(PPObjectSans-Bold.woff2);
 }
 
 @font-face {
     font-family: "Object Sans";
-    font-weight:700;
+    font-weight: 700;
     src: url(PPObjectSans-Heavy.woff2);
 }
 
@@ -132,7 +132,7 @@ a.navbar {
     left: 0;
     right: 0;
     padding: 2vw;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,9 +171,10 @@ a.navbar {
     color: #FFFDF5;
 }
 
-#newsletter-wrapper{
+#newsletter-wrapper {
     height: 80vh;
-    background-color: #101010;;
+    background-color: #101010;
+    ;
     padding: 0 65vw 0 8vw;
     justify-content: center;
 
@@ -197,7 +198,7 @@ a.navbar {
 .newsletter-button-wrapper {
     display: flex;
     justify-content: left;
-    
+
 }
 
 .newsletter-button {
@@ -215,26 +216,27 @@ a.navbar {
 .container {
     display: flex;
     align-items: center;
-  }
+}
 
 .problem {
     text-align: center;
     background-color: #b3b3b3;
-    color:white;   
-     padding: 20px;
-  height: 200px;
-  width: fit-content;
-  border-radius: 20px;
-  justify-content: center;
-  display: flex;
+    color: white;
+    padding: 20px;
+    height: 200px;
+    width: fit-content;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
 }
-  .logo-space {
+
+.logo-space {
     width: 200px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 .arrow {
     opacity: 0.5;
@@ -300,64 +302,77 @@ a.navbar {
     color: #FFFDF5;
 }
 
-.flavors-item {
-    width: max-content;
+/* Shopping Cart */
+.shopping-cart-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
-.flavors-item-image-wrapper {
-    position: fixed;
+.shopping-cart-icon {
+    width: 24px;
+    vertical-align: middle;
+}
+
+.cart-quantity {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width: 600px;
-    height: 400px;
-    pointer-events: none;
-    opacity: 0;
+    transform: translate(-50%, -35%);
+    font-size: 14px;
+    /* Adjust the font size as needed */
+    color: black;
+    z-index: -1;
 }
 
-.flavors-item-image-inner .flavors-item-image {
-    position: absolute;
-    left: 0;
+/* Shopping Cart Overlay */
+.cart-overlay {
+    position: fixed;
     top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.flavors-item-text {
-    position: relative;
-    font-family: "Agrandir Variable";
-    font-style: italic;
-    font-weight: 617;
-    text-transform: uppercase;
-    font-size: 8vw;
-    line-height: 1;
-    transition: opacity 350ms ease;
-    white-space: nowrap;
-    cursor: pointer;
+.cart-overlay-content {
+    max-width: 100%;
 }
 
-.flavors-item-image-wrapper {
-    z-index: -2;
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.flavors-item:hover #lavender {
-    color: #B6ABD8;
+.cart-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
-.flavors-item:hover #grapefruit {
-    color: #F2A5A0;
+.cart-item-price {
+    margin-left: auto;
 }
 
-.flavors-item:hover #cherry {
-    color: #DE6262;
+.cart-total-price {
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-.flavors-item:hover #mango {
-    color: #FFC38C;
+.view-full-cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0c14b;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.flavors-item:hover #citrus {
-    color: #CCE18F;
+.hidden {
+    display: none;
 }
