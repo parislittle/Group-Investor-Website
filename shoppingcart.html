@@ -230,7 +230,9 @@
         <div id="outercontainer">
             <div id="cart-container">
                 <h1>Shopping Cart</h1>
+                <br>
                 <h2>Your cart total is $<span id="total"></span></h2>
+                <br>
                 <hr>
                 <div id="cart"></div>
             </div>
@@ -314,6 +316,7 @@
                 // Save the updated cart to a cookie
                 document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
             }
+            updateCart();
         }
 
         function updateCart() {
@@ -380,9 +383,7 @@
             document.getElementById('cart-quantity').textContent = totalQuantity; // Update the quantity indicator
             // Save the cart to a cookie
             document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
-        }
-        // Initial update of the cart display
-        updateCart();        
+        }       
     </script>
 </body>
 
