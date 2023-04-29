@@ -259,7 +259,6 @@ a.navbar {
 
 .essentials-title {
     font-family: "Agrandir Variable";
-    font-size: 2vw;
     padding-bottom: 1vw;
 }
 
@@ -300,7 +299,7 @@ a.navbar {
     color: #FFFDF5;
 }
 
-.flavors-item {
+.flavors-tem {
     width: max-content;
 }
 
@@ -322,7 +321,6 @@ a.navbar {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 25px;
 }
 
 .flavors-item-text {
@@ -331,14 +329,16 @@ a.navbar {
     font-style: italic;
     font-weight: 617;
     text-transform: uppercase;
-    font-size: 8vw;
+    font-size: 5vw;
     line-height: 1;
+    color: #222222;
     transition: opacity 350ms ease;
     white-space: nowrap;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.flavors-item-image-wrapper {
+.flavors-item:hover .flavors-item-image-wrapper {
     z-index: -2;
 }
 

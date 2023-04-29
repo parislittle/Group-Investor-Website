@@ -1,11 +1,12 @@
 <html>
     <head>
         <title>Tabbed</title>
-        <link rel="stylesheet" href="tabbed-style.css">
+        <link rel="stylesheet" href="tabbed-home.css">
         <meta charset="UTF-8">
         <style>
-            
         </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
     </head> 
     <body>
         <div class="navbar">
@@ -36,78 +37,89 @@
                     </a>
                 </div>
                 <img class="hero-img" src="hero-img.jpeg">
-<p>
-    <br><br>
-    <br><br>
-    <br><br>
-<div class="container">
-        <div class="problem">
-          <p class="white-text"><p>Drink spiking is a serious issue and it's time WE do something about it.
-            <br><br>
-(Insert some photo)
-            <br><br>
-                Meet Tabbed, a simple solution to a major problem. 
-                <br>
-                Simply pop the lid open and swing the tab to the 
-                <br>
-                side to sip then swing it back to protect your drink!</p></p>
-        </div>
-        <div class="logo-space">    
-             <img src="TABBED.svg" alt="Tabbed Logo">
-
-
-        </div>
-      </div>
-    <br><br><br><br>
-
-</p>
-<br>
-<br>
-
             </div>
         </div>
-<br><br>
+
+        <div class="container">
+                <div class="problem">
+                    <p class="white-text">
+                        Drink spiking is a serious issue and it's time WE do something about it.
+                        <br><br>
+                        (Insert some photo)
+                        <br><br>
+                        Meet Tabbed, a simple solution to a major problem. 
+                        <br>
+                        Simply pop the lid open and swing the tab to the 
+                        <br>
+                        side to sip then swing it back to protect your drink!
+                    </p>
+                </div>
+                <div class="logo-space">    
+                    <img src="TABBED.svg" alt="Tabbed Logo">
+                </div>
+        </div>
+
         <div class="essentials-section">
             <div class="essentials-wrapper">
                 <h2 class="year">2023</h2>
                 <h3 class="essentials-title">Summertime Essentials</h3>
-                <div class="gallery-wrapper">
-                    <a class="gallery-item-wrapper">
-                        <div class="gallery-text-wrapper">
-                            <span class=""></span>
-                        </div>
-                        <img src="drink 2.jpeg" class="gallery-img">
-                    </a>
 
-                    <a class="gallery-item-wrapper">
-                        <div class="gallery-text-wrapper">
-                            <span class=""></span>
+                <div class="flavors">
+                    <div class="flavors-item">
+                        <div class="flavors-item-image-wrapper">
+                            <div class="flavors-item-image-inner">
+                                <img src="drink1.jpeg" alt="" class="flavors-item-image">
+                            </div>
                         </div>
-                        <img src="drink 3.jpeg" class="gallery-img">
-                    </a>
+                        <span class="flavors-item-text" id="lavender">
+                            <span class="flavors-item-innertext">LAVENDER LULLABY</span>
+                        </span>
+                    </div>
 
-                    <a class="gallery-item-wrapper">
-                        <div class="gallery-text-wrapper">
-                            <span class=""></span>
+                    <div class="flavors-item">
+                        <div class="flavors-item-image-wrapper">
+                            <div class="flavors-item-image-inner">
+                                <img src="drink 2.jpeg" alt="" class="flavors-item-image">
+                            </div>
                         </div>
-                        <img src="drink1.jpeg" class="gallery-img">
-                    </a>
+                        <span class="flavors-item-text" id="grapefruit">
+                            <span class="flavors-item-innertext">GRAPEFRUIT GUSTO</span>
+                        </span>
+                    </div>
 
-                    <a class="gallery-item-wrapper">
-                        <div class="gallery-text-wrapper">
-                            <span class=""></span>
+                    <div class="flavors-item">
+                        <div class="flavors-item-image-wrapper">
+                            <div class="flavors-item-image-inner">
+                                <img src="drink 3.jpeg" alt="" class="flavors-item-image">
+                            </div>
                         </div>
-                        <img src="drink 2.jpeg" class="gallery-img">
-                    </a>
+                        <span class="flavors-item-text" id="cherry">
+                            <span class="flavors-item-innertext">CHERRY CASCADE </span>
+                        </span>
+                    </div>
 
-                    <a class="gallery-item-wrapper">
-                        <div class="gallery-text-wrapper">
-                            <span class=""></span>
+                    <div class="flavors-item">
+                        <div class="flavors-item-image-wrapper">
+                            <div class="flavors-item-image-inner">
+                                <img src="drink1.jpeg" alt="" class="flavors-item-image">
+                            </div>
                         </div>
-                        <img src="drink 3.jpeg" class="gallery-img">
-                    </a>
+                        <span class="flavors-item-text" id="mango">
+                            <span class="flavors-item-innertext">MANGO MOSAIC</span>
+                        </span>
+                    </div>
+
+                    <div class="flavors-item">
+                        <div class="flavors-item-image-wrapper">
+                            <div class="flavors-item-image-inner">
+                                <img src="drink 2.jpeg" alt="" class="flavors-item-image">
+                            </div>
+                        </div>
+                        <span class="flavors-item-text" id="citrus">
+                            <span class="flavors-item-innertext">CITRUS SYMPHONY</span>
+                        </span>
+                    </div>
                 </div>
-
             </div>
         </div>
 
@@ -136,5 +148,6 @@
                 <a class="lil-links" href="">Legal Terms</a>
             </div> -->
         </div>
+        <script src="hover-script.js"></script>
     </body>
 </html>
