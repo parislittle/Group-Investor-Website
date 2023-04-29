@@ -11,15 +11,23 @@
                 display:flex;
                 margin:5%;
                 margin-top: 20px;
-                flex-direction: row;
+                flex-direction:row;
+                flex-wrap:wrap;
+                justify-content: center; 
+                align-items: center; 
+            }
+            .about-section div{
+              width:30%;
+              object-position: center;
             }
             .member{
-              width:90%;
+              width:30%;
               padding:1%;
               display:inline-block;
             }
+            
             .meet{
-              border-radius: 90px;
+              border-radius: 40px;
               width: 80%;
             }
             #blurb{
@@ -52,14 +60,15 @@
 
             }
             .h3{
-              font-size: 30px;
+              font-size: 50%;
               text-decoration:solid;
-              
+              font-weight:bold;
             }
 
             .title{
               font-size:10pt;
               text-align: center;
+              margin:0;
             }
             .blurb{
               margin:7%;
@@ -95,15 +104,9 @@
             }*/
             .container{
               flex-direction:column;
+              margin-left:20px;
+              margin-right:20px;
             }
-            .container * {
-                display:block;
-}
-
-
-  
-
-          
   .anec{
     width:30%;
     padding:10px;
@@ -120,9 +123,9 @@
     text-align: left;
   }
   .nav-item{
-    background-color:  #FFFDF5;
+    background-color: rgba(255, 253, 245, .8);
     border-radius: 3px;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
   }
            /* Media query for devices with a pixel width of a phone */
             @media (max-width: 767px) {
@@ -169,7 +172,7 @@
         <img src="joanna_pfp.jpeg" class="meet" alt="Joanna Poon" >
         <div class="container">
           <br>
-          <h3>Joanna <br>Poon</h3>
+          <h3>Joanna Poon</h3>
           <p class="title">Co-founder <br>&amp;<br> Designer </p>
           <!--<p>jhpoon@usc.edu</p>-->
           <a class="a" href="mailto: jhpoon@usc.edu" target="-new">
