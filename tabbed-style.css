@@ -168,6 +168,10 @@ a.navbar {
 
 .tabbed-logo {
     width: 6.5vw;
+    background-color: rgba(255, 253, 245, .8);
+     border-radius: 3px;
+     padding: 5px;
+
 }
 
 .footer {
