@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <title>Shop</title>
     <style>
+        /*dark mode & light mode*/
+        .mode-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            bottom: 40px;
+            left: 40px;
+            background-color: black;
+            color: white;
+            box-shadow: 0px 0px 5px black;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .mode-button img {
+            height: 50px;
+        }
+
         /* Shopping Cart */
         .shopping-cart-wrapper {
             position: relative;
@@ -85,19 +107,23 @@
 
         .cart-overlay-content {
             max-width: 100%;
+            height: 96vh;
+            position: relative;
         }
 
         .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 2vh;
         }
 
         .cart-item img {
             width: 50px;
             height: auto;
             margin-right: 10px;
+            border-radius: 1.5vh;
+            box-shadow: 0 0 3px lightgrey;
         }
 
         .cart-item-price {
@@ -107,15 +133,26 @@
         .cart-total-price {
             margin-top: 20px;
             font-weight: bold;
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            right: 0;
+            text-align: left;
         }
 
         .view-full-cart-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #f0c14b;
+            background-color: black;
+            color: white;
+            border-radius: 1.5vh;
             text-decoration: none;
             text-align: center;
             margin-top: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
 
         .hidden {
@@ -214,13 +251,17 @@
 
         }
     </style>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
 </head>
 
 <body>
-    <!-- Add this HTML structure inside the body tag -->
+    <div class="mode-button" onclick="toggleStylesheet('darkModeStylesheet')"><img src=moon.png></div>
+
     <div id="cart-overlay" class="cart-overlay hidden">
         <div class="cart-overlay-content">
-            <h3>Your Cart</h3>
+            <h3 style="text-align:center">Your Cart</h3>
+            <hr>
+            <br>
             <div id="cart-overlay-items"></div>
             <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
             <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
@@ -265,19 +306,22 @@
                 <div class="flavors" id="drink2">
                     <div class="flavorname">MANGO MOSAIC</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add to
+                        Cart</button>
                 </div>
 
                 <div class="flavors" id="drink3">
                     <div class="flavorname">GRAPEFRUIT GUSTO</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add
+                        to Cart</button>
                 </div>
 
                 <div class="flavors" id="drink1">
                     <div class="flavorname">CITRUS SYMPHONY</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add to
+                        Cart</button>
                 </div>
 
                 <div class="flavors" id="drink4">
@@ -334,6 +378,21 @@
 
         </div>
         <script>
+            // dark mode/light mode customization
+
+            function toggleStylesheet(darkModeStylesheet) {
+                // Get the link element that references the external stylesheet using the provided id
+                var stylesheetLink = document.getElementById(darkModeStylesheet);
+
+                // Check if the stylesheet is currently disabled
+                if (stylesheetLink.disabled) {
+                    // Enable the stylesheet
+                    stylesheetLink.disabled = false;
+                } else {
+                    // Disable the stylesheet
+                    stylesheetLink.disabled = true;
+                }
+            }
             // Event listener for the DOMContentLoaded event
             document.addEventListener('DOMContentLoaded', function () {
                 // Update the cart when the page loads

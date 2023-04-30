@@ -7,6 +7,8 @@
     width: 50px;
     height: 50px;
     margin-right: 10px;
+    border-radius: 1.5vh;
+    box-shadow: 0 0 3px lightgrey;
 }
 .cart-item-details {
     display: flex;
@@ -31,6 +33,11 @@
     transform: translate(-50%, -25%);
     font-size: 14px; /* Adjust the font size as needed */
     color: black; /* Adjust the color as needed */
+}
+
+.product-details {
+    text-align: center;
+    background-color: blue;
 }
 #outercontainer {
     padding: 20px;

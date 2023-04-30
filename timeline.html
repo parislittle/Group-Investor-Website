@@ -5,13 +5,288 @@
     <script></script>
     <link rel="stylesheet" href="tabbed-style.css">
     <style>
-        .TLbox {
-            width: 100vw;
-            border: 4px solid, black;
-            border-radius: 20px;
+        body {
+            background-color: #FFFDF5;
+            color: #222222;
+            font-family: "Object Sans";
+            padding: 0;
+            margin: 0;
+
+            text-transform: uppercase;
+
+            overflow-x: hidden;
+
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 64pt;
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 16pt;
+            text-transform: uppercase;
+            margin: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222222;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #222222;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 300;
+            src: url(PPObjectSans-Thin.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 400;
+            src: url(PPObjectSans-Regular.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 600;
+            src: url(PPObjectSans-Bold.woff2);
+        }
+
+        @font-face {
+            font-family: "Object Sans";
+            font-weight: 700;
+            src: url(PPObjectSans-Heavy.woff2);
+        }
+
+        #hero-section {
+            text-align: center;
+
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 0;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 4vw;
+        }
+
+        .hero-title {
+            font-size: 22vw;
+            line-height: 80%;
+        }
+
+        .hero-subtitle {
+            font-weight: 600;
+            font-size: 3vw;
+
+        }
+
+        .navbar {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2vw;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .nav-item {
+            text-align: center;
+            justify-content: center;
+            font-family: "Object Sans";
+            font-weight: 400;
+            color: #222222;
+            opacity: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+            /* mix-blend-mode: difference; */
+        }
+
+        .nav-item.active {
+            opacity: 50%;
+        }
+
+        .nav-left {
+            text-align: left;
+        }
+
+        .nav-right {
+            text-align: right;
+        }
+
+        .tabbed-logo {
+            width: 6.5vw;
+        }
+
+        .footer {
+            color: #FFFDF5;
+        }
+
+        #newsletter-wrapper {
+            height: 80vh;
+            background-color: #101010;
+            ;
+            padding: 0 65vw 0 8vw;
+            justify-content: center;
+
+            display: flex;
+            flex-direction: column;
             justify-content: center;
 
         }
+
+        .newsletter-text-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #newsletter-text {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 20pt;
+        }
+
+        .newsletter-button-wrapper {
+            display: flex;
+            justify-content: left;
+
+        }
+
+        .newsletter-button {
+            width: 100%;
+        }
+
+        .newsletter-button-text {
+            background-color: #101010;
+            border: none;
+            padding: 0;
+            font-size: 16pt;
+            font-weight: 300;
+        }
+
+        .arrow {
+            opacity: 0.5;
+        }
+
+        .hr-transparent {
+            opacity: 0.5;
+        }
+
+        #footer-ip {
+            padding: 2vw;
+            text-align: right;
+            background-color: #101010;
+            color: #FFFDF5;
+        }
+
+        .lil-links {
+            padding-left: 1vw;
+            color: #FFFDF5;
+        }
+        .TLbox {
+            width: 70%;
+            height: 40%;
+            border-radius: 20px;
+            align-self: center;
+            text-align: center;
+            margin:auto;
+            margin-top:40px;
+        }
+        .titlebox{
+            width: 70%;
+            height: 20%;
+            border-radius: 20px;
+            align-self: center;
+            text-align: center;
+            margin:auto;
+            margin-top:40px;
+        }
+        #prototype{
+            margin-top: 7%;
+
+        }
+        #branding{
+
+        }
+        #survey{
+
+        }
+        #business{
+
+        }
+      
+        .textbox{
+            width:65%;
+            /*border:3px solid black;*/
+            height:90%
+        }
+        #txt1{
+            float:right;
+           
+          
+        }
+        #txt2{
+            float:left;
+           
+        }
+        #txt3{
+            float:right;
+           
+        }
+        #txt4{
+            float:left;
+        
+        }
+        .imgL{
+            width:30%;
+            height:90%;
+            float:left;
+        }
+        .imgR{
+            width:30%;
+            height:90%;
+            float:right;    
+        }
+
+        #img1{
+        width:100%;
+        height:100%;
+        border-radius:20px;
+        margin-top:-10%;
+        border:4px solid black;
+        }
+
+        #img2{
+            width:100%;
+            height:100%;
+            margin-top:-10%;
+            border-radius:20px;
+            border:4px solid black;
+        }
+       
+
+        
     </style>
 </head>
 
@@ -21,15 +296,75 @@
             <img class="tabbed-logo" src="TABBED.svg">
         </a>
         <div class="nav-right">
-            <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a>
-            <a class="nav-item" id="login" href="tabbed-mission.html">Our Mission</a>
-            <a class="nav-item" id="login" href="tabbed-contact.html">Contact Us</a>
+            <a class="nav-item" id="about" href="about_us.html">About Us</a>
+            <a class="nav-item" id="shop" href="shop.html">Shop</a>
+            <a class="nav-item" id="business" href="business.html">Business</a>
+            <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+            <div class="nav-item shopping-cart-wrapper">
+                <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                <span id="cart-quantity" class="cart-quantity">0</span>
+            </div>
         </div>
-
     </div>
-    <div id="hero-section">
-        <div class="TLbox">
-            ;oajdfojndf
+
+    <div class="titlebox" id="prototype">
+
+        <h1>Timeline</h1>
+    </div>
+    <hr>
+    <div class="TLbox" id="prototype">
+
+        <div class="imgL">
+            <br><img id="img1" src="cant_top.png"/>
+           
+        </div>
+        <div class="textbox" id="txt1">
+            <h2><em>Prototyping</em></h2>
+            <p>
+                We started by developing a concept based on the target market, material, and production feasibility. We then created 3D renders of the prototype and evaluated different concepts. We tested the prototype for durability, ease of use, and visual appeal.
+            </p>
+        </div>
+    
+    </div>
+    <hr>
+
+    <div class="TLbox" id="branding">
+        <div class="textbox" id="txt2">
+            <h2><em>Branding</em></h2>
+            <p>
+                We wanted our branding aesthetic to be contemporary and minimalist, with a focus on clean lines, elegant typography, and subtle pops of color. Something that resonated with our target demographic: young people. Our label design is carefully crafted to reflect the taste and quality of our product, with each flavor having its unique design elements that speak to its taste and ingredients.
+            </p>
+        </div>
+        <div class="imgR">
+            <br><img id="img2" src="branding.png"/>
+           
+        </div>
+    </div>
+    <hr>
+    <div class="TLbox" id="survey">
+
+        <div class="imgL">
+            <br><img id="img1" src="can_render.png"/>
+           
+        </div>
+       
+
+        <div class="textbox" id="txt3">
+            <h2><em>Surveying</em></h2>
+            <p>After developing our prototypes with advanced renders, we conducted a survey with our users to better understand the market desire. We learned that they don't want another bottled seltzer company so we chose to use a more elegant bottled design. </p>
+        </div>
+    </div>
+    <hr>
+    <div class="TLbox" id="business">
+        <div class="textbox" id="txt4">
+            <h2><em>Business Plan</em></h2>
+            <p>
+                The plan is to target college students and party-goers, starting with USC and partnering with nearby schools. Safety in drinking is important, and we plan to promote it at events and align their branding with sexual assault prevention organizations. The main goal is to raise awareness around drink-spiking, with the hope that larger companies will adopt their solution as an industry standard.
+            </p>
+        </div>
+        <div class="imgR">
+            <br><img id="img2" src="hero-img.jpeg"/>
+           
         </div>
     </div>
 
