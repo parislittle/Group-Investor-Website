@@ -4,19 +4,19 @@
         <meta charset="UTF-8">
         <title>Ask</title>
         <style>
-
             #innercontainer{
                 width: 60%;
                 height: fit-content;
                 margin: auto;
+                padding: 4vw 0vw 8vw 0vw;
 
             }
 
             #graph{
                 width: 100%;
                 border: 2px black solid;
-                height: 550px;
-                margin-bottom: 50px;
+                border-radius: 25px;
+                padding: 2vw;
             }
 
             .theteam {
@@ -106,9 +106,10 @@
                 text-align: center;
 
             }
-            
 
-            
+            .chartBox {
+                width: 100%;
+            }
            
         </style>
     </head>
@@ -131,14 +132,14 @@
             </div>
 
             <div id = "innercontainer">
-
                 <div id = "boxes3">
-
-                <p class = "theteam">THE ASK</p>
-
-                <p class = "asktext">(...) PROJECTION:</p>
-
-                <div id = "graph"></div>
+                    <p class = "theteam">THE ASK</p>
+                    <p class = "asktext">PNL PROJECTION:</p>
+                <div id = "graph">
+                    <div class="chartBox">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
 
                 <p class = "asktext">STATS:</p>
 
@@ -216,29 +217,7 @@
 
                 <p class = "valueprop"><strong>4.<em> Expansion and acquisitions: </em></strong> We want to use our funds to support expansion efforts. 
                     We are entering new markets or acquiring complementary businesses that can help us expand our product line and distribution network. </p>
-
-                
-                
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <div class="footer">
@@ -258,22 +237,100 @@
                         </div>
                     </div>
                 </div>
-    
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        // setup 
         
+        drawChart();
+    
+        async function drawChart(){
+            const dataPoints = await getData();
+            const data = {
+            labels: dataPoints.labels,
+            datasets: [{
+                label: dataPoints.grossProfitName,
+                data: dataPoints.grossProfitData,
+                backgroundColor: ['rgba(255, 26, 104, 0.2)'],
+                borderColor: ['rgba(255, 26, 104, 1)',],
+                tension: 0.4
+            },{
+                label: dataPoints.operatingExpensesName,
+                data: dataPoints.operatingExpensesData,
+                backgroundColor: ['rgba(54, 162, 235, 0.2)'],
+                borderColor: ['rgba(54, 162, 235, 1)'],
+                tension: 0.4
+            },{
+                label: dataPoints.netProfitName,
+                data: dataPoints.netProfitData,
+                backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+                borderColor: ['rgba(75, 192, 192, 1)'],
+                tension: 0.4
+            }
+            ]};
+
+            // config 
+            const config = {
+            type: 'line',
+            data,
+            options: {
+                scales: {
+                y: {
+                    beginAtZero: true
+                }
+                }
+            }
+            };
+
+            // render init block
+            const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+            );
+
+            // Instantly assign Chart.js version
+            const chartVersion = document.getElementById('chartVersion');
+            chartVersion.innerText = Chart.version;
+        };
+
+        async function getData() {
+            const labels = [];
+            const grossProfitData = [];
+            const operatingExpensesData = [];
+            const netProfitData = [];
+
+            const response = await fetch('https://webdev.iyaclasses.com/~jsteinho/acad275/tabbed/pnl.csv');
+            const tabledata = await response.text();
+            // console.log(tabledata);
+
+            const table = tabledata.split('\n').slice(1);
+            // console.log(table);
+            table.forEach(row => {
+                const column = row.split(',');
+                const year = column[0];
+                const grossProfit = column[1];
+                const operatingExpenses = column[2];
+                const netProfit = column[4];
+
+                labels.push(year);
+                grossProfitData.push(grossProfit);
+                operatingExpensesData.push(operatingExpenses);
+                netProfitData.push(netProfit);
+            });
+
+
+            const grossProfitName = 'Gross Profit';
+            const operatingExpensesName = 'Operating Expenses';
+            const netProfitName = 'Net Profit';
+
+            console.log(labels);
+            return { labels, grossProfitData, operatingExpensesData, netProfitData, grossProfitName, operatingExpensesName, netProfitName }
+            
+        };
+
+        </script>
 
     </body>
 </html>
