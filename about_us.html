@@ -1,90 +1,104 @@
 <html>
-    <head>
-        <title>About Us - Tabbed</title>
-        <script></script>
-        <link rel="stylesheet" href="tabbed-style.css">
-        <style>
-          body {
-            padding-top: 6vw;
-          }
-            .about-section{
-                display:flex;
-                margin:5%;
-                margin-top: 20px;
-                flex-direction:row;
-                flex-wrap:wrap;
-                justify-content: center; 
-                align-items: center; 
-            }
-            .about-section div{
-              width:30%;
-              object-position: center;
-            }
-            .member{
-              width:30%;
-              padding:1%;
-              display:inline-block;
-            }
-            
-            .meet{
-              border-radius: 40px;
-              width: 80%;
-            }
-            #blurb{
-              font-size: 12pt;
-              width: 70%
-            }
-            .bigbutton{
-              font-family: "Object Sans";
-              font-weight:400;
-              src: url(PPObjectSans-Thin.woff2);
-              background-color: #FFFDF5;
-              border: black solid 2px;
-              border-radius:5px;
-              width:20%;
-              height:8%;
-            }
-            .button{
-              font-family: "Object Sans";
-              font-weight:300;
-              src: url(PPObjectSans-Thin.woff2);
-              background-color: #FFFDF5;
-              border: black solid 1px;
-              border-radius:5px;
-            }
-            h2{
-              
-              margin-left:10%;
-              text-decoration:solid;
-              margin:auto;
 
-            }
-            .h3{
-              font-size: 50%;
-              text-decoration:solid;
-              font-weight:bold;
-            }
+<head>
+  <title>About Us - Tabbed</title>
+  <script></script>
+  <link rel="stylesheet" href="tabbed-style.css">
+  <style>
+    body {
+      padding-top: 6vw;
+    }
 
-            .title{
-              font-size:10pt;
-              text-align: center;
-              margin:0;
-            }
-            .blurb{
-              margin:7%;
-            }
-            #blurb{
-                font-size: 11pt;
-                width: 85%;
-              }
-              .strong{
-                font-size: 19pt;
-              }
-              .strong2{
-                font-size: 19pt;
-                text-align:right;
-              }
-              /*.fixed-image {
+    .about-section {
+      display: flex;
+      margin: 5%;
+      margin-top: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-section div {
+      width: 30%;
+      object-position: center;
+    }
+
+    .member {
+      width: 30%;
+      padding: 1%;
+      display: inline-block;
+    }
+
+    .meet {
+      border-radius: 40px;
+      width: 80%;
+    }
+
+    #blurb {
+      font-size: 12pt;
+      width: 70%
+    }
+
+    .bigbutton {
+      font-family: "Object Sans";
+      font-weight: 400;
+      src: url(PPObjectSans-Thin.woff2);
+      background-color: #FFFDF5;
+      border: black solid 2px;
+      border-radius: 5px;
+      width: 20%;
+      height: 8%;
+    }
+
+    .button {
+      font-family: "Object Sans";
+      font-weight: 300;
+      src: url(PPObjectSans-Thin.woff2);
+      background-color: #FFFDF5;
+      border: black solid 1px;
+      border-radius: 5px;
+    }
+
+    h2 {
+
+      margin-left: 10%;
+      text-decoration: solid;
+      margin: auto;
+
+    }
+
+    .h3 {
+      font-size: 50%;
+      text-decoration: solid;
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 10pt;
+      text-align: center;
+      margin: 0;
+    }
+
+    .blurb {
+      margin: 7%;
+    }
+
+    #blurb {
+      font-size: 11pt;
+      width: 85%;
+    }
+
+    .strong {
+      font-size: 19pt;
+    }
+
+    .strong2 {
+      font-size: 19pt;
+      text-align: right;
+    }
+
+    /*.fixed-image {
                 position: fixed;
                 background-image: url("joanna_pfp.jpeg");
                 top: 0;
@@ -93,8 +107,8 @@
                 z-index: 999;
                 width:100%;
                 display:inline-block*/
-            
-            /*#behind{
+
+    /*#behind{
               background-image: url("tabbed5.jpeg");
               background-size: 100%;
               width: 100%;
@@ -102,213 +116,439 @@
               display: flex;
 
             }*/
-            .container{
-              flex-direction:column;
-              margin-left:20px;
-              margin-right:20px;
-            }
-  .anec{
-    width:30%;
-    padding:10px;
-    
-  }
-  #story{
-    margin: 5%;
-    display: flex;
-    flex-direction: row;
-  }
-  .tag{
-    font-size: 30px;
-    text-decoration:solid;
-    text-align: left;
-  }
-  .nav-item{
-    background-color: rgba(255, 253, 245, .8);
-    border-radius: 3px;
-    /*border: black solid 1px;*/
-  }
-           /* Media query for devices with a pixel width of a phone */
-            @media (max-width: 767px) {
-              /* Your CSS styles for mobile devices go here */
-              #about{
-                display:flex;
-                margin:5%;
-                margin-top: 10px;
-                flex-direction: row;
-              }
-              .member{
-                width:90%;
-                margin-top: 20%;
-              }
-}
+    .container {
+      flex-direction: column;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
 
-        </style>
-    </head>
-    <body>
-<center>
+    .anec {
+      width: 30%;
+      padding: 10px;
 
-  <div class="navbar">
-    <a class="nav-left" href="tabbed-investor-site.html">
-        <img class="tabbed-logo" src="TABBED.svg">    
-    </a>
-    <div class="nav-right">
-      <a class="nav-item" id="about" href="shop.html">Shop</a>
-      <a class="nav-item" id="about" href="about_us.html">About Us</a>
-      <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
-      <a class="nav-item" id="cart" href="cart.html">Cart</a>
+    }
+
+    #story {
+      margin: 5%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tag {
+      font-size: 30px;
+      text-decoration: solid;
+      text-align: left;
+    }
+
+    .nav-item {
+      background-color: rgba(255, 253, 245, .8);
+      border-radius: 3px;
+      /*border: black solid 1px;*/
+    }
+
+    /* Media query for devices with a pixel width of a phone */
+    @media (max-width: 767px) {
+
+      /* Your CSS styles for mobile devices go here */
+      #about {
+        display: flex;
+        margin: 5%;
+        margin-top: 10px;
+        flex-direction: row;
+      }
+
+      .member {
+        width: 90%;
+        margin-top: 20%;
+      }
+    }
+  </style>
+  <style>
+    /* Container for the entire gallery */
+    .gallery-container {
+      position: relative;
+      /* Set the position property to relative */
+      display: flex;
+      align-items: center;
+      width: 50vw;
+    }
+
+    #sidebar-stuff-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 5vw;
+      padding-right: 1vw;
+    }
+
+    /* Sidebar for navigation */
+    .sidebar {
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      margin-right: 10px;
+      overflow: hidden;
+      height: 36vh;
+      width: 5vw;
+    }
+
+    /* Navigation buttons */
+    .nav-button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 50%;
+      filter: grayscale(100%);
+    }
+
+    /* Main content area */
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    /* Business card container */
+    .business-card {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 35vh;
+      border-radius: 2vh;
+    }
+
+    /* Member photo */
+    .member-photo {
+      height: 25vh;
+      border-radius: 1vh;
+      margin-right: 10px;
+    }
+
+    /* Member info container */
+    .member-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 25vh;
+      border-radius: 1vh;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    /* Member name */
+    .member-name {
+      font-size: 2vw;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    /* Member role */
+    .member-role {
+      font-size: 1vw;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    /* Contact button */
+    .contact-button {
+      margin-top: 5vh;
+      background-color: #101010;
+      color: #FFFDF5;
+      border: none;
+      border-radius: 0.5vw;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #222222;
+    }
+
+    /* Arrow buttons */
+    .arrow-button {
+      position: absolute;
+      /* Use absolute positioning */
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      filter: grayscale(100%);
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      /* Background color for the arrow buttons */
+      text-align: center;
+      /* Center the arrow character */
+      line-height: 30px;
+      /* Align the arrow character vertically */
+    }
+
+    /* Position the up arrow button above the sidebar */
+    .arrow-button.up {
+      top: -20px;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 50%;
+    }
+
+    /* Position the down arrow button below the sidebar */
+    .arrow-button.down {
+      bottom: -20px;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 50%;
+    }
+  </style>
+  <script>
+    // JavaScript code to handle navigation
+    function initializeGallery() {
+      let currentMemberIndex = 0;
+      const members = [
+        { photo: 'joanna_pfp.jpeg', name: 'Joanna Poon', role: 'Co-Founder & Designer', email: 'jhpoon@usc.edu' },
+        { photo: 'kyler_pfp2.jpg', name: 'Kyler Caldwell', role: 'Co-Founder & Product Manager', email: 'kncaldwe@usc.edu' },
+        { photo: 'jaden_pfp.png', name: 'Jaden Steinhoff', role: 'Co-Founder & Web Designer', email: 'jsteinho@usc.edu' },
+        { photo: 'lauren_pfp.png', name: 'Lauren Graham', role: 'Co-Founder & Designer', email: 'lggraham@usc.edu' },
+        { photo: 'mia_pfp2.jpeg', name: 'Mia Wang', role: 'Co-Founder & Desiger', email: 'mingxinw@usc.edu' },
+      ];
+
+      function updateMemberCard() {
+        const member = members[currentMemberIndex];
+        document.getElementById('member-photo').src = member.photo;
+        document.getElementById('member-name').textContent = member.name;
+        document.getElementById('member-role').textContent = member.role;
+        document.getElementById('contact-button-link').href = 'mailto:' + member.email;
+      }
+
+      function navigateToMember(index) {
+        currentMemberIndex = index;
+        updateMemberCard();
+      }
+
+      // Function to navigate to the previous member
+      function navigateUp() {
+        if (currentMemberIndex > 0) {
+          currentMemberIndex--;
+          updateMemberCard();
+        }
+      }
+
+      // Function to navigate to the next member
+      function navigateDown() {
+        if (currentMemberIndex < members.length - 1) {
+          currentMemberIndex++;
+          updateMemberCard();
+        }
+      }
+
+      // Dynamically generate the member icons in the sidebar
+      const sidebar = document.getElementById('sidebar');
+      members.forEach((member, index) => {
+        const navButton = document.createElement('img');
+        navButton.src = member.photo;
+        navButton.alt = member.name;
+        navButton.className = 'nav-button';
+        navButton.addEventListener('click', () => navigateToMember(index));
+        sidebar.appendChild(navButton);
+      });
+
+      // Initialize the member card with the first member's information
+      updateMemberCard();
+
+
+      // Add event listeners for the up and down buttons
+      document.querySelector('.arrow-button.up').addEventListener('click', navigateUp);
+      document.querySelector('.arrow-button.down').addEventListener('click', navigateDown);
+    }
+
+    // Call the initializeGallery function when the page has finished loading
+    window.addEventListener('DOMContentLoaded', initializeGallery);
+  </script>
+
+</head>
+
+<body>
+  <center>
+
+    <div class="navbar">
+      <a class="nav-left" href="tabbed-investor-site.html">
+        <img class="tabbed-logo" src="TABBED.svg">
+      </a>
+      <div class="nav-right">
+        <a class="nav-item" id="about" href="shop.html">Shop</a>
+        <a class="nav-item" id="about" href="about_us.html">About Us</a>
+        <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
+        <a class="nav-item" id="cart" href="cart.html">Cart</a>
+      </div>
     </div>
-  </div>
 
-<br> <h1> ABOUT US</h1>
+    <br>
+    <h1> ABOUT US</h1>
 
-    
+
 
     <br><br>
-   <!--<h2> <strong>MEET THE TEAM</strong></h2><br><br>-->
+    <h2> <strong>MEET THE TEAM</strong></h2><br><br>
 
-
-   <div class="about-section">
-      <div class="member">
-        <img src="joanna_pfp.jpeg" class="meet" alt="Joanna Poon" >
-        <div class="container">
-          <br>
-          <h3>Joanna Poon</h3>
-          <p class="title">Co-founder <br>&amp;<br> Designer </p>
-          <!--<p>jhpoon@usc.edu</p>-->
-          <a class="a" href="mailto: jhpoon@usc.edu" target="-new">
-           <p><button class="button">Contact</button></p></a>
+    <div class="gallery-container">
+      <div id="sidebar-stuff-container">
+        <!-- Up arrow button -->
+        <button class="arrow-button up" onclick="navigateUp()">&#9650;</button>
+        <!-- Sidebar for navigation -->
+        <div class="sidebar" id="sidebar">
+          <!-- Member icons will be dynamically generated here -->
+        </div>
+        <!-- Down arrow button -->
+        <button class="arrow-button down" onclick="navigateDown()">&#9660;</button>
+        <!-- Main content area -->
+      </div>
+      <div class="content">
+        <!-- Business card container -->
+        <div class="business-card">
+          <img id="member-photo" src="member1_photo.jpg" alt="Member 1" class="member-photo">
+          <div class="member-info">
+            <div id="member-name" class="member-name">Member 1</div>
+            <div id="member-role" class="member-role">Role 1</div>
+            <a id="contact-button-link" href="mailto:member1@example.com">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="member">
-        <img src="kyler_pfp2.jpg" class="meet" alt="Kyler Caldwell" >
-        <div class="container">
-          <br>
-          <h3>Kyler Caldwell</h3>
-          <p class="title">Co-founder <br>&amp;<br> Product Manager </p>
-         <!-- <p>kncaldwe@usc.edu </p>-->
-         <a class="a" href="mailto: kncaldwe@usc.edu" target="-new">
-          <p><button class="button">Contact</button></p></a>
-        </div>
-      </div>
-
-      <div class="member">
-        <img src="jaden_pfp.png" class="meet" alt="Jaden Steinhoff"  >
-        <div class="container">
-          <br>
-          <h3>Jaden Steinhoff</h3>
-          <p class="title">Co-founder <br>&amp;<br> Website Designer </p>
-          <!--<p>jsteinho@usc.edu</p>-->
-          <a class="a" href="mailto: jsteinho@usc.edu" target="-new">
-            <p><button class="button">Contact</button></p></a>
-        </div>
-      </div>
-
-      <div class="member">
-        <img src="lauren_pfp.png" class="meet" alt="Lauren Graham" >
-        <div class="container">
-          <br>
-          <h3>Lauren Graham</h3>
-          <p class="title">Co-founder <br>&amp;<br> Designer </p>
-          <!--<p>lggraham@usc.edu</p>-->
-          <a class="a" href="mailto: lggraham@usc.edu" target="-new">
-            <p><button class="button">Contact</button></p></a>
-        </div>
-      </div>
-
-      <div class="member">
-        <img src="mia_pfp2.jpeg" class="meet" alt="Mia Wang" >
-        <div class="container">
-          <br>
-          <h3>Mia<br> Wang</h3>
-          <p class="title">Co-founder <br>&amp;<br> Designer </p>
-          <!--<p>mingxinw@usc.edu</p>-->
-          <a class="a" href="mailto: mingxinw@usc.edu" target="-new">
-            <p><button class="button">Contact</button></p></a>
-        </div>
-      </div>
-  </div>
-  <a class="a" href="Contact_us.html" target="-new">
-  <button class="bigbutton"><strong>CONTACT US</strong></button> </a>
- <div class="blurb">
-  <h3 class="tag"><strong>Our Story</strong></h3>
-    <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to prevents drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
-      Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture! Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small device that can be attached to any drink container. It detects common date rape drugs and alerts the user in real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink safety and hello to a fun and safe party experience with Tabbed - the must-have product for any college student looking to take control of their own safety. Join us in our mission to empower and protect young adults with this revolutionary product!
-    </p>
     </div>
 
-    
+    <a class="a" href="Contact_us.html" target="-new">
+      <button class="bigbutton"><strong>CONTACT US</strong></button> </a>
+    <div class="blurb">
+      <h3 class="tag"><strong>Our Story</strong></h3>
+      <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed
+        because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to
+        prevents
+        drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
+        Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture!
+        Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a
+        game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small
+        device that can be attached to any drink container. It detects common date rape drugs and alerts the user in
+        real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink
+        safety
+        and hello to a fun and safe party experience with Tabbed - the must-have product for any college student
+        looking
+        to take control of their own safety. Join us in our mission to empower and protect young adults with this
+        revolutionary product!
+      </p>
+    </div>
 
-   
-<div id="behind">
 
-  
- 
-      <img src="tabbed1.jpeg" class="fixed-image"width="30%" alt="Photo 1">
-    
-      <img src="tabbed2.jpeg"  class="fixed-image"width="30%" alt="Photo 2">
-   
-      <img src="tabbed3.jpeg" class="fixed-image"width="30%" alt="Photo 3">
-  
+
+
+    <div id="behind">
+
+
+
+      <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt="Photo 1">
+
+      <img src="tabbed2.jpeg" class="fixed-image" width="30%" alt="Photo 2">
+
+      <img src="tabbed3.jpeg" class="fixed-image" width="30%" alt="Photo 3">
+
       <div class="blurb">
- <h3 class="tag"><strong>Behind the Scenes</strong></h3><br> 
- <p>Behind the scenes of our startup, Tabbed, created by five college students passionate about creating a solution to prevent drink spiking. Our team has been working hard to develop a product that is both effective and affordable, while also raising awareness about the dangers of drink spiking. Through our journey, we've faced many challenges, but we've also had many successes. These photos capture some of the highlights and moments from our journey so far.</p>
-</div>
-      <img src="tabbed4.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
-      <img src="tabbed5.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
-      <img src="tabbed1.jpeg" class="fixed-image" width= "30%" alt="Photo 4">
-    
-    <br><br>
-   <!--<div class="column">
+        <h3 class="tag"><strong>Behind the Scenes</strong></h3><br>
+        <p>Behind the scenes of our startup, Tabbed, created by five college students passionate about creating a
+          solution to prevent drink spiking. Our team has been working hard to develop a product that is both
+          effective
+          and affordable, while also raising awareness about the dangers of drink spiking. Through our journey, we've
+          faced many challenges, but we've also had many successes. These photos capture some of the highlights and
+          moments from our journey so far.</p>
+      </div>
+      <img src="tabbed4.jpeg" class="fixed-image" width="30%" alt="Photo 4">
+      <img src="tabbed5.jpeg" class="fixed-image" width="30%" alt="Photo 4">
+      <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt="Photo 4">
+
+      <br><br>
+      <!--<div class="column">
       <img src="photo5.jpg" alt="Photo 5">
     </div>
     <div class="column">
       <img src="photo6.jpg" alt="Photo 6">
     </div>
-  </div>--> 
+  </div>-->
 
-</div><!--behind-->
+    </div><!--behind-->
 
-<div class="flex" id="story">
-<div id="s1" class="anec">
+    <div class="flex" id="story">
+      <div id="s1" class="anec">
 
-<p><strong class="strong">" </strong>Our team was working on the anti-drink spiking product when the web developer on our team suggested a brilliant feature. He proposed that we add a "safe word" option to the app, where users could set a word that would alert their friends or emergency contacts if they suspected their drink had been spiked. We were all so excited about the idea, and we ended up celebrating with a virtual dance party on Zoom. It was amazing to see how much fun we could have while working on such an important project.<strong class="strong2">" </strong></p>
-<h4>-JOANNA POON</h4>
-</div>
-<div id="s1" class="anec">
-
-<p><strong class="strong">" </strong> One day during a team meeting, our product designer unveiled her latest concept for the anti-drink spiking product. It was a small, sleek device that could detect certain drugs in the user's drink and alert them with a vibration or flashing light. We were all amazed by the simplicity and elegance of the design, and we couldn't help but feel a sense of pride and excitement for what we were creating. After the meeting, we decided to treat ourselves to some delicious cupcakes to celebrate our progress.
-  <strong class="strong2">" </strong>
-
-</p>
-<h4>-LAUREN GRAHAM</h4>
-</div>
-<div id="s1" class="anec">
-
-<p><strong class="strong">" </strong> As a team, we were working on the branding for our anti-drink spiking product. One of the designers suggested the name "Guardian," which we all loved. It perfectly embodied the idea of protection and safety that we wanted to convey. We spent the afternoon designing a logo and creating a website around the "Guardian" brand, and we couldn't help but feel a sense of joy and satisfaction at the progress we were making. Later that day, we all went out for a picnic in the park to celebrate our hard work and enjoy some time together in the sunshine.<strong class="strong2">" </strong></p>
- <h4>-KYLER CALDWELL</h4>
-</div>
-  
-</div>
-
-</center>
-
-<div id="newsletter-wrapper">
-  <div id="newsletter-text-wrapper">
-      <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-  </div>
-
-  <div class="newsletter-button-wrapper">
-      <div class="newsletter-button">
-          <div class="newsletter-text-wrapper">
-              <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-              
-              <h3 class="arrow">↗</h3>
-          </div>
-          <hr class="hr-transparent">
+        <p><strong class="strong">" </strong>Our team was working on the anti-drink spiking product when the web
+          developer on our team suggested a brilliant feature. He proposed that we add a "safe word" option to the
+          app,
+          where users could set a word that would alert their friends or emergency contacts if they suspected their
+          drink had been spiked. We were all so excited about the idea, and we ended up celebrating with a virtual
+          dance
+          party on Zoom. It was amazing to see how much fun we could have while working on such an important
+          project.<strong class="strong2">" </strong></p>
+        <h4>-JOANNA POON</h4>
       </div>
-  </div>
-</div>
+      <div id="s1" class="anec">
 
-    </body>
+        <p><strong class="strong">" </strong> One day during a team meeting, our product designer unveiled her latest
+          concept for the anti-drink spiking product. It was a small, sleek device that could detect certain drugs in
+          the user's drink and alert them with a vibration or flashing light. We were all amazed by the simplicity and
+          elegance of the design, and we couldn't help but feel a sense of pride and excitement for what we were
+          creating. After the meeting, we decided to treat ourselves to some delicious cupcakes to celebrate our
+          progress.
+          <strong class="strong2">" </strong>
+
+        </p>
+        <h4>-LAUREN GRAHAM</h4>
+      </div>
+      <div id="s1" class="anec">
+
+        <p><strong class="strong">" </strong> As a team, we were working on the branding for our anti-drink spiking
+          product. One of the designers suggested the name "Guardian," which we all loved. It perfectly embodied the
+          idea of protection and safety that we wanted to convey. We spent the afternoon designing a logo and creating
+          a
+          website around the "Guardian" brand, and we couldn't help but feel a sense of joy and satisfaction at the
+          progress we were making. Later that day, we all went out for a picnic in the park to celebrate our hard work
+          and enjoy some time together in the sunshine.<strong class="strong2">" </strong></p>
+        <h4>-KYLER CALDWELL</h4>
+      </div>
+
+    </div>
+
+  </center>
+
+  <div id="newsletter-wrapper">
+    <div id="newsletter-text-wrapper">
+      <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+    </div>
+
+    <div class="newsletter-button-wrapper">
+      <div class="newsletter-button">
+        <div class="newsletter-text-wrapper">
+          <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+
+          <h3 class="arrow">↗</h3>
+        </div>
+        <hr class="hr-transparent">
+      </div>
+    </div>
+  </div>
+  <script>
+    // Initialize the member card with the first member's information
+    updateMemberCard();
+  </script>
+</body>
+
 </html>
