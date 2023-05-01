@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%, -35%);
     font-size: 14px;
-    color: black;
+    color: white !important;
     z-index: 0;
 }
 
@@ -28,7 +28,7 @@
     right: 0;
     bottom: 0;
     width: 300px;
-    background-color: #ffffff;
+    background-color: black !important;
     z-index: 1000;
     overflow-y: auto;
     padding: 20px;
@@ -73,8 +73,8 @@
 .view-full-cart-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: black;
-    color: white;
+    background-color: white !important;
+    color: black !important;
     border-radius: 1.5vh;
     text-decoration: none;
     text-align: center;
@@ -97,7 +97,7 @@
 }
 
 .dropdown-toggle {
-    color: #222222;
+    color: white !important;
     text-decoration: none;
 }
 
