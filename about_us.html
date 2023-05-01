@@ -318,6 +318,70 @@
       border: none;
       border-radius: 50%;
     }
+
+    @keyframes slideInDown {
+      0% {
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideOutDown {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+    }
+
+    @keyframes slideInUp {
+      0% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideOutUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+    }
+
+    .slide-in-down {
+      animation: slideInDown 0.5s ease-in-out forwards;
+    }
+
+    .slide-out-down {
+      animation: slideOutDown 0.5s ease-in-out forwards;
+    }
+
+    .slide-in-up {
+      animation: slideInUp 0.5s ease-in-out forwards;
+    }
+
+    .slide-out-up {
+      animation: slideOutUp 0.5s ease-in-out forwards;
+    }
   </style>
   <script>
     // JavaScript code to handle navigation
@@ -331,28 +395,43 @@
         { photo: 'mia_pfp2.jpeg', name: 'Mia Wang', role: 'Co-Founder & Desiger', email: 'mingxinw@usc.edu' },
       ];
 
-      function updateMemberCard() {
+      function updateMemberCard(animationType) {
         const member = members[currentMemberIndex];
-        document.getElementById('member-photo').src = member.photo;
-        document.getElementById('member-name').textContent = member.name;
-        document.getElementById('member-role').textContent = member.role;
-        document.getElementById('contact-button-link').href = 'mailto:' + member.email;
+        const businessCard = document.querySelector('.business-card');
 
-        // Get all the navigation buttons
-        const navButtons = document.querySelectorAll('.nav-button');
+        // Add the slide-out animation to the business card
+        businessCard.classList.add(`slide-out-${animationType}`);
 
-        // Loop through the navigation buttons and update their styles
-        navButtons.forEach((navButton, index) => {
-          if (index === currentMemberIndex) {
-            // Add the active class to the current member's icon
-            navButton.classList.add('nav-button-active');
-          } else {
-            // Remove the active class from other icons
-            navButton.classList.remove('nav-button-active');
-          }
-        });
+        // Wait for the slide-out animation to complete
+        setTimeout(() => {
+          // Update the member information
+          document.getElementById('member-photo').src = member.photo;
+          document.getElementById('member-name').textContent = member.name;
+          document.getElementById('member-role').textContent = member.role;
+          document.getElementById('contact-button-link').href = 'mailto:' + member.email;
+
+          // Remove the slide-out animation class
+          businessCard.classList.remove(`slide-out-${animationType}`);
+
+          // Add the slide-in animation class
+          businessCard.classList.add(`slide-in-${animationType}`);
+
+          // Update the navigation buttons' styles
+          const navButtons = document.querySelectorAll('.nav-button');
+          navButtons.forEach((navButton, index) => {
+            if (index === currentMemberIndex) {
+              navButton.classList.add('nav-button-active');
+            } else {
+              navButton.classList.remove('nav-button-active');
+            }
+          });
+
+          // Remove the slide-in animation class after it completes
+          setTimeout(() => {
+            businessCard.classList.remove(`slide-in-${animationType}`);
+          }, 500);
+        }, 500);
       }
-
 
       function navigateToMember(index) {
         currentMemberIndex = index;
@@ -363,7 +442,7 @@
       function navigateUp() {
         if (currentMemberIndex > 0) {
           currentMemberIndex--;
-          updateMemberCard();
+          updateMemberCard('up');
         }
       }
 
@@ -371,7 +450,7 @@
       function navigateDown() {
         if (currentMemberIndex < members.length - 1) {
           currentMemberIndex++;
-          updateMemberCard();
+          updateMemberCard('down');
         }
       }
 
@@ -387,8 +466,7 @@
       });
 
       // Initialize the member card with the first member's information
-      updateMemberCard();
-
+      updateMemberCard('down'); // Use 'down' animation for initial load
 
       // Add event listeners for the up and down buttons
       document.querySelector('.arrow-button.up').addEventListener('click', navigateUp);
