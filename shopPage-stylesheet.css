@@ -1,0 +1,133 @@
+/* Add to cart button */
+.flavors .add-to-cart-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 1vh;
+    color: white;
+    cursor: pointer;
+}
+
+.flavors:hover .add-to-cart-btn {
+    display: block;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.flavors {
+    position: relative;
+    width: 360px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: 1s;
+    text-align: center;
+    border-radius: 25px;
+}
+
+/* Product Page */
+#drink1 {
+    background-image: url("drink1.jpeg");
+    background-size: 115%;
+}
+
+#drink2 {
+    background-image: url("drink 2.jpeg");
+    background-size: 110%;
+}
+
+#drink3 {
+    background-image: url("drink 3.jpeg");
+    background-size: 110%;
+}
+
+#drink4 {
+    background-image: url("drink1.jpeg");
+    background-size: 115%;
+}
+
+#drink5 {
+    background-image: url("drink 2.jpeg");
+    background-size: 110%;
+}
+
+#drink6 {
+    background-image: url("drink 3.jpeg");
+    background-size: 110%;
+}
+
+#drink7 {
+    background-image: url("drink 3.jpeg");
+    background-size: 110%;
+}
+
+#drink8 {
+    background-image: url("drink1.jpeg");
+    background-size: 115%;
+}
+
+#drink9 {
+    background-image: url("drink 2.jpeg");
+    background-size: 110%;
+}
+
+.flavorname {
+    color: #0C0B0B;
+    text-align: left;
+    font-size: 18pt;
+    font-family: "Agrandir Variable";
+    padding-bottom: 0;
+    z-index: 1;
+    position: relative;
+    top: 100%;
+    margin-top: 10px;
+}
+
+.price {
+    color: #0C0B0B;
+    text-align: left;
+    font-size: 14pt;
+    z-index: 1;
+    position: relative;
+    top: 100%;
+    margin-top: 5px;
+    font-family: "Agrandir Variable";
+    font-weight: 250;
+}
+
+#boxes {
+    width: 100%;
+    margin: auto;
+    margin-top: -700px;
+}
+
+#outercontainer {
+    width: 100%;
+    height: auto;
+    background-color: #FFFDF5;
+    color: #222222;
+    font-family: "Object Sans";
+}
+
+#header {
+    font-size: 18pt;
+    text-align: center;
+    position: relative;
+    top: -740px;
+
+}
