@@ -117,6 +117,21 @@
 
         <script src="globalShoppingCartStuff-javascript.js"></script>
         <script src="globalDarkMode-javascript.js"></script>
+        <script>
+        function initializeDarkMode() {
+            // Get the value of the darkMode cookie
+            const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
+            const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
+          
+            // If the darkMode cookie is set to "true", enable dark mode
+            if (darkModeValue === 'true') {
+              toggleDarkMode();
+            }
+          }
+          
+          // Call the initializeDarkMode function when the page loads
+          window.addEventListener('DOMContentLoaded', initializeDarkMode);
+        </script>
 
 </body>
 

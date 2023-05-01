@@ -14,16 +14,30 @@
   <style></style>
 
   <script>
+    function initializeDarkMode() {
+      // Get the value of the darkMode cookie
+      const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
+      const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
+
+      // If the darkMode cookie is set to "true", enable dark mode
+      if (darkModeValue === 'true') {
+        toggleDarkModeAboutUs();
+      }
+    }
+
+    // Call the initializeDarkMode function when the page loads
+    window.addEventListener('DOMContentLoaded', initializeDarkMode);
+
     // JavaScript code to handle navigation
     function initializeGallery() {
       let currentMemberIndex = 0;
       const members = [
-  { photo: 'joanna_pfp.jpeg', name: 'Joanna Poon', role: 'Co-Founder & Designer', email: 'jhpoon@usc.edu', altText: 'Profile picture of Joanna Poon' },
-  { photo: 'kyler_pfp2.jpg', name: 'Kyler Caldwell', role: 'Co-Founder & Product Manager', email: 'kncaldwe@usc.edu', altText: 'Profile picture of Kyler Caldwell' },
-  { photo: 'jaden_pfp.png', name: 'Jaden Steinhoff', role: 'Co-Founder & Web Designer', email: 'jsteinho@usc.edu', altText: 'Profile picture of Jaden Steinhoff' },
-  { photo: 'lauren_pfp.png', name: 'Lauren Graham', role: 'Co-Founder & Designer', email: 'lggraham@usc.edu', altText: 'Profile picture of Lauren Graham' },
-  { photo: 'mia_pfp2.jpeg', name: 'Mia Wang', role: 'Co-Founder & Desiger', email: 'mingxinw@usc.edu', altText: 'Profile picture of Mia Wang' },
-];
+        { photo: 'joanna_pfp.jpeg', name: 'Joanna Poon', role: 'Co-Founder & Designer', email: 'jhpoon@usc.edu', altText: 'Profile picture of Joanna Poon' },
+        { photo: 'kyler_pfp2.jpg', name: 'Kyler Caldwell', role: 'Co-Founder & Product Manager', email: 'kncaldwe@usc.edu', altText: 'Profile picture of Kyler Caldwell' },
+        { photo: 'jaden_pfp.png', name: 'Jaden Steinhoff', role: 'Co-Founder & Web Designer', email: 'jsteinho@usc.edu', altText: 'Profile picture of Jaden Steinhoff' },
+        { photo: 'lauren_pfp.png', name: 'Lauren Graham', role: 'Co-Founder & Designer', email: 'lggraham@usc.edu', altText: 'Profile picture of Lauren Graham' },
+        { photo: 'mia_pfp2.jpeg', name: 'Mia Wang', role: 'Co-Founder & Desiger', email: 'mingxinw@usc.edu', altText: 'Profile picture of Mia Wang' },
+      ];
 
 
       function updateMemberCard(animationType) {

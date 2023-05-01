@@ -14,6 +14,22 @@
     <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
     <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
     <link id="dark-mode-ask-stylesheet" rel="stylesheet" href="darkModeAsk.css" disabled>
+
+    <script>
+        function initializeDarkMode() {
+            // Get the value of the darkMode cookie
+            const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
+            const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
+
+            // If the darkMode cookie is set to "true", enable dark mode
+            if (darkModeValue === 'true') {
+                toggleDarkModeAsk();
+            }
+        }
+
+        // Call the initializeDarkMode function when the page loads
+        window.addEventListener('DOMContentLoaded', initializeDarkMode);
+    </script>
 </head>
 
 <body>
