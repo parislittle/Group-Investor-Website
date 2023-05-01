@@ -22,9 +22,13 @@ function toggleDarkMode() {
     if (darkModeStylesheet.disabled) {
         // If it is disabled, enable it
         darkModeStylesheet.disabled = false;
+        // Add the dark-mode class to the body element
+        document.body.classList.add('dark-mode');
     } else {
         // If it is enabled, disable it
         darkModeStylesheet.disabled = true;
+        // Remove the dark-mode class from the body element
+        document.body.classList.remove('dark-mode');
     }
 
     // Check if the global stylesheet is disabled
