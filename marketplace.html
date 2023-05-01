@@ -4,8 +4,105 @@
     <title>Contact Us - Tabbed</title>
     <script></script>
     <link rel="stylesheet" href="tabbed-style.css">
+    <link rel="stylesheet" href="marketplace.css">
     <style>
         body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.titlebox,
+.secondtitlebox {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#imgs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.imgbox {
+    width: 30%;
+}
+
+.imgbox img,
+.imgblur {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.imgblur {
+    opacity: 60%;
+    border: 3px solid red;
+}
+
+#tabbedimg {
+    border: 3px solid rgb(157, 214, 157);
+}
+
+#maintxt {
+    margin-bottom: 40px;
+}
+
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.marketplace-title {
+    font-family: "Agrandir Variable";
+    padding-bottom: 1vw;
+    font-size: 18pt;
+    text-align: center;
+
+}
+
+.marketplace-headings {
+    font-family: "Agrandir Variable";
+    font-size: 20pt;
+    line-height: 0%;
+
+}
+
+@media (max-width: 768px) {
+    .boxes-container {
+        flex-direction: column;
+    }
+} body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;

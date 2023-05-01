@@ -1,0 +1,103 @@
+.team {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: auto;
+    
+    
+}
+
+.people {
+    width: 200px; height: 225px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: 1s;
+    text-align: center;
+    border-radius: 25px;
+    background-color: black;
+}
+
+#hamin{
+    background-image: url("haminPhoto.jpg");
+    background-size: 110%;
+    background-position: 0px -40px;
+}
+
+#paris{
+    background-image: url("profile copy.jpg") ;
+    background-size: 110%;
+}
+
+#dom{
+    background-image: url("dom-photo.png");
+    background-size: 120%;
+}
+
+#campbelle{
+    background-image: url("prof-photo-campbelle.jpg");
+    background-size: 100%;
+}
+
+#jaden{
+    background-image: url("jaden_pfp.png") ;
+    background-size: 115%;
+    background-position: -15px
+}
+
+#tiana{
+    background-image: url("tianadayusc.jpg");
+    background-size: 115%;
+    background-position: -20px;
+}
+
+#boxes2 {
+    width: 100%;
+    margin: auto;
+    margin-top: -780px;
+    margin-bottom: 50px;
+}
+
+.name{
+    color: #0C0B0B;
+    text-align: left;
+    font-size: 15pt;
+    font-family: "Agrandir Variable";
+    padding-bottom: 0;
+    z-index: 1;
+    position: relative;
+    top: 100%;
+    margin-top: 10px;
+}
+
+.role{
+    color: #0C0B0B;
+    text-align: left;
+    font-size: 9pt;
+    z-index: 1;
+    position: relative;
+    top: 100%;
+    margin-top: 5px;
+    font-family: "Agrandir Variable";
+    font-weight: 250;
+}
+
+.theteam {
+    font-family: "Agrandir Variable";
+    font-size: 18pt;
+    padding-bottom: 1vw;
+    text-align: center;
+}
+
+#outercontainer2{
+    width: 100%;
+    height: fit-content;
+    background-color: #FFFDF5;
+    color: #222222;
+}
+
