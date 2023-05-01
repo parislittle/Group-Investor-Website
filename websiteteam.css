@@ -98,3 +98,12 @@
     padding: 8vw 0 8vw 0;
 }
 
+.quality{
+    font-family: "Object Sans";
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
