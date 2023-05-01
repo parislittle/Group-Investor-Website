@@ -8,12 +8,11 @@
 
             #graph{
                 width: 100%;
-                border: 2px black solid;
+                border: 2px white solid !important;
                 border-radius: 25px;
                 padding: 2vw;
                 height: 550px;
                 margin-bottom: 50px;
-                margin: auto;
             }
 
             .theteam {
@@ -47,14 +46,14 @@
             }
 
             .data {
-                width: 250px; height: 130px;
+                width: 278px; height: 130px;
                 margin-left: 10px;
                 margin-right: 10px;
                 text-align: center;
                 margin-bottom: 20px;
                 text-align: center;
                 border-radius: 25px;
-                border: 2px solid black;
+                border: 2px solid white !important;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -75,12 +74,8 @@
             }
 
             .salestitle{
-<<<<<<< Updated upstream
+                color: white !important;
                 text-align: left;
-=======
-                color: #0C0B0B;
-                text-align: center;
->>>>>>> Stashed changes
                 font-size: 11pt;
                 font-family: "Object Sans";
                 font-weight: 600;
@@ -92,6 +87,7 @@
             }
 
             .description{
+                color: white !important;
                 text-align: center;
                 font-size: 10pt;
                 z-index: 1;

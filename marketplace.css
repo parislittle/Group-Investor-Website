@@ -10,21 +10,6 @@ body {
     padding: 20px;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.nav-right {
-    display: flex;
-}
-
-.nav-item {
-    margin-left: 10px;
-}
-
 .titlebox,
 .secondtitlebox {
     text-align: center;
@@ -43,13 +28,13 @@ body {
 
 .imgbox img,
 .imgblur {
-    width: 100%;
+    width: 20vw;
     border-radius: 20px;
 }
 
 .imgblur {
     opacity: 60%;
-    border: 3px solid red;
+    border: 3px solid black;
 }
 
 #tabbedimg {
@@ -57,7 +42,9 @@ body {
 }
 
 #maintxt {
-    margin-bottom: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-weight: 200;
 }
 
 .boxes-container {
@@ -71,123 +58,97 @@ body {
     border: 1px solid black;
     padding-left: 10px;
     padding-right: 10px;
-    margin: 10px;
+    width: 70vw;
     box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 1vw;
+    border-radius: 15px;
 }
 
 .marketplace-title {
     font-family: "Agrandir Variable";
-    padding-bottom: 1vw;
     font-size: 18pt;
     text-align: center;
-
 }
 
 .marketplace-headings {
     font-family: "Agrandir Variable";
     font-size: 20pt;
     line-height: 0%;
-
 }
 
 @media (max-width: 768px) {
     .boxes-container {
         flex-direction: column;
     }
-} body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.compete {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
+.competitors {
+    position: relative;
+    width: 20vw;
+    height: 19.5vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    transition: 1s;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid black;
+}
 
-        .nav-right {
-            display: flex;
-        }
+#ball2 {
+    background-image: url("ball2.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -10px 0px;
+}
 
-        .nav-item {
-            margin-left: 10px;
-        }
+#nightcap {
+    background-image: url("nightcap.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -10px 0px;
+}
 
-        .titlebox,
-        .secondtitlebox {
-            text-align: center;
-            margin: 40px 0;
-        }
+#tabbedlogo {
+    background-image: url("tabbed_logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #FFFDF5 !important;
+}
 
-        #imgs {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
+hr {
+    width: 90%;
+}
 
-        .imgbox {
-            width: 30%;
-        }
+#cashflow {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 70vw;
+    height: 57vw;
+    background-image: url("cashflowprojection.png");
+    background-size: 100%;
+    margin-bottom: 50px;
+}
 
-        .imgbox img,
-        .imgblur {
-            width: 100%;
-            border-radius: 20px;
-        }
-
-        .imgblur {
-            opacity: 60%;
-            border: 3px solid red;
-        }
-
-        #tabbedimg {
-            border: 3px solid rgb(157, 214, 157);
-        }
-
-        #maintxt {
-            margin-bottom: 40px;
-        }
-
-        .boxes-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .box {
-            flex: 1;
-            border: 1px solid black;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin: 10px;
-            box-sizing: border-box;
-        }
-
-        .marketplace-title {
-            font-family: "Agrandir Variable";
-            padding-bottom: 1vw;
-            font-size: 18pt;
-            text-align: center;
-
-        }
-
-        .marketplace-headings {
-            font-family: "Agrandir Variable";
-            font-size: 20pt;
-            line-height: 0%;
-
-        }
-
-        @media (max-width: 768px) {
-            .boxes-container {
-                flex-direction: column;
-            }
-        }
+#financialplan {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 70vw;
+    height: 47vw;
+    background-image: url("financialplan.png");
+    background-size: 100%;
+    margin-bottom: 50px;
+}

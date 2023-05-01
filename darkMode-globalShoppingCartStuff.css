@@ -94,6 +94,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    color: white !important;
 }
 
 .dropdown-toggle {

@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="shoppingcart2.css">
     <link rel="stylesheet" href="shoppingcart.css">
     <style>
+
+        button{
+            font-family: "Object Sans";
+            font-weight: 300;
+            font-size: 10pt;
+        }
+
+        .item-total-price-{
+            
+        }
+
+        
        
     </style>
 </head>
@@ -176,7 +188,7 @@
 
                 // Remove Button
                 const removeButton = document.createElement('button');
-                removeButton.textContent = 'Remove';
+                removeButton.textContent = 'REMOVE';
                 removeButton.onclick = () => removeFromCart(item.id);
                 itemDiv.appendChild(removeButton);
 
