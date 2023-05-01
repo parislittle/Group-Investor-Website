@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        .thank-you-container {
+            text-align: center;
+            font-size: 36px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo-animation.gif" alt="Tabbed Logo Animation">
+    <div class="thank-you-container">
+        <p>Thank You</p>
+        <p>for your part</p>
+        <p> in preventing drink spiking!</p>
+
+    </div>
+</body>
+
+</html>
