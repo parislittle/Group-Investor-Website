@@ -8,7 +8,6 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -50,13 +49,13 @@
 
         .imgbox img,
         .imgblur {
-            width: 100%;
+            width: 20vw;
             border-radius: 20px;
         }
 
         .imgblur {
             opacity: 60%;
-            border: 3px solid red;
+            border: 3px solid black;
         }
 
         #tabbedimg {
@@ -64,7 +63,9 @@
         }
 
         #maintxt {
-            margin-bottom: 40px;
+            padding-left: 200px;
+            padding-right: 200px;
+            font-weight: 200;
         }
 
         .boxes-container {
@@ -84,7 +85,6 @@
 
         .marketplace-title {
             font-family: "Agrandir Variable";
-            padding-bottom: 1vw;
             font-size: 18pt;
             text-align: center;
 
@@ -102,6 +102,60 @@
                 flex-direction: column;
             }
         }
+
+        .compete {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .competitors {
+            position: relative;
+            width: 20vw;
+            height: 19.5vw;
+            margin-left: 2%;
+            margin-right: 2%;
+            text-align: center;
+            transition: 1s;
+            text-align: center;
+            border-radius: 25px;
+            border: 2px solid black;
+        }
+
+        #ball2{
+            background-image: url("ball2.png");
+            background-size: 110%;
+            background-repeat: no-repeat;
+            background-position: -10px 0px;
+
+        }
+
+        #nightcap{
+            background-image: url("nightcap.png");
+            background-size: 110%;
+            background-repeat: no-repeat;
+            background-position: -10px 0px;
+
+        }
+
+        #tabbedlogo{
+
+            background-image: url("tabbed_logo.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+        }
+
+        hr{
+            width: 90%;
+        }
+
+        
+
     </style>
 </head>
 
@@ -123,24 +177,22 @@
     <div class="titlebox" id="prototype">
         <p class = "marketplace-title">MARKETPLACE</p>
     </div>
-    <hr>
     <!-- Images section -->
-    <div id="imgs">
-        <div class="imgbox">
-            <img class="imgblur" src="ball2.png">
+    
+    <div class="compete">
+        <div class="competitors" id="ball2">
         </div>
-        <div class="imgbox">
-            <img class="imgblur" src="nightcap.png">
+        <div class="competitors" id="nightcap">
         </div>
-        <div class="imgbox">
-            <img id="tabbedimg" src="tabbed_logo.png">
+        <div class="competitors" id = "tabbedlogo">
         </div>
     </div>
+<br>
+    <hr>
     <!-- Main text section -->
+    <p class = "marketplace-title">Competitors:</p>
     <div id="maintxt">
-        <hr>
-        <br><br>
-        &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;While there currently are not any direct competitors with Tabbed’s
+        &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;While there currently are not any direct competitors with Tabbed's
         redesigned can lid, there are
         several reusable, additive solutions in the anti-drink spiking industry like Nightcap, a scrunchie
         with a hidden cap to cover the top of a drink, leaving only a hole for the straw. While this
@@ -167,8 +219,9 @@
         positioning as a drink-spiking preventative measure provides consumers with an effortless and
         reliable way to protect their drinks from potential tampering.
         <br><br>
-        <hr>
     </div>
+
+    <hr>
 
 
     <div class="secondtitlebox" id="prototype">
@@ -178,7 +231,7 @@
         <p class = "marketplace-headings">Can Design Optimization:</p>
         <p>
         Our unique can design and lid mechanism serve as the
-        cornerstones of our product’s value proposition, so we are investing in R&D efforts that
+        cornerstones of our product's value proposition, so we are investing in R&D efforts that
         focus on refining and improving these features. We are conducting consumer research
         through surveys to gather feedback on the usability and effectiveness of the lid
         mechanism to reduce drink-spiking. We are also exploring different materials (i.e.
@@ -189,7 +242,7 @@
         <p class = "marketplace-headings">Product Formulation:</p>
         <p>
         We aim to develop an alcoholic beverage that meets our target
-        customers’ preferences and aligns with our brand values. We are gathering feedback to
+        customers' preferences and aligns with our brand values. We are gathering feedback to
         determine the most popular recipes and experiment with different types of flavor profiles
         and ingredients. We want to create a product that stands out in a crowded marketplace.</p>
     </div>
@@ -213,6 +266,9 @@
     </div>
 
     <p class = "marketplace-title">Projected Financial</h1>
+
+        <div id = "cashflow"></div>
+        <div id = "financialplan"></div>
 
     <img src="cashflowprojection.png">
     <img src="financialplan.png">
