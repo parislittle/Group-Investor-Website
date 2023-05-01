@@ -3,8 +3,42 @@
         <title>Tabbed</title>
         <link rel="stylesheet" href="tabbed-style.css">
         <meta charset="UTF-8">
+        <script src="http://code.jquery.com/jquery.js"></script>
         <style>
+            #buttons {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                padding: 2vw;
+                display: flex;
+                gap: 5px;
+            }
+
+            .sequence_buttons {
+                background-color: #222222;
+                color: #FFFDF5;
+                height: 40px;
+                width: 40px;
+                border-radius: 25px;
+            }
         </style>
+        <script>
+            var seq_1 = function() {     
+                $("#audio_1").trigger("play");
+
+                $("#w1").
+                    animate({
+                        "left": "1800px"
+                    }, 6200)
+            }
+
+            $(document).ready(function(){
+                $("#seq_1").on("click", function(){ 
+                    seq_1();		
+                    
+                });
+            });
+        </script>
     </head> 
     <body>
         <div class="navbar">
@@ -20,10 +54,18 @@
             </div>
         </div>
 
-        <div id="animation-section">
-            
+        <div id="buttons">
+            <div class="sequence_buttons" id="seq_1">1</div>
+            <div class="sequence_buttons" id="seq_2">2</div>
+            <div class="sequence_buttons" id="seq_3">3</div>
         </div>
 
+        <div id="animation-section">
+
         </div>
+
+        <audio id="audio_1">
+            <source type="audio/audio_1" src="audio_1.mp3">
+        </audio>
     </body>
 </html>
