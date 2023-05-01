@@ -74,7 +74,6 @@
             }
 
             .salestitle{
-                color: #0C0B0B;
                 text-align: left;
                 font-size: 11pt;
                 font-family: "Object Sans";
@@ -87,7 +86,6 @@
             }
 
             .description{
-                color: #0C0B0B;
                 text-align: center;
                 font-size: 10pt;
                 z-index: 1;
