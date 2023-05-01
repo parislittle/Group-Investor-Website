@@ -8,7 +8,7 @@
 
             #graph{
                 width: 100%;
-                border: 2px black solid;
+                border: 2px white solid !important;
                 border-radius: 25px;
                 padding: 2vw;
                 height: 550px;
@@ -53,7 +53,7 @@
                 margin-bottom: 20px;
                 text-align: center;
                 border-radius: 25px;
-                border: 2px solid black;
+                border: 2px solid white !important;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -74,7 +74,7 @@
             }
 
             .salestitle{
-                color: #0C0B0B;
+                color: white !important;
                 text-align: left;
                 font-size: 11pt;
                 font-family: "Object Sans";
@@ -87,7 +87,7 @@
             }
 
             .description{
-                color: #0C0B0B;
+                color: white !important;
                 text-align: center;
                 font-size: 10pt;
                 z-index: 1;

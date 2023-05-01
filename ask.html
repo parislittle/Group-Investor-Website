@@ -1,326 +1,267 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="tabbed-style.css">
-        <link rel="stylesheet" href="ask.css">
-        <meta charset="UTF-8">
-        <title>Ask</title>
-        <style>
-            #innercontainer{
-                width: 60%;
-                height: fit-content;
-                margin: auto;
-                padding: 4vw 0vw 8vw 0vw;
 
-            }
+<head>
+    <title>Ask</title>
 
-            #graph{
-                width: 100%;
-                border: 2px black solid;
-                border-radius: 25px;
-                padding: 2vw;
-            }
+    <meta charset="UTF-8">
 
-            .theteam {
-                font-family: "Agrandir Variable";
-                font-size: 18pt;
-                padding-bottom: 1vw;
-                text-align: center;
-            }
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+    <link id="ask-stylesheet" rel="stylesheet" href="ask.css">
 
-            .asktext{
-                font-family: "Agrandir Variable";
-                font-size: 18pt;
-                text-align: left;
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+    <link id="dark-mode-ask-stylesheet" rel="stylesheet" href="darkModeAsk.css" disabled>
+</head>
 
-            }
+<body>
+    <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
 
-            #boxes3{
-                width: 100%;
-                margin: auto;
-                margin-top: -780px;
-            }
+    <div id="cart-overlay" class="cart-overlay hidden">
+        <div class="cart-overlay-content">
+            <h3 style="text-align:center">Your Cart</h3>
+            <hr>
+            <br>
+            <div id="cart-overlay-items"></div>
+            <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+            <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        </div>
+    </div>
 
-            .stats {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                margin: auto;
-            }
-
-            .data {
-                width: 278px; height: 130px;
-                margin-left: 10px;
-                margin-right: 10px;
-                text-align: center;
-                margin-bottom: 20px;
-                text-align: center;
-                border-radius: 25px;
-                border: 2px solid black;
-            }
-
-            #stat1{
-                background-image:_;
-                background-size: 100%;
-            }
-
-            #stat2{
-                background-image:_;
-                background-size: 100%;
-            }
-
-            #stat3{
-                background-image:_;
-                background-size: 100%;
-            }
-
-            #stat4{
-                background-image:_;
-                background-size: 100%;
-            }
-
-            #stat5{
-                background-image:_;
-                background-size: 100%;
-            }
-
-            #stat6{
-                background-image:_;
-                background-size: 100%;
-            }
-
-
-            .valueprop{
-                font-size: 14pt;
-                font-family: "Object Sans";
-                font-weight:300;
-            }
-
-            .officialask{
-
-                font-size: 26.5pt;
-                font-family: "Object Sans";
-                font-weight:300;
-                text-align: center;
-
-            }
-
-            .chartBox {
-                width: 100%;
-            }
-           
-        </style>
-    </head>
-
-    <body>
-        <div id = "outercontainer3">
-            <br><br><br><br>
-            <div id="hero-section">
-                <div class="navbar">
-                    <a class="nav-left" href="tabbed-investor-site.html">
-                        <img class="tabbed-logo" src="TABBED.svg">
-                    </a>
-                    <div class="nav-right">
-                        <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                        <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                        <a class="nav-item" id="business" href="business.html">Business</a>
-                        <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                        <div class="nav-item shopping-cart-wrapper">
-                            <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                            <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+    <div id="outercontainer3">
+        <br><br><br><br>
+        <div id="hero-section">
+            <div class="navbar">
+                <a class="nav-left" href="tabbed-investor-site.html">
+                    <img class="tabbed-logo" src="TABBED.svg">
+                </a>
+                <div class="nav-right">
+                    <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                    <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                    <div class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
+                                class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                            <a class="dropdown-item" href="timeline.html">Timeline</a>
                         </div>
                     </div>
+                    <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+                    <div class="nav-item shopping-cart-wrapper">
+                        <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                        <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+                    </div>
                 </div>
-                <br><br><br><br>
             </div>
+            <br><br><br><br>
+        </div>
 
-            <div id = "innercontainer">
-                <div id = "boxes3">
-                    <p class = "theteam">THE ASK</p>
-                    <p class = "asktext">PNL PROJECTION:</p>
-                <div id = "graph">
+        <div id="innercontainer">
+            <div id="boxes3">
+                <p class="theteam">THE ASK</p>
+                <p class="asktext">PNL PROJECTION:</p>
+                <div id="graph">
                     <div class="chartBox">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
 
-                <p class = "asktext">SALES STRATEGY:</p>
+                <p class="asktext">SALES STRATEGY:</p>
 
-                <div class = "stats">
-                    
-                    <div class="data" id = "stat1">
-                        <div class = "salestitle">
+                <div class="stats">
+
+                    <div class="data" id="stat1">
+                        <div class="salestitle">
                             <p>Determine Sales Channels:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>Focus on online retailers, create an e-commerce, direct-to-consumer sales</p>
                         </div>
                     </div>
-                    
-                    <div class="data" id = "stat2">
-                        <div class = "salestitle">
+
+                    <div class="data" id="stat2">
+                        <div class="salestitle">
                             <p>Distributors:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>Offer samples to distributors, establish relationship, follow up regularly</p>
                         </div>
                     </div>
-                    
-                    <div class="data" id = "stat3">
-                        <div class = "salestitle">
+
+                    <div class="data" id="stat3">
+                        <div class="salestitle">
                             <p>Set Sales Goals:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>Achiece 72,000 unit sales within first year, track progress on monthly basis</p>
                         </div>
                     </div>
-    
-                    <div class="data" id = "stat4">
-                        <div class = "salestitle">
+
+                    <div class="data" id="stat4">
+                        <div class="salestitle">
                             <p>Promotional Materials:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>focus on visually appealling and informative mateirals, highlight unique features</p>
                         </div>
                     </div>
-                    
-                    <div class="data" id = "stat5">
-                        <div class = "salestitle">
+
+                    <div class="data" id="stat5">
+                        <div class="salestitle">
                             <p>Sales Tactics:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>social media campaigns, influencer marketing, trade shows, promotional discounts</p>
                         </div>
                     </div>
-                    
-                    <div class="data" id = "stat6">
-                        <div class = "salestitle">
+
+                    <div class="data" id="stat6">
+                        <div class="salestitle">
                             <p>Measure Performance:</p>
                         </div>
-                        <div class= "description">
+                        <div class="description">
                             <p>key performance indicators (KPIs), customer feedback, social media engagement</p>
                         </div>
                     </div>
-    
+
                 </div>
 
-                <p class = "asktext">VALUE PROPOSITION:</p>
+                <p class="asktext">VALUE PROPOSITION:</p>
 
-                <p class = "valueprop">Our company offers a unique can system that prevents drink spiking, providing a safer and more enjoyable social drinking experience for everyone. 
-                    Our innovative can design incorporates a unique tab that can be rotated to cover the opening where the drink is consumed, providing a patented locking 
-                    mechanism that prevents drink spiking and guarantees the safety of the drink by making it inaccessible to potential tampering.</p>
-                    
-                <p class = "valueprop">Investing in our company means investing in a solution to a serious and growing problem in the drinking culture. 
-                    Drink spiking is a prevalent issue that affects people of all ages and genders, and our product offers a simple and effective way to prevent it.</p>
-                    
-    
-                <p class = "valueprop">Not only does our can system provide a safer alternative for consumers, but it also has the potential to capture a significant share of the 
-                    market by differentiating ourselves from other beverage brands. With our unique selling proposition, we believe we can establish ourselves 
+                <p class="valueprop">Our company offers a unique can system that prevents drink spiking, providing a
+                    safer and more enjoyable social drinking experience for everyone.
+                    Our innovative can design incorporates a unique tab that can be rotated to cover the opening where
+                    the drink is consumed, providing a patented locking
+                    mechanism that prevents drink spiking and guarantees the safety of the drink by making it
+                    inaccessible to potential tampering.</p>
+
+                <p class="valueprop">Investing in our company means investing in a solution to a serious and growing
+                    problem in the drinking culture.
+                    Drink spiking is a prevalent issue that affects people of all ages and genders, and our product
+                    offers a simple and effective way to prevent it.</p>
+
+
+                <p class="valueprop">Not only does our can system provide a safer alternative for consumers, but it also
+                    has the potential to capture a significant share of the
+                    market by differentiating ourselves from other beverage brands. With our unique selling proposition,
+                    we believe we can establish ourselves
                     as a trusted and reliable choice for consumers who prioritize safety and security.</p>
-                    
-                <p class = "valueprop">Investing in our company is not only a smart financial decision, but it also allows you to support a business that prioritizes 
-                    the well-being of its customers. Our mission is to provide a safe and enjoyable drinking experience for all, and with your investment, 
+
+                <p class="valueprop">Investing in our company is not only a smart financial decision, but it also allows
+                    you to support a business that prioritizes
+                    the well-being of its customers. Our mission is to provide a safe and enjoyable drinking experience
+                    for all, and with your investment,
                     we can make that a reality.</p>
 
 
-                <p class = "asktext">OUR ASK AND DEAL TERMS:</p>
+                <p class="asktext">OUR ASK AND DEAL TERMS:</p>
 
-                <p class = "officialask">We are asking for <strong>$600K</strong> for the first round.</p>
+                <p class="officialask">We are asking for <strong>$600K</strong> for the first round.</p>
 
-                <p class = "valueprop"><strong>We intend to use these funds on...</strong></p>
+                <p class="valueprop"><strong>We intend to use these funds on...</strong></p>
 
-                <p class = "valueprop"><strong>1.<em> Startup costs: </em></strong>As a new company, we need to invest in product development, packaging design, 
-                    legal fees for filing our utility patent, and marketing expenses. Because of the complexity of our product, we predict that our costs 
+                <p class="valueprop"><strong>1.<em> Startup costs: </em></strong>As a new company, we need to invest in
+                    product development, packaging design,
+                    legal fees for filing our utility patent, and marketing expenses. Because of the complexity of our
+                    product, we predict that our costs
                     will range from tens of thousands to hundred thousand dollars.</p>
 
-                <p class = "valueprop"><strong>2.<em> Manufacturing and production: </em></strong>To bring Tabbed to market, we will need to invest in manufacturing 
-                    and production costs, including equipment, raw materials, and labor costs. We will need to invest in a variety of capital expenditures, 
-                    from canning and bottling equipment to manufacturing facilities and warehouses to support our production and distribution operations.</p>
+                <p class="valueprop"><strong>2.<em> Manufacturing and production: </em></strong>To bring Tabbed to
+                    market, we will need to invest in manufacturing
+                    and production costs, including equipment, raw materials, and labor costs. We will need to invest in
+                    a variety of capital expenditures,
+                    from canning and bottling equipment to manufacturing facilities and warehouses to support our
+                    production and distribution operations.</p>
 
-                <p class = "valueprop"><strong>3.<em> Marketing and sales: </em></strong> In order to build brand awareness and generate sales, we will need to invest 
-                    in marketing and advertising efforts. We plan on utilizing digital advertising, influencer marketing, and sponsorship events to bring about 
-                    brand awareness. Other expenses in this field include hiring a marketing director, ad-spend on advertising campaigns, and sponsoring events 
+                <p class="valueprop"><strong>3.<em> Marketing and sales: </em></strong> In order to build brand
+                    awareness and generate sales, we will need to invest
+                    in marketing and advertising efforts. We plan on utilizing digital advertising, influencer
+                    marketing, and sponsorship events to bring about
+                    brand awareness. Other expenses in this field include hiring a marketing director, ad-spend on
+                    advertising campaigns, and sponsoring events
                     to drive sales.</p>
 
-                <p class = "valueprop"><strong>4.<em> Expansion and acquisitions: </em></strong> We want to use our funds to support expansion efforts. 
-                    We are entering new markets or acquiring complementary businesses that can help us expand our product line and distribution network. </p>
-                </div>
+                <p class="valueprop"><strong>4.<em> Expansion and acquisitions: </em></strong> We want to use our funds
+                    to support expansion efforts.
+                    We are entering new markets or acquiring complementary businesses that can help us expand our
+                    product line and distribution network. </p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <div id="newsletter-wrapper">
+            <div id="newsletter-text-wrapper">
+                <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
             </div>
 
-                
-        </div>
-        <div class="footer">
-                    <div id="newsletter-wrapper">
-                        <div id="newsletter-text-wrapper">
-                            <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-                        </div>
-        
-                        <div class="newsletter-button-wrapper">
-                            <div class="newsletter-button">
-                                <div class="newsletter-text-wrapper">
-                                    <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-                                    </input>
-                                    <h3 class="arrow">↗</h3>
-                                </div>
-                                <hr class="hr-transparent">
-                            </div>
-                        </div>
+            <div class="newsletter-button-wrapper">
+                <div class="newsletter-button">
+                    <div class="newsletter-text-wrapper">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+                        </input>
+                        <h3 class="arrow">↗</h3>
                     </div>
+                    <hr class="hr-transparent">
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
         // setup 
-        
+
         drawChart();
-    
-        async function drawChart(){
+
+        async function drawChart() {
             const dataPoints = await getData();
             const data = {
-            labels: dataPoints.labels,
-            datasets: [{
-                label: dataPoints.grossProfitName,
-                data: dataPoints.grossProfitData,
-                backgroundColor: ['rgba(255, 26, 104, 0.2)'],
-                borderColor: ['rgba(255, 26, 104, 1)',],
-                tension: 0.4
-            },{
-                label: dataPoints.operatingExpensesName,
-                data: dataPoints.operatingExpensesData,
-                backgroundColor: ['rgba(54, 162, 235, 0.2)'],
-                borderColor: ['rgba(54, 162, 235, 1)'],
-                tension: 0.4
-            },{
-                label: dataPoints.netProfitName,
-                data: dataPoints.netProfitData,
-                backgroundColor: ['rgba(75, 192, 192, 0.2)'],
-                borderColor: ['rgba(75, 192, 192, 1)'],
-                tension: 0.4
-            }
-            ]};
+                labels: dataPoints.labels,
+                datasets: [{
+                    label: dataPoints.grossProfitName,
+                    data: dataPoints.grossProfitData,
+                    backgroundColor: ['rgba(255, 26, 104, 0.2)'],
+                    borderColor: ['rgba(255, 26, 104, 1)',],
+                    tension: 0.4
+                }, {
+                    label: dataPoints.operatingExpensesName,
+                    data: dataPoints.operatingExpensesData,
+                    backgroundColor: ['rgba(54, 162, 235, 0.2)'],
+                    borderColor: ['rgba(54, 162, 235, 1)'],
+                    tension: 0.4
+                }, {
+                    label: dataPoints.netProfitName,
+                    data: dataPoints.netProfitData,
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+                    borderColor: ['rgba(75, 192, 192, 1)'],
+                    tension: 0.4
+                }
+                ]
+            };
 
             // config 
             const config = {
-            type: 'line',
-            data,
-            options: {
-                scales: {
-                y: {
-                    beginAtZero: true
+                type: 'line',
+                data,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
-                }
-            }
             };
 
             // render init block
             const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
+                document.getElementById('myChart'),
+                config
             );
 
             // Instantly assign Chart.js version
@@ -360,14 +301,16 @@
 
             console.log(labels);
             return { labels, grossProfitData, operatingExpensesData, netProfitData, grossProfitName, operatingExpensesName, netProfitName }
-            
+
         };
 
-        </script>
-        
-                </div>
-                <script src="globalShoppingCartStuff-javascript.js"></script>
-                <script src="globalDarkMode-javascript.js"></script>
+    </script>
 
-    </body>
+    </div>
+
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
+
+</body>
+
 </html>

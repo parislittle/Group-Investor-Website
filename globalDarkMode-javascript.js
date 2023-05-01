@@ -1,6 +1,7 @@
 function toggleDarkMode() {
     globalDarkMode();
     aboutUsDarkMode();
+    ourAskMode();
   };
 
 // dark mode/light mode customization
@@ -104,5 +105,36 @@ function aboutUsDarkMode() {
     } else {
       // If it is enabled, disable it
       aboutUsStylesheet.disabled = true;
+    }
+  };
+
+  // dark mode/light mode customization
+function ourAskMode() {
+    // Define the stylesheetId for the dark mode about us stylesheet link element
+    const darkModeAskStylesheetId = 'dark-mode-ask-stylesheet';
+    // Define the stylesheetId for the about us stylesheet link element
+    const askStylesheetId = 'ask-stylesheet';
+
+    // Get the dark mode stylesheet link element by its ID
+    const darkModeAskStylesheet = document.getElementById(darkModeAskStylesheetId);
+    // Get the about us stylesheet link element by its ID
+    const askStylesheet = document.getElementById(askStylesheetId);
+
+    // Check if the global stylesheet is disabled
+    if (darkModeAskStylesheet.disabled) {
+      // If it is disabled, enable it
+      darkModeAskStylesheet.disabled = false;
+    } else {
+      // If it is enabled, disable it
+      darkModeAskStylesheet.disabled = true;
+    }
+
+    // Check if the global stylesheet is disabled
+    if (askStylesheet.disabled) {
+      // If it is disabled, enable it
+      askStylesheet.disabled = false;
+    } else {
+      // If it is enabled, disable it
+      askStylesheet.disabled = true;
     }
   };
