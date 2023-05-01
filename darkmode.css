@@ -1,3 +1,59 @@
+/* Business Section Dropdown */
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: white !important;
+    text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #FFFDF5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-marker {
+    width: 2vw;
+    margin-left: 0px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #222222;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ddd;
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-marker {
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+
+.dropdown:hover .dropdown-toggle {
+    opacity: 50%;
+}
+
 body {
     background-color: black !important;
     color: white !important;
@@ -151,8 +207,8 @@ a.navbar {
     padding-left: 8px;
     padding-right: 8px;
     background-color: black !important;
-     border-radius: 3px;
-        /*border: black solid 1px;*/
+    border-radius: 3px;
+    /*border: black solid 1px;*/
     /* mix-blend-mode: difference; */
 }
 
@@ -170,6 +226,9 @@ a.navbar {
 
 .tabbed-logo {
     width: 6.5vw;
+    background-color: rgba(255, 253, 245, .8);
+    border-radius: 3px;
+    padding: 5px;
 }
 
 .footer {
@@ -225,14 +284,82 @@ a.navbar {
 
 .problem {
     text-align: center;
-    background-color: #b3b3b3;
-    color: white;
+    background-image: url('drink_spike2.png');
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: #FFFDF5;
     padding: 20px;
-    height: 200px;
-    width: fit-content;
-    border-radius: 20px;
+    height: fit-content;
+    width: 100%;
     justify-content: center;
     display: flex;
+}
+
+.solution {
+    text-align: center;
+    background-color: #FFFDF5;
+    color: black;
+    padding: 20px;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.problem-title {
+    text-align: left;
+    display: flex;
+    font-family: "Agrandir Variable";
+    font-style: italic;
+    font-weight: 617;
+    font-size: 7vw;
+    line-height: 100%;
+    text-align: left;
+    margin: 5%;
+    margin-left: 0;
+    color: #FFFDF5;
+
+}
+
+.tabbed-title {
+    font-size: 4vh;
+    text-align: center;
+    font-family: "Agrandir Variable";
+
+}
+
+.solution-title {
+    text-align: center;
+    float: left;
+    padding: 2%;
+    font-family: "Agrandir Variable";
+    font-style: italic;
+    font-weight: 617;
+    font-size: 7vw;
+    line-height: 100%;
+    text-align: right;
+    margin: 5%;
+    display: block;
+
+
+}
+
+.problem-context {
+    margin: 3%;
+    margin-right: 1%;
+    font-size: 3vh;
+    font-family: "Agrandir Variable";
+}
+
+.solution-context {
+    margin: 5%;
+    margin-left: 1%;
+    text-align: left;
+    font-size: 2.5vh;
+    font-family: "Agrandir Variable";
 }
 
 .logo-space {
@@ -266,12 +393,12 @@ a.navbar {
 
 .essentials-title {
     font-family: "Agrandir Variable";
+    font-size: 2vw;
     padding-bottom: 1vw;
 }
 
 .essentials-wrapper {
     width: 100vw;
-    overflow-x: scroll;
     margin-left: 4vw;
 
 }
@@ -285,13 +412,13 @@ a.navbar {
 }
 
 
- .gallery-img {
+.gallery-img {
     height: 100%;
     width: 25vw;
     border-radius: 25px;
 
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url('Screen Shot 2023-04-03 at 4.35.png');
-   background-blend-mode: multiply, normal;
+    background-blend-mode: multiply, normal;
 }
 
 
@@ -323,13 +450,20 @@ a.navbar {
     cursor: pointer;
     z-index: 1000;
 }
+
 /*shop page*/
-#hero-section, #boxes, #outercontainer, #drink1, #drink2, #drink3 {
+#hero-section,
+#boxes,
+#outercontainer,
+#drink1,
+#drink2,
+#drink3 {
     background-color: black !important;
     color: white !important;
 }
 
-.flavorname, .price {
+.flavorname,
+.price {
     background-color: black !important;
     color: white !important;
 }
