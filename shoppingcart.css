@@ -23,7 +23,7 @@
 .shopping-cart-icon {
     width: 24px;
     vertical-align: middle;
-    z-index: -1;
+    z-index: 0;
 }
 
 .cart-quantity {
@@ -33,6 +33,7 @@
     transform: translate(-50%, -25%);
     font-size: 14px; /* Adjust the font size as needed */
     color: black; /* Adjust the color as needed */
+    z-index: inherit;
 }
 
 .product-details {
