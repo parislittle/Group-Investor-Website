@@ -205,6 +205,13 @@
       filter: grayscale(100%);
     }
 
+    .nav-button-active {
+      filter: grayscale(0%);
+      /* Remove the grayscale filter */
+      /* Add any other styles you want for the active icon */
+    }
+
+
     /* Main content area */
     .content {
       flex-grow: 1;
@@ -330,7 +337,22 @@
         document.getElementById('member-name').textContent = member.name;
         document.getElementById('member-role').textContent = member.role;
         document.getElementById('contact-button-link').href = 'mailto:' + member.email;
+
+        // Get all the navigation buttons
+        const navButtons = document.querySelectorAll('.nav-button');
+
+        // Loop through the navigation buttons and update their styles
+        navButtons.forEach((navButton, index) => {
+          if (index === currentMemberIndex) {
+            // Add the active class to the current member's icon
+            navButton.classList.add('nav-button-active');
+          } else {
+            // Remove the active class from other icons
+            navButton.classList.remove('nav-button-active');
+          }
+        });
       }
+
 
       function navigateToMember(index) {
         currentMemberIndex = index;
