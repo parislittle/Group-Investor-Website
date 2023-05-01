@@ -1,6 +1,14 @@
-function toggleDarkMode() {
+function toggleDarkModeShop() {
+    globalDarkMode();
+  };
+
+  function toggleDarkModeAboutUs() {
     globalDarkMode();
     aboutUsDarkMode();
+  };
+
+  function toggleDarkModeAsk() {
+    globalDarkMode();
     ourAskMode();
   };
 
