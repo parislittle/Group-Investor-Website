@@ -1,6 +1,14 @@
 body {
     background-color: black !important;
     color: white !important;
+    font-family: "Object Sans";
+    padding: 0;
+    margin: 0;
+
+    text-transform: uppercase !important;
+
+    overflow-x: hidden;
+
 }
 
 .mode-button {
@@ -19,21 +27,143 @@ body {
     cursor: pointer;
     z-index: 1000;
 }
-#hero-section, #boxes, #outercontainer {
+/*shop page*/
+#hero-section, #boxes, #outercontainer, #drink1, #drink2, #drink3 {
     background-color: black !important;
     color: white !important;
 }
 
+.flavorname, .price {
+    background-color: black !important;
+    color: white !important;
+}
+/*global stylesheet*/
+h1 {
+    font-weight: 600;
+    font-size: 64pt;
+    margin: 0;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 469;
+    font-family: "Agrandir Variable";
+    font-size: 2vw;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 a.navbar {
-    color: white;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: "Object Sans";
+    font-weight: 300;
+    src: url(PPObjectSans-Thin.woff2);
+}
+
+@font-face {
+    font-family: "Object Sans";
+    font-weight: 400;
+    src: url(PPObjectSans-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Object Sans";
+    font-weight: 600;
+    src: url(PPObjectSans-Bold.woff2);
+}
+
+@font-face {
+    font-family: "Object Sans";
+    font-weight: 700;
+    src: url(PPObjectSans-Heavy.woff2);
+}
+
+@font-face {
+    font-family: "Agrandir Variable";
+    src: url(fonts/PPAgrandir-Variable.ttf);
+}
+
+
+#hero-section {
+    height: 100vh;
+    text-align: right;
+}
+
+.hero-wrapper {
+    padding: 8vw;
+}
+
+.hero-text-wrapper {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 4vw;
+    text-align: left;
+}
+
+.hero-img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.hero-title {
+    font-family: "Agrandir Variable";
+    font-style: italic;
+    font-weight: 617;
+    font-size: 8vw;
+    line-height: 100%;
+    text-align: left;
+}
+
+.hero-subtitle {
+    font-family: "Object Sans";
+    font-weight: 400;
+    font-size: 2vw;
+    padding-bottom: 1vw;
 }
 
 .learn-more-button {
     display: inline-block;
-    background: #222222 !important;
+    background: white !important;
     border-radius: 50px;
-    color: white !important;
+    color: black !important;
     padding: 1vw 2vw 1vw 2vw;
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -46,10 +176,26 @@ a.navbar {
     opacity: 100%;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: rgba(255, 253, 245, .8) !important;
+    background-color: black !important;
      border-radius: 3px;
         /*border: black solid 1px;*/
     /* mix-blend-mode: difference; */
+}
+
+.nav-item.active {
+    opacity: 50%;
+}
+
+.nav-left {
+    text-align: left;
+}
+
+.nav-right {
+    text-align: right;
+}
+
+.tabbed-logo {
+    width: 6.5vw;
 }
 
 .footer {
@@ -58,7 +204,7 @@ a.navbar {
 
 #newsletter-wrapper {
     height: 80vh;
-    background-color: #101010 !important;
+    background-color: #101010;
     ;
     padding: 0 65vw 0 8vw;
     justify-content: center;
@@ -69,18 +215,44 @@ a.navbar {
 
 }
 
+.newsletter-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#newsletter-text {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20pt;
+}
+
+.newsletter-button-wrapper {
+    display: flex;
+    justify-content: left;
+
+}
+
+.newsletter-button {
+    width: 100%;
+}
+
 .newsletter-button-text {
-    background-color: white !important;
+    background-color: #101010;
     border: none;
     padding: 0;
     font-size: 16pt;
     font-weight: 300;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+}
+
 .problem {
     text-align: center;
-    background-color: white !important;
-    color: black !important;
+    background-color: #b3b3b3;
+    color: white;
     padding: 20px;
     height: 200px;
     width: fit-content;
@@ -88,6 +260,56 @@ a.navbar {
     justify-content: center;
     display: flex;
 }
+
+.logo-space {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    opacity: 0.5;
+}
+
+.hr-transparent {
+    opacity: 0.5;
+}
+
+.essentials-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.year {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.essentials-title {
+    font-family: "Agrandir Variable";
+    padding-bottom: 1vw;
+}
+
+.essentials-wrapper {
+    width: 100vw;
+    overflow-x: scroll;
+    margin-left: 4vw;
+
+}
+
+.gallery-wrapper {
+    height: 50vh;
+    display: flex;
+    gap: 1vw;
+    overflow: auto;
+    white-space: nowrap;
+}
+
 
  .gallery-img {
     height: 100%;
@@ -102,11 +324,11 @@ a.navbar {
 #footer-ip {
     padding: 2vw;
     text-align: right;
-    background-color: #101010 !important;
-    color: #FFFDF5 !important;
+    background-color: #101010;
+    color: #FFFDF5;
 }
 
 .lil-links {
     padding-left: 1vw;
-    color: #FFFDF5 !important;
+    color: #FFFDF5;
 }

@@ -1,0 +1,23 @@
+.flavors-tem {
+    width: max-content;
+}
+
+.flavors-item-image-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 400px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.flavors-item-image-inner .flavors-item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

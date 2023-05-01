@@ -87,7 +87,6 @@
 }
 
 .flavorname {
-    color: #0C0B0B;
     text-align: left;
     font-size: 18pt;
     font-family: "Agrandir Variable";
@@ -99,7 +98,6 @@
 }
 
 .price {
-    color: #0C0B0B;
     text-align: left;
     font-size: 14pt;
     z-index: 1;
