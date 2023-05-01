@@ -1,5 +1,11 @@
-// dark mode/light mode customization
 function toggleDarkMode() {
+    globalDarkMode();
+    aboutUsDarkMode();
+  };
+
+// dark mode/light mode customization
+function globalDarkMode() {
+
     // Define the stylesheetId for the dark mode stylesheet link element
     const darkModeStylesheetId = 'dark-mode-stylesheet';
     // Define the stylesheetId for the global stylesheet link element
@@ -68,4 +74,35 @@ function toggleDarkMode() {
         // If it is enabled, disable it
         darkModeShoppingCartStylesheet.disabled = true;
     }
-}
+};
+
+// dark mode/light mode customization
+function aboutUsDarkMode() {
+    // Define the stylesheetId for the dark mode about us stylesheet link element
+    const darkModeAboutUsStylesheetId = 'dark-mode-about-us-stylesheet';
+    // Define the stylesheetId for the about us stylesheet link element
+    const aboutUsStylesheetId = 'about-us-stylesheet';
+
+    // Get the dark mode stylesheet link element by its ID
+    const darkModeAboutUsStylesheet = document.getElementById(darkModeAboutUsStylesheetId);
+    // Get the about us stylesheet link element by its ID
+    const aboutUsStylesheet = document.getElementById(aboutUsStylesheetId);
+
+    // Check if the global stylesheet is disabled
+    if (darkModeAboutUsStylesheet.disabled) {
+      // If it is disabled, enable it
+      darkModeAboutUsStylesheet.disabled = false;
+    } else {
+      // If it is enabled, disable it
+      darkModeAboutUsStylesheet.disabled = true;
+    }
+
+    // Check if the global stylesheet is disabled
+    if (aboutUsStylesheet.disabled) {
+      // If it is disabled, enable it
+      aboutUsStylesheet.disabled = false;
+    } else {
+      // If it is enabled, disable it
+      aboutUsStylesheet.disabled = true;
+    }
+  };
