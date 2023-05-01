@@ -5,207 +5,10 @@
     <title>Shopping Cart</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="tabbed-style.css">
+    <link rel="stylesheet" href="shoppingcart2.css">
     <link rel="stylesheet" href="shoppingcart.css">
     <style>
-        body {
-            background-color: #FFFDF5;
-            color: #222222;
-            font-family: "Object Sans";
-            padding: 0;
-            margin: 0;
-
-            text-transform: uppercase;
-
-            overflow-x: hidden;
-
-        }
-
-        h1 {
-            font-weight: 600;
-            font-size: 64pt;
-            margin: 0;
-        }
-
-        h2 {
-            font-weight: 300;
-            margin: 0;
-        }
-
-        h3 {
-            font-weight: 400;
-            font-size: 16pt;
-            text-transform: uppercase;
-            margin: 5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #222222;
-        }
-
-        a:visited {
-            text-decoration: none;
-            color: #222222;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 300;
-            src: url(PPObjectSans-Thin.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 400;
-            src: url(PPObjectSans-Regular.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 600;
-            src: url(PPObjectSans-Bold.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 700;
-            src: url(PPObjectSans-Heavy.woff2);
-        }
-
-        #hero-section {
-            text-align: center;
-
-        }
-
-        .hero-text {
-            position: absolute;
-            bottom: 0;
-            text-transform: uppercase;
-            text-align: left;
-            padding: 4vw;
-        }
-
-        .hero-title {
-            font-size: 22vw;
-            line-height: 80%;
-        }
-
-        .hero-subtitle {
-            font-weight: 600;
-            font-size: 3vw;
-
-        }
-
-        .navbar {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 2vw;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .nav-item {
-            text-align: center;
-            justify-content: center;
-            font-family: "Object Sans";
-            font-weight: 400;
-            color: #222222;
-            opacity: 100%;
-            padding-left: 8px;
-            padding-right: 8px;
-            /* mix-blend-mode: difference; */
-        }
-
-        .nav-item.active {
-            opacity: 50%;
-        }
-
-        .nav-left {
-            text-align: left;
-        }
-
-        .nav-right {
-            text-align: right;
-        }
-
-        .tabbed-logo {
-            width: 6.5vw;
-        }
-
-        .footer {
-            color: #FFFDF5;
-        }
-
-        #newsletter-wrapper {
-            height: 80vh;
-            background-color: #101010;
-            ;
-            padding: 0 65vw 0 8vw;
-            justify-content: center;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-        .newsletter-text-wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #newsletter-text {
-            text-transform: uppercase;
-            font-weight: 300;
-            font-size: 20pt;
-        }
-
-        .newsletter-button-wrapper {
-            display: flex;
-            justify-content: left;
-
-        }
-
-        .newsletter-button {
-            width: 100%;
-        }
-
-        .newsletter-button-text {
-            background-color: #101010;
-            border: none;
-            padding: 0;
-            font-size: 16pt;
-            font-weight: 300;
-        }
-
-        .arrow {
-            opacity: 0.5;
-        }
-
-        .hr-transparent {
-            opacity: 0.5;
-        }
-
-        #footer-ip {
-            padding: 2vw;
-            text-align: right;
-            background-color: #101010;
-            color: #FFFDF5;
-        }
-
-        .lil-links {
-            padding-left: 1vw;
-            color: #FFFDF5;
-        }
+       
     </style>
 </head>
 
@@ -214,7 +17,7 @@
 
         <div class="navbar">
             <a class="nav-left" href="tabbed-investor-site.html">
-                <img class="tabbed-logo" src="TABBED.svg">
+                <img class="tabbed-logo" src="TABBED.svg" alt="tabbed logo">
             </a>
             <div class="nav-right">
                 <a class="nav-item" id="about" href="about_us.html">About Us</a>
@@ -237,6 +40,7 @@
                 <hr>
                 <div id="cart"></div>
             </div>
+            <a href="thankyou.html" id="checkout">Checkout</a>
         </div>
 
     </div>
@@ -386,6 +190,9 @@
             document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
         }       
     </script>
+
+    
 </body>
+
 
 </html>
