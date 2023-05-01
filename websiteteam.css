@@ -60,7 +60,7 @@
     width: 100%;
     margin: auto;
     margin-top: -780px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .name{
@@ -95,6 +95,6 @@
 #outercontainer2{
     width: 100%;
     height: fit-content;
-    background-color: #FFFDF5;
+    padding: 8vw 0 8vw 0;
 }
 
