@@ -5,8 +5,8 @@
     <title>Shopping Cart</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="tabbed-style.css">
-    <link rel="stylesheet" href="shoppingcart.css">
     <link rel="stylesheet" href="shoppingcart2.css">
+    <link rel="stylesheet" href="shoppingcart.css">
     <style>
        
     </style>
@@ -40,6 +40,7 @@
                 <hr>
                 <div id="cart"></div>
             </div>
+            <a href="thankyou.html" id="checkout">Checkout</a>
         </div>
 
     </div>
@@ -189,6 +190,9 @@
             document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
         }       
     </script>
+
+    
 </body>
+
 
 </html>

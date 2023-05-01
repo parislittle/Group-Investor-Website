@@ -56,3 +56,17 @@
     width: 800px;
 }
 
+#checkout {
+    display: flex;
+    height: 4vh;
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 2vh;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
