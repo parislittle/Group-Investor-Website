@@ -11,32 +11,6 @@ body {
 
 }
 
-.mode-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    bottom: 40px;
-    left: 40px;
-    background-color: white !important;
-    color: black !important;
-    box-shadow: 0px 0px 5px black;
-    cursor: pointer;
-    z-index: 1000;
-}
-/*shop page*/
-#hero-section, #boxes, #outercontainer, #drink1, #drink2, #drink3 {
-    background-color: black !important;
-    color: white !important;
-}
-
-.flavorname, .price {
-    background-color: black !important;
-    color: white !important;
-}
 /*global stylesheet*/
 h1 {
     font-weight: 600;
@@ -331,4 +305,31 @@ a.navbar {
 .lil-links {
     padding-left: 1vw;
     color: #FFFDF5;
+}
+
+.mode-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 40px;
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    z-index: 1000;
+}
+/*shop page*/
+#hero-section, #boxes, #outercontainer, #drink1, #drink2, #drink3 {
+    background-color: black !important;
+    color: white !important;
+}
+
+.flavorname, .price {
+    background-color: black !important;
+    color: white !important;
 }

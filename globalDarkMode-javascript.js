@@ -4,11 +4,15 @@ function toggleDarkMode() {
     const darkModeStylesheetId = 'dark-mode-stylesheet';
     // Define the stylesheetId for the global stylesheet link element
     const globalStylesheetId = 'global-stylesheet';
+    // Define the stylesheetId for the global shopping cart stuff link element
+    const shoppingCartStylesheetId = 'global-stylesheet';
 
     // Get the dark mode stylesheet link element by its ID
     const darkModeStylesheet = document.getElementById(darkModeStylesheetId);
     // Get the global stylesheet link element by its ID
     const globalStylesheet = document.getElementById(globalStylesheetId);
+    // Get the global stylesheet link element by its ID
+    const shoppingCartStylesheet = document.getElementById(shoppingCartStylesheetId);
 
     // Check if the dark mode stylesheet is disabled
     if (darkModeStylesheet.disabled) {
@@ -26,6 +30,15 @@ function toggleDarkMode() {
     } else {
         // If it is enabled, disable it
         globalStylesheet.disabled = true;
+    }
+    
+    // Check if the Shopping Cart Style is disabled
+    if (shoppingCartStylesheet.disabled) {
+        // If it is disabled, enable it
+        shoppingCartStylesheet.disabled = false;
+    } else {
+        // If it is enabled, disable it
+        shoppingCartStylesheet.disabled = true;
     }
 }
 
