@@ -1,74 +1,105 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="tabbed-style.css">
-        <link rel="stylesheet" href="websiteteam.css">
-        <meta charset="UTF-8">
-        <title>Website Team</title>
-        <style>
 
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Website Team</title>
 
-    <body>
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+    <link rel="stylesheet" href="websiteteam.css">
 
-        <div id = "outercontainer2">
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
 
-            <div id="hero-section">
-                <div class="navbar">
-                    <a class="nav-left" href="tabbed-investor-site.html">
-                        <img class="tabbed-logo" src="TABBED.svg">
-                    </a>
-                    <div class="nav-right">
-                        <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                        <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                        <a class="nav-item" id="business" href="business.html">Business</a>
-                        <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                        <div class="nav-item shopping-cart-wrapper">
-                            <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                            <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
+    <div id="cart-overlay" class="cart-overlay hidden">
+        <div class="cart-overlay-content">
+            <h3 style="text-align:center">Your Cart</h3>
+            <hr>
+            <br>
+            <div id="cart-overlay-items"></div>
+            <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+            <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        </div>
+    </div>
+
+    <div id="outercontainer2">
+
+        <div id="hero-section">
+            <div class="navbar">
+                <a class="nav-left" href="tabbed-investor-site.html">
+                    <img class="tabbed-logo" src="TABBED.svg">
+                </a>
+                <div class="nav-right">
+                    <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                    <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                    <div class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
+                                class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                            <a class="dropdown-item" href="timeline.html">Timeline</a>
                         </div>
+                    </div>
+                    <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+                    <div class="nav-item shopping-cart-wrapper">
+                        <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                        <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
                     </div>
                 </div>
             </div>
+        </div>
 
-        <div id = "boxes2">
+        <div id="boxes2">
 
-            <p class = "theteam">MEET THE WEBSITE TEAM</p>
+            <p class="theteam">MEET THE WEBSITE TEAM</p>
 
-            <div class = "team">
-                    
-                <div class="people" id = "hamin">
-                    <div class = "name">HAMIN JIN</div>
-                    <div class= "role">SHOPPING CART PAGE, MAJOR ROUTINE, CUSTOMIZATION (LIGHT/DARK MODE), INTERACTIVE PHOTO GALLERY, ABOUT US, CHECKOUT PAGE, PRODUCT DESCRIPTION NARRATION</div>
-                </div>
-                
-                <div class="people" id = "paris">
-                    <div class = "name">PARIS LITTLE</div>
-                    <div class= "role">SHOP PAGE, ASK PAGE, WEBSITE TEAM PAGE, BUSINESS PILOT, MARKETPLACE, SHOPPING CART CSS</div>
-                </div>
-                
-                <div class="people" id = "dom">
-                    <div class = "name">DOM JOCAS</div>
-                    <div class= "role">MARKETPLACE, TIMELINE</div>
+            <div class="team">
+
+                <div class="people" id="hamin">
+                    <div class="name">HAMIN JIN</div>
+                    <div class="role">SHOPPING CART PAGE, MAJOR ROUTINE, CUSTOMIZATION (LIGHT/DARK MODE), INTERACTIVE
+                        PHOTO GALLERY, ABOUT US, CHECKOUT PAGE, PRODUCT DESCRIPTION NARRATION</div>
                 </div>
 
-                <div class="people" id = "campbelle">
-                    <div class = "name">CAMPBELLE SEARCY</div>
-                    <div class= "role">TEAM PAGE, ABOUT THE TEAM, BEHIND THE SCENE, PROBLEM & SOLUTION, STYLESHEETS</div>
+                <div class="people" id="paris">
+                    <div class="name">PARIS LITTLE</div>
+                    <div class="role">SHOP PAGE, ASK PAGE, WEBSITE TEAM PAGE, BUSINESS PILOT, MARKETPLACE, SHOPPING CART
+                        CSS</div>
                 </div>
-                
-                <div class="people" id = "jaden">
-                    <div class = "name">JADEN STEINHOFF</div>
-                    <div class= "role">HOME PAGE, ANIMATED PRESENTATION, MOTION GRAPHICS, JS CHART, MEDIUM ROUTINE </div>
+
+                <div class="people" id="dom">
+                    <div class="name">DOM JOCAS</div>
+                    <div class="role">MARKETPLACE, TIMELINE</div>
                 </div>
-                
-                <div class="people" id = "tiana">
-                    <div class = "name">TIANA DAY</div>
-                    <div class= "role">BUSINESS PILOT</div>
+
+                <div class="people" id="campbelle">
+                    <div class="name">CAMPBELLE SEARCY</div>
+                    <div class="role">TEAM PAGE, ABOUT THE TEAM, BEHIND THE SCENE, PROBLEM & SOLUTION, STYLESHEETS</div>
+                </div>
+
+                <div class="people" id="jaden">
+                    <div class="name">JADEN STEINHOFF</div>
+                    <div class="role">HOME PAGE, ANIMATED PRESENTATION, MOTION GRAPHICS, JS CHART, MEDIUM ROUTINE </div>
+                </div>
+
+                <div class="people" id="tiana">
+                    <div class="name">TIANA DAY</div>
+                    <div class="role">BUSINESS PILOT</div>
                 </div>
 
             </div>
-    
+
         </div>
 
         <div class="footer">
@@ -91,7 +122,11 @@
 
         </div>
 
-        </div>
+    </div>
 
-    </body>
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
+
+</body>
+
 </html>

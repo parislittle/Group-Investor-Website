@@ -64,7 +64,6 @@
 }
 
 .name{
-    color: #0C0B0B;
     text-align: left;
     font-size: 15pt;
     font-family: "Agrandir Variable";
@@ -75,8 +74,7 @@
     margin-top: 10px;
 }
 
-.role{
-    color: #0C0B0B;
+.role {
     text-align: left;
     font-size: 9pt;
     z-index: 1;
@@ -98,6 +96,5 @@
     width: 100%;
     height: fit-content;
     background-color: #FFFDF5;
-    color: #222222;
 }
 
