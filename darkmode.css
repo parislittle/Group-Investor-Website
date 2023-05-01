@@ -13,9 +13,100 @@ body {
     border-radius: 50%;
     bottom: 40px;
     left: 40px;
-    background-color: white;
-    color: white;
+    background-color: white !important;
+    color: black !important;
     box-shadow: 0px 0px 5px black;
     cursor: pointer;
     z-index: 1000;
+}
+#hero-section, #boxes, #outercontainer {
+    background-color: black !important;
+    color: white !important;
+}
+
+a.navbar {
+    color: white;
+}
+
+.learn-more-button {
+    display: inline-block;
+    background: #222222 !important;
+    border-radius: 50px;
+    color: white !important;
+    padding: 1vw 2vw 1vw 2vw;
+
+}
+
+.nav-item {
+    text-align: center;
+    justify-content: center;
+    font-family: "Object Sans";
+    font-weight: 400;
+    color: white !important;
+    opacity: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgba(255, 253, 245, .8) !important;
+     border-radius: 3px;
+        /*border: black solid 1px;*/
+    /* mix-blend-mode: difference; */
+}
+
+.footer {
+    color: #FFFDF5;
+}
+
+#newsletter-wrapper {
+    height: 80vh;
+    background-color: #101010 !important;
+    ;
+    padding: 0 65vw 0 8vw;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.newsletter-button-text {
+    background-color: white !important;
+    border: none;
+    padding: 0;
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+.problem {
+    text-align: center;
+    background-color: white !important;
+    color: black !important;
+    padding: 20px;
+    height: 200px;
+    width: fit-content;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+ .gallery-img {
+    height: 100%;
+    width: 25vw;
+    border-radius: 25px;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url('Screen Shot 2023-04-03 at 4.35.png');
+   background-blend-mode: multiply, normal;
+}
+
+
+#footer-ip {
+    padding: 2vw;
+    text-align: right;
+    background-color: #101010 !important;
+    color: #FFFDF5 !important;
+}
+
+.lil-links {
+    padding-left: 1vw;
+    color: #FFFDF5 !important;
 }
