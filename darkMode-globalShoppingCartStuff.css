@@ -117,6 +117,7 @@
 .dropdown-marker {
     width: 2vw;
     margin-left: 0px;
+    z-index: 1;
 }
 
 .dropdown-menu .dropdown-item {
@@ -147,9 +148,9 @@
 
 /* Chagning Icons */
 body.dark-mode .shopping-cart-icon {
-    content: url("shoppingcarticon2.png");
+    src: url("shoppingcarticon2.png");
 }
 
 body.dark-mode .dropdown-marker {
-    content: url("dropdownmarker2.png");
+    src: url("dropdownmarker2.png");
 }
