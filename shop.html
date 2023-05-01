@@ -2,15 +2,19 @@
 
 <head>
     <title>Shop</title>
-    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+    
     <meta charset="UTF-8">
     <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
-    <link rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
     <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
     <link rel="stylesheet" href="shopPage-stylesheet.css">
+
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
 </head>
 
-<body>
+<body>s
         <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
 
         <div id="cart-overlay" class="cart-overlay hidden">
@@ -35,7 +39,7 @@
                     <div class="nav-right">
                         <a class="nav-item" id="about" href="about_us.html">About Us</a>
                         <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                        <a class="nav-item" id="business" href="business.html">Business</a>
+                        <a class="nav-item" id="business" href="marketplace.html">Business</a>
                         <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
                         <div class="nav-item shopping-cart-wrapper">
                             <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
