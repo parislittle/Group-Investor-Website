@@ -52,7 +52,6 @@
                 margin-right: 10px;
                 text-align: center;
                 margin-bottom: 20px;
-                text-align: center;
                 border-radius: 25px;
                 border: 2px solid black;
                 padding-left: 10px;
@@ -75,12 +74,8 @@
             }
 
             .salestitle{
-<<<<<<< Updated upstream
-                text-align: left;
-=======
                 color: #0C0B0B;
                 text-align: center;
->>>>>>> Stashed changes
                 font-size: 11pt;
                 font-family: "Object Sans";
                 font-weight: 600;
