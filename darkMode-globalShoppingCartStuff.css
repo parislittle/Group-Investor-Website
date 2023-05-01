@@ -147,11 +147,9 @@
 
 /* Chagning Icons */
 body.dark-mode .shopping-cart-icon {
-    /* Specify the image for dark mode */
-    src: url("shoppingcarticon2.png");
+    content: url("shoppingcarticon2.png");
 }
 
 body.dark-mode .dropdown-marker {
-    /* Specify the image for dark mode */
-    src: url("dropdownmarker2.png");
+    content: url("dropdownmarker2.png");
 }

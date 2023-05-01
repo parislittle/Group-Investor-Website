@@ -15,8 +15,13 @@ function toggleDarkMode() {
     const globalStylesheet = document.getElementById(globalStylesheetId);
     // Get the shopping cart stylesheet link element by its ID
     const shoppingCartStylesheet = document.getElementById(shoppingCartStylesheetId);
-     // Get the dark mode shopping cart stylesheet link element by its ID
-     const darkModeShoppingCartStylesheet = document.getElementById(darkModeShoppingCartStylesheetId);
+    // Get the dark mode shopping cart stylesheet link element by its ID
+    const darkModeShoppingCartStylesheet = document.getElementById(darkModeShoppingCartStylesheetId);
+
+    // Get the shopping cart icon image element
+    const shoppingCartIcon = document.querySelector('.shopping-cart-icon');
+    // Get the dropdown marker image element
+    const dropdownMarker = document.querySelector('.dropdown-marker');
 
     // Check if the dark mode stylesheet is disabled
     if (darkModeStylesheet.disabled) {
@@ -24,11 +29,17 @@ function toggleDarkMode() {
         darkModeStylesheet.disabled = false;
         // Add the dark-mode class to the body element
         document.body.classList.add('dark-mode');
+        // Change the images to dark mode versions
+        shoppingCartIcon.src = 'shoppingcarticon2.png';
+        dropdownMarker.src = 'dropdown2.png';
     } else {
         // If it is enabled, disable it
         darkModeStylesheet.disabled = true;
         // Remove the dark-mode class from the body element
         document.body.classList.remove('dark-mode');
+        // Change the images to light mode versions
+        shoppingCartIcon.src = 'shoppingcarticon.png';
+        dropdownMarker.src = 'dropdown.png';
     }
 
     // Check if the global stylesheet is disabled
@@ -39,7 +50,7 @@ function toggleDarkMode() {
         // If it is enabled, disable it
         globalStylesheet.disabled = true;
     }
-    
+
     // Check if the Shopping Cart Style is disabled
     if (shoppingCartStylesheet.disabled) {
         // If it is disabled, enable it
