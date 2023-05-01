@@ -13,6 +13,7 @@
                 padding: 2vw;
                 height: 550px;
                 margin-bottom: 50px;
+                margin: auto;
             }
 
             .theteam {
@@ -46,7 +47,7 @@
             }
 
             .data {
-                width: 278px; height: 130px;
+                width: 250px; height: 130px;
                 margin-left: 10px;
                 margin-right: 10px;
                 text-align: center;
@@ -74,7 +75,12 @@
             }
 
             .salestitle{
+<<<<<<< Updated upstream
                 text-align: left;
+=======
+                color: #0C0B0B;
+                text-align: center;
+>>>>>>> Stashed changes
                 font-size: 11pt;
                 font-family: "Object Sans";
                 font-weight: 600;
