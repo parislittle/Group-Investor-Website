@@ -321,7 +321,7 @@
 
     @keyframes slideInDown {
       0% {
-        transform: translateY(-50%);
+        transform: translateY(-25%);
         opacity: 0;
       }
 
@@ -338,14 +338,14 @@
       }
 
       100% {
-        transform: translateY(50%);
+        transform: translateY(25%);
         opacity: 0;
       }
     }
 
     @keyframes slideInUp {
       0% {
-        transform: translateY(50%);
+        transform: translateY(25%);
         opacity: 0;
       }
 
@@ -362,25 +362,25 @@
       }
 
       100% {
-        transform: translateY(-50%);
+        transform: translateY(-25%);
         opacity: 0;
       }
     }
 
     .slide-in-down {
-      animation: slideInDown 0.5s ease-in-out forwards;
+      animation: slideInDown 0.35s ease-in-out forwards;
     }
 
     .slide-out-down {
-      animation: slideOutDown 0.5s ease-in-out forwards;
+      animation: slideOutDown 0.35s ease-in-out forwards;
     }
 
     .slide-in-up {
-      animation: slideInUp 0.5s ease-in-out forwards;
+      animation: slideInUp 0.35s ease-in-out forwards;
     }
 
     .slide-out-up {
-      animation: slideOutUp 0.5s ease-in-out forwards;
+      animation: slideOutUp 0.35s ease-in-out forwards;
     }
   </style>
   <script>
@@ -461,7 +461,6 @@
         navButton.src = member.photo;
         navButton.alt = member.name;
         navButton.className = 'nav-button';
-        navButton.addEventListener('click', () => navigateToMember(index));
         sidebar.appendChild(navButton);
       });
 
