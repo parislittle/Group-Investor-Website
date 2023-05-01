@@ -1,420 +1,101 @@
 <html>
-
-<head>
-    <title>Tabbed</title>
-    <link rel="stylesheet" href="tabbed-style.css">
-    <link rel="stylesheet" href="problem_solution.css">
-    <meta charset="UTF-8">
-    <style>
-        body {
-            background-color: #FFFDF5;
-            color: #222222;
-            font-family: "Object Sans";
-            padding: 0;
-            margin: 0;
-
-            text-transform: uppercase;
-
-            overflow-x: hidden;
-
-        }
-
-        h1 {
-            font-weight: 600;
-            font-size: 64pt;
-            margin: 0;
-        }
-
-        h2 {
-            font-style: normal;
-            font-weight: 469;
-            font-family: "Agrandir Variable";
-            font-size: 2vw;
-            margin: 0;
-        }
-
-        h3 {
-            font-weight: 400;
-            font-size: 2vw;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:visited {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        a.navbar {
-            color: #222222;
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 300;
-            src: url(PPObjectSans-Thin.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 400;
-            src: url(PPObjectSans-Regular.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 600;
-            src: url(PPObjectSans-Bold.woff2);
-        }
-
-        @font-face {
-            font-family: "Object Sans";
-            font-weight: 700;
-            src: url(PPObjectSans-Heavy.woff2);
-        }
-
-        @font-face {
-            font-family: "Agrandir Variable";
-            src: url(fonts/PPAgrandir-Variable.ttf);
-        }
-
-
-        #hero-section {
-            height: 110vh;
-            text-align: right;
-        }
-
-        .hero-wrapper {
-            padding: 8vw;
-        }
-
-        .hero-text-wrapper {
-            z-index: 1;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            padding: 4vw;
-            text-align: left;
-        }
-
-        .hero-img {
-            width: 50%;
-            border-radius: 25px;
-        }
-
-        .hero-title {
-            font-family: "Agrandir Variable";
-            font-style: italic;
-            font-weight: 617;
-            font-size: 8vw;
-            line-height: 100%;
-            text-align: left;
-        }
-
-        .hero-subtitle {
-            font-family: "Object Sans";
-            font-weight: 400;
-            font-size: 2vw;
-            padding-bottom: 1vw;
-        }
-
-        .learn-more-button {
-            display: inline-block;
-            background: #222222;
-            border-radius: 50px;
-            color: white;
-            padding: 1vw 2vw 1vw 2vw;
-
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 2vw;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .nav-item {
-            text-align: center;
-            justify-content: center;
-            font-family: "Object Sans";
-            font-weight: 400;
-            color: #222222;
-            opacity: 100%;
-            padding-left: 8px;
-            padding-right: 8px;
-            background-color: rgba(255, 253, 245, .8);
-            border-radius: 3px;
-            /*border: black solid 1px;*/
-            /* mix-blend-mode: difference; */
-        }
-
-        .nav-item.active {
-            opacity: 50%;
-        }
-
-        .nav-left {
-            text-align: left;
-        }
-
-        .nav-right {
-            text-align: right;
-        }
-
-        .tabbed-logo {
-            width: 6.5vw;
-            background-color: rgba(255, 253, 245, .8);
-            border-radius: 3px;
-            padding: 5px;
-
-        }
-
-        .footer {
-            color: #FFFDF5;
-        }
-
-        #newsletter-wrapper {
-            height: 80vh;
-            background-color: #101010;
-            ;
-            padding: 0 65vw 0 8vw;
-            justify-content: center;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-        .newsletter-text-wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #newsletter-text {
-            text-transform: uppercase;
-            font-weight: 300;
-            font-size: 20pt;
-        }
-
-        .newsletter-button-wrapper {
-            display: flex;
-            justify-content: left;
-
-        }
-
-        .newsletter-button {
-            width: 100%;
-        }
-
-        .newsletter-button-text {
-            background-color: #101010;
-            border: none;
-            padding: 0;
-            font-size: 16pt;
-            font-weight: 300;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-space {
-            width: 200px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .arrow {
-            opacity: 0.5;
-        }
-
-        .hr-transparent {
-            opacity: 0.5;
-        }
-
-        .essentials-section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .year {
-            font-weight: 400;
-            font-size: 1vw;
-        }
-
-        .essentials-title {
-            font-family: "Agrandir Variable";
-            padding-bottom: 1vw;
-        }
-
-        .essentials-wrapper {
-            width: 100vw;
-            overflow-x: scroll;
-            margin-left: 4vw;
-
-        }
-
-        .gallery-wrapper {
-            height: 50vh;
-            display: flex;
-            gap: 1vw;
-            overflow: auto;
-            white-space: nowrap;
-        }
-
-
-        .gallery-img {
-            height: 100%;
-            width: 25vw;
-            border-radius: 25px;
-
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 135, 135, 0.5) 63.54%, #EA6161 100%), url('Screen Shot 2023-04-03 at 4.35.png');
-            background-blend-mode: multiply, normal;
-        }
-
-
-        #footer-ip {
-            padding: 2vw;
-            text-align: right;
-            background-color: #101010;
-            color: #FFFDF5;
-        }
-
-        .lil-links {
-            padding-left: 1vw;
-            color: #FFFDF5;
-        }
-
-        /* Shopping Cart */
-        .shopping-cart-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
-        .shopping-cart-icon {
-            width: 24px;
-            vertical-align: middle;
-        }
-
-        .cart-quantity {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -35%);
-            font-size: 14px;
-            /* Adjust the font size as needed */
-            color: black;
-            z-index: -1;
-        }
-
-        /* Shopping Cart Overlay */
-        .cart-overlay {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 300px;
-            background-color: #ffffff;
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .cart-overlay-content {
-            max-width: 100%;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .cart-item img {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .cart-item-price {
-            margin-left: auto;
-        }
-
-        .cart-total-price {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .view-full-cart-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #f0c14b;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
-    <style>
-
-    </style>
-</head>
-
-<body>
-
-    <div class="navbar">
-        <a class="nav-left" href="tabbed-investor-site.html">
-            <img class="tabbed-logo" src="TABBED.svg">
-        </a>
-        <div class="nav-right">
-            <!-- <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a> -->
-            <a class="nav-item" id="about" href="shop.html">Shop</a>
-            <a class="nav-item" id="about" href="about_us.html">About Us</a>
-            <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
-            <a class="nav-item" id="cart" href="cart.html">Cart</a>
-        </div>
-    </div>
-
-    <div id="hero-section">
-        <div class="hero-wrapper">
-            <div class="hero-text-wrapper">
-                <h1 class="hero-title">
-                    Safe sips, <br> bvv
-                    Spirited Moments
-                </h1>
-                <h3 class="hero-subtitle">
-                    INDULGE WITH UNRIVALED CONFIDENCE
-                </h3>
-                <a class="learn-more-button" href="about_us.html">
-                    Learn More
-                </a>
+    <head>
+        <title>Tabbed</title>
+        <link rel="stylesheet" href="tabbed-home.css">
+        <link rel="stylesheet" href="problem_solution.css">
+        <meta charset="UTF-8">
+        <style>
+            /* Shopping Cart */
+            .shopping-cart-wrapper {
+                position: relative;
+                display: inline-block;
+            }
+
+            .shopping-cart-icon {
+                width: 24px;
+                vertical-align: middle;
+            }
+
+            .cart-quantity {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -35%);
+                font-size: 14px;
+                /* Adjust the font size as needed */
+                color: black;
+                z-index: -1;
+            }
+
+            /* Shopping Cart Overlay */
+            .cart-overlay {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 300px;
+                background-color: #ffffff;
+                z-index: 1000;
+                overflow-y: auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .cart-overlay-content {
+                max-width: 100%;
+            }
+
+            .cart-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .cart-item img {
+                width: 50px;
+                height: auto;
+                margin-right: 10px;
+            }
+
+            .cart-item-price {
+                margin-left: auto;
+            }
+
+            .cart-total-price {
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            .view-full-cart-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #f0c14b;
+                text-decoration: none;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    </head> 
+    <body>
+        <div class="navbar">
+            <a class="nav-left" href="tabbed-investor-site.html">
+                <img class="tabbed-logo" src="TABBED.svg">    
+            </a>
+            <div class="nav-right">
+                <!-- <a class="nav-item" id="login" href="tabbed-waitlist.html">Join the Waitlist</a> -->
+                <a class="nav-item" id="about" href="shop.html">Shop</a>
+                <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                <a class="nav-item" id="contact" href="Contact_us.html">Contact Us</a>
+                <a class="nav-item" id="cart" href="cart.html">Cart</a>
             </div>
-            <img class="hero-img" src="hero-img.jpeg">
+        </div>
 
         <div id="hero-section">
             <div class="hero-wrapper">
@@ -434,23 +115,28 @@
             </div>
         </div>
 
-        <div class="container">
-                <div class="problem">
-                    <p class="white-text">
-                        Drink spiking is a serious issue and it's time WE do something about it.
-                        <br><br>
-                        (Insert some photo)
-                        <br><br>
-                        Meet Tabbed, a simple solution to a major problem. 
-                        <br>
-                        Simply pop the lid open and swing the tab to the 
-                        <br>
-                        side to sip then swing it back to protect your drink!
-                    </p>
-                </div>
-                <div class="logo-space">    
-                    <img src="TABBED.svg" alt="Tabbed Logo">
-                </div>
+        <div class="problem">
+            <div class="problem-context">
+                <p>There are VERY few products in the market dedicated towards drink spiking prevention. Current solutions
+                    are expensive, unattractive, obvious at parties, and difficult to use. </p>
+            </div>
+            <div class="problem-title"> THE PROBLEM </div>
+    
+        </div>
+        
+        <div class="solution">
+            <div class="solution-title"> THE SOLUTION </div>
+            <div class="solution-context">
+                <h2 class="tabbed-title"><strong> Meet Tabbed.</strong></h2>
+    
+    
+                <strong>Aesthetic.</strong> How can we gear the design to make it attractive towards college students?<br>
+                <strong>Safe.</strong> We’re looking for the best materials and design to discourage drink spiking.<br>
+                <strong>Inconspicuous.</strong> What design aspects can we implement to disguise the drink spiking
+                prevention features?<br>
+                <strong>Convenient. </strong>How can we get our users to keep coming back to our product?
+                </p>
+            </div>
         </div>
 
         <div class="essentials-section">
@@ -532,109 +218,11 @@
                             <h3 class="arrow">↗</h3>
                         </div>
                         <hr class="hr-transparent">
-        </div>
-    </div>
-
-    <!--<div class="container">-->
-    <div class="problem">
-
-
-        <div class="problem-context">
-            <p>There are VERY few products in the market dedicated towards drink spiking prevention. Current solutions
-                are expensive, unattractive, obvious at parties, and difficult to use. </p>
-        </div>
-        <div class="problem-title"> THE PROBLEM </div>
-
-    </div>
-    <div class="solution">
-        <div class="solution-title"> THE SOLUTION </div>
-        <div class="solution-context">
-            <h2 class="tabbed-title"><strong> Meet Tabbed.</strong></h2>
-
-
-            <strong>Aesthetic.</strong> How can we gear the design to make it attractive towards college students?<br>
-            <strong>Safe.</strong> We’re looking for the best materials and design to discourage drink spiking.<br>
-            <strong>Inconspicuous.</strong> What design aspects can we implement to disguise the drink spiking
-            prevention features?<br>
-            <strong>Convenient. </strong>How can we get our users to keep coming back to our product?
-            </p>
-        </div>
-    </div>
-
-    </div>
-    <!--<div class="logo-space">    
-             <img src="TABBED.svg" alt="Tabbed Logo">-->
-
-
-    </div>
-
-
-    </div>
-    <br><br>
-    <div class="essentials-section">
-        <div class="essentials-wrapper">
-            <h2 class="year">2023</h2>
-            <h3 class="essentials-title">Summertime Essentials</h3>
-            <div class="gallery-wrapper">
-                <a class="gallery-item-wrapper">
-                    <div class="gallery-text-wrapper">
-                        <span class=""></span>
                     </div>
-                    <img src="drink 2.jpeg" class="gallery-img">
-                </a>
-
-                <a class="gallery-item-wrapper">
-                    <div class="gallery-text-wrapper">
-                        <span class=""></span>
-                    </div>
-                    <img src="drink 3.jpeg" class="gallery-img">
-                </a>
-
-                <a class="gallery-item-wrapper">
-                    <div class="gallery-text-wrapper">
-                        <span class=""></span>
-                    </div>
-                    <img src="drink1.jpeg" class="gallery-img">
-                </a>
-
-                <a class="gallery-item-wrapper">
-                    <div class="gallery-text-wrapper">
-                        <span class=""></span>
-                    </div>
-                    <img src="drink 2.jpeg" class="gallery-img">
-                </a>
-
-                <a class="gallery-item-wrapper">
-                    <div class="gallery-text-wrapper">
-                        <span class=""></span>
-                    </div>
-                    <img src="drink 3.jpeg" class="gallery-img">
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="footer">
-        <div id="newsletter-wrapper">
-            <div id="newsletter-text-wrapper">
-                <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-            </div>
-
-            <div class="newsletter-button-wrapper">
-                <div class="newsletter-button">
-                    <div class="newsletter-text-wrapper">
-                        <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-                        </input>
-                        <h3 class="arrow">↗</h3>
-                    </div>
-                    <hr class="hr-transparent">
                 </div>
             </div>
-        </div>
 
-        <!-- <div id="footer-ip">
+            <!-- <div id="footer-ip">
                 COPYRIGHT © TABBED 2023
                 <a class="lil-links" href="">Privacy Policy</a>
                 <a class="lil-links" href="">Legal Terms</a>
@@ -642,7 +230,4 @@
         </div>
         <script src="hover-script.js"></script>
     </body>
-    </div>
-</body>
-
 </html>
