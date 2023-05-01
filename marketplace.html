@@ -2,286 +2,35 @@
 
 <head>
     <title>Marketplace</title>
-    <script></script>
-    <link rel="stylesheet" href="tabbed-style.css">
-    <link rel="stylesheet" href="marketplace.css">
+    <meta charset="UTF-8">
+
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+    <link id="marketplace-stylesheet" rel="stylesheet" href="marketplace.css">
+
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+
     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.nav-right {
-    display: flex;
-}
-
-.nav-item {
-    margin-left: 10px;
-}
-
-.titlebox,
-.secondtitlebox {
-    text-align: center;
-    margin: 40px 0;
-}
-
-#imgs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-}
-
-.imgbox {
-    width: 30%;
-}
-
-.imgbox img,
-.imgblur {
-    width: 100%;
-    border-radius: 20px;
-}
-
-.imgblur {
-    opacity: 60%;
-    border: 3px solid red;
-}
-
-#tabbedimg {
-    border: 3px solid rgb(157, 214, 157);
-}
-
-#maintxt {
-    margin-bottom: 40px;
-}
-
-.boxes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.box {
-    flex: 1;
-    border: 1px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 10px;
-    box-sizing: border-box;
-}
-
-.marketplace-title {
-    font-family: "Agrandir Variable";
-    padding-bottom: 1vw;
-    font-size: 18pt;
-    text-align: center;
-
-}
-
-.marketplace-headings {
-    font-family: "Agrandir Variable";
-    font-size: 20pt;
-    line-height: 0%;
-
-}
-
-@media (max-width: 768px) {
-    .boxes-container {
-        flex-direction: column;
-    }
-} body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .nav-right {
-            display: flex;
-        }
-
-        .nav-item {
-            margin-left: 10px;
-        }
-
-        .titlebox,
-        .secondtitlebox {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        #imgs {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
-
-        .imgbox {
-            width: 30%;
-        }
-
-        .imgbox img,
-        .imgblur {
-            width: 20vw;
-            border-radius: 20px;
-        }
-
-        .imgblur {
-            opacity: 60%;
-            border: 3px solid black;
-        }
-
-        #tabbedimg {
-            border: 3px solid rgb(157, 214, 157);
-        }
-
-        #maintxt {
-            padding-left: 200px;
-            padding-right: 200px;
-            font-weight: 200;
-        }
-
-        .boxes-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .box {
-            flex: 1;
-            border: 1px solid black;
-            padding-left: 10px;
-            padding-right: 10px;
-            width: 70vw;
-            box-sizing: border-box;
-            margin: auto;
-            margin-bottom: 1vw;
-            border-radius: 15px;
-        }
-
-        .marketplace-title {
-            font-family: "Agrandir Variable";
-            font-size: 18pt;
-            text-align: center;
-
-        }
-
-        .marketplace-headings {
-            font-family: "Agrandir Variable";
-            font-size: 20pt;
-            line-height: 0%;
-
-        }
-
-        @media (max-width: 768px) {
-            .boxes-container {
-                flex-direction: column;
-            }
-        }
-
-        .compete {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        .competitors {
-            position: relative;
-            width: 20vw;
-            height: 19.5vw;
-            margin-left: 2%;
-            margin-right: 2%;
-            text-align: center;
-            transition: 1s;
-            text-align: center;
-            border-radius: 25px;
-            border: 2px solid black;
-        }
-
-        #ball2{
-            background-image: url("ball2.png");
-            background-size: 110%;
-            background-repeat: no-repeat;
-            background-position: -10px 0px;
-
-        }
-
-        #nightcap{
-            background-image: url("nightcap.png");
-            background-size: 110%;
-            background-repeat: no-repeat;
-            background-position: -10px 0px;
-
-        }
-
-        #tabbedlogo{
-
-            background-image: url("tabbed_logo.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-
-        }
-
-        hr{
-            width: 90%;
-        }
-
-        #cashflow{
-            margin: auto;
-            border: 1px solid black;
-            border-radius: 15px;
-            width: 70vw;
-            height: 57vw;
-            background-image: url("cashflowprojection.png");
-            background-size: 100%;
-            margin-bottom: 50px;
-        }
-
-        #financialplan{
-            margin: auto;
-            border: 1px solid black;
-            border-radius: 15px;
-            width: 70vw;
-            height: 47vw;
-            background-image: url("financialplan.png");
-            background-size: 100%;
-            margin-bottom: 50px;
-
-        }
-        
-
     </style>
 </head>
 
 <body>
+    <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
+    <div id="cart-overlay" class="cart-overlay hidden">
+        <div class="cart-overlay-content">
+            <h3 style="text-align:center">Your Cart</h3>
+            <hr>
+            <br>
+            <div id="cart-overlay-items"></div>
+            <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+            <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        </div>
+    </div>
+
     <div class="navbar">
         <a class="nav-left" href="tabbed-investor-site.html">
             <img class="tabbed-logo" src="TABBED.svg">
@@ -289,7 +38,14 @@
         <div class="nav-right">
             <a class="nav-item" id="about" href="about_us.html">About Us</a>
             <a class="nav-item" id="shop" href="shop.html">Shop</a>
-            <a class="nav-item" id="business" href="business.html">Business</a>
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
+                        class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                    <a class="dropdown-item" href="timeline.html">Timeline</a>
+                </div>
+            </div>
             <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
             <div class="nav-item shopping-cart-wrapper">
                 <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
@@ -298,128 +54,130 @@
         </div>
     </div>
 
-    <div id = "container">
+    <div id="container">
 
-    <div class="titlebox" id="prototype">
-        <p class = "marketplace-title">MARKETPLACE</p>
-    </div>
-    <!-- Images section -->
-    
-    <div class="compete">
-        <div class="competitors" id="ball2" alt="ball2 logo">
+        <div class="titlebox" id="prototype">
+            <p class="marketplace-title">MARKETPLACE</p>
         </div>
-        <div class="competitors" id="nightcap" alt="nightcap logo">
-        </div>
-        <div class="competitors" id = "tabbedlogo" alt="tabbed logo">
-        </div>
-    </div>
-<br>
-    <hr>
-    <!-- Main text section -->
-    <p class = "marketplace-title">Competitors:</p>
-    <div id="maintxt">
-        &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;While there currently are not any direct competitors with Tabbed's
-        redesigned can lid, there are
-        several reusable, additive solutions in the anti-drink spiking industry like Nightcap, a scrunchie
-        with a hidden cap to cover the top of a drink, leaving only a hole for the straw. While this
-        solution offers a way for consumers to protect themselves, it necessitates action from the
-        consumers, requiring them purchase the item and carry it around with them rather than having
-        the solution already embedded into the bottle.
-        <br><br>
-        &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;There are a few solutions in the market that modify the can itself, but
-        none of them are marketed
-        to prevent drink-spiking. Some companies, like Ball Packaging Europe, Foboha GmbH, and
-        Can2close, use additional plastic components, which inhibits mass-production due to recycling
-        difficulties of the combined materials. Other inventions, like the Xtra lid, the Soda Seal by the
-        Ukrainian inventor, Johan De Broyer, and one done by Robert Davis use excess amounts of
-        aluminum that are extremely costly when mass-produced. All of these lids are marketed as
-        solutions to drink-spilling and preventing bugs and other external contaminants from entering the
-        drink. Very few were brought to production and those that did failed to be successful in their
-        launch due to reasons described above. There are no resealable cans to prevent drink-spiking on
-        the market.
-        <br><br>
-        &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Tabbed finds itself in a unique position as a startup in the hard-seltzer
-        industry that differentiates
-        itself with a drink-spiking prevention design. While the contents could be comparable to a brand
-        like Truly, Tabbed's redesigned can lid that is seamlessly integrated into the product and
-        positioning as a drink-spiking preventative measure provides consumers with an effortless and
-        reliable way to protect their drinks from potential tampering.
-        <br><br>
-    </div>
+        <!-- Images section -->
 
-    <hr>
-
-
-    <div class="secondtitlebox" id="prototype">
-        <p class = "marketplace-title">Research and Experimental Development</p>
-    </div>
-    <div class="box">
-        <p class = "marketplace-headings">Can Design Optimization:</p>
-        <p>
-        Our unique can design and lid mechanism serve as the
-        cornerstones of our product's value proposition, so we are investing in R&D efforts that
-        focus on refining and improving these features. We are conducting consumer research
-        through surveys to gather feedback on the usability and effectiveness of the lid
-        mechanism to reduce drink-spiking. We are also exploring different materials (i.e.
-        aluminum, plastic) and manufacturing processes to optimize the design for cost and
-        efficiency.</p>
-    </div>
-    <div class="box">
-        <p class = "marketplace-headings">Product Formulation:</p>
-        <p>
-        We aim to develop an alcoholic beverage that meets our target
-        customers' preferences and aligns with our brand values. We are gathering feedback to
-        determine the most popular recipes and experiment with different types of flavor profiles
-        and ingredients. We want to create a product that stands out in a crowded marketplace.</p>
-    </div>
-    <div class="box">
-        <p class = "marketplace-headings">Safety and Compliance:</p>
-        <p>
-        Because Tabbed is designed to address the issue of drink-spiking,
-        we realize the importance of investing in R&D activities that ensure that our product
-        achieves what it is designed to do. We are testing our canning solution to ensure that it
-        meets all relevant safety standards and regulations.</p>
-    </div>
-
-    <div class="box">
-        <p class = "marketplace-headings">Sustainability:</p>
-        <p>
-        We believe that it is vital to prioritize sustainable and eco-friendly
-        products, so we are committed to investing in R&D activities that promote sustainability.
-        We are exploring alternative packaging materials, optimizing our manufacturing
-        processes to reduce waste and energy use, and exploring methods of using recycled or
-        repurposed materials.</p>
-    </div>
-
-    <p class = "marketplace-title">Projected Financials</h1>
-
-        <div id = "cashflow" alt="cash flow projection"></div>
-        <div id = "financialplan" alt="financial plan"></div>
-
-</div>
-
-<div class="footer">
-    <div id="newsletter-wrapper">
-        <div id="newsletter-text-wrapper">
-            <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-        </div>
-
-        <div class="newsletter-button-wrapper">
-            <div class="newsletter-button">
-                <div class="newsletter-text-wrapper">
-                    <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-                    </input>
-                    <h3 class="arrow">↗</h3>
-                </div>
-                <hr class="hr-transparent">
+        <div class="compete">
+            <div class="competitors" id="ball2" alt="ball2 logo">
+            </div>
+            <div class="competitors" id="nightcap" alt="nightcap logo">
+            </div>
+            <div class="competitors" id="tabbedlogo" alt="tabbed logo">
             </div>
         </div>
+        <br>
+        <hr>
+        <!-- Main text section -->
+        <p class="marketplace-title">Competitors:</p>
+        <div id="maintxt">
+            &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;While there currently are not any direct competitors with Tabbed's
+            redesigned can lid, there are
+            several reusable, additive solutions in the anti-drink spiking industry like Nightcap, a scrunchie
+            with a hidden cap to cover the top of a drink, leaving only a hole for the straw. While this
+            solution offers a way for consumers to protect themselves, it necessitates action from the
+            consumers, requiring them purchase the item and carry it around with them rather than having
+            the solution already embedded into the bottle.
+            <br><br>
+            &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;There are a few solutions in the market that modify the can itself,
+            but
+            none of them are marketed
+            to prevent drink-spiking. Some companies, like Ball Packaging Europe, Foboha GmbH, and
+            Can2close, use additional plastic components, which inhibits mass-production due to recycling
+            difficulties of the combined materials. Other inventions, like the Xtra lid, the Soda Seal by the
+            Ukrainian inventor, Johan De Broyer, and one done by Robert Davis use excess amounts of
+            aluminum that are extremely costly when mass-produced. All of these lids are marketed as
+            solutions to drink-spilling and preventing bugs and other external contaminants from entering the
+            drink. Very few were brought to production and those that did failed to be successful in their
+            launch due to reasons described above. There are no resealable cans to prevent drink-spiking on
+            the market.
+            <br><br>
+            &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Tabbed finds itself in a unique position as a startup in the
+            hard-seltzer
+            industry that differentiates
+            itself with a drink-spiking prevention design. While the contents could be comparable to a brand
+            like Truly, Tabbed's redesigned can lid that is seamlessly integrated into the product and
+            positioning as a drink-spiking preventative measure provides consumers with an effortless and
+            reliable way to protect their drinks from potential tampering.
+            <br><br>
+        </div>
+
+        <hr>
+
+
+        <div class="secondtitlebox" id="prototype">
+            <p class="marketplace-title">Research and Experimental Development</p>
+        </div>
+        <div class="box">
+            <p class="marketplace-headings">Can Design Optimization:</p>
+            <p>
+                Our unique can design and lid mechanism serve as the
+                cornerstones of our product's value proposition, so we are investing in R&D efforts that
+                focus on refining and improving these features. We are conducting consumer research
+                through surveys to gather feedback on the usability and effectiveness of the lid
+                mechanism to reduce drink-spiking. We are also exploring different materials (i.e.
+                aluminum, plastic) and manufacturing processes to optimize the design for cost and
+                efficiency.</p>
+        </div>
+        <div class="box">
+            <p class="marketplace-headings">Product Formulation:</p>
+            <p>
+                We aim to develop an alcoholic beverage that meets our target
+                customers' preferences and aligns with our brand values. We are gathering feedback to
+                determine the most popular recipes and experiment with different types of flavor profiles
+                and ingredients. We want to create a product that stands out in a crowded marketplace.</p>
+        </div>
+        <div class="box">
+            <p class="marketplace-headings">Safety and Compliance:</p>
+            <p>
+                Because Tabbed is designed to address the issue of drink-spiking,
+                we realize the importance of investing in R&D activities that ensure that our product
+                achieves what it is designed to do. We are testing our canning solution to ensure that it
+                meets all relevant safety standards and regulations.</p>
+        </div>
+
+        <div class="box">
+            <p class="marketplace-headings">Sustainability:</p>
+            <p>
+                We believe that it is vital to prioritize sustainable and eco-friendly
+                products, so we are committed to investing in R&D activities that promote sustainability.
+                We are exploring alternative packaging materials, optimizing our manufacturing
+                processes to reduce waste and energy use, and exploring methods of using recycled or
+                repurposed materials.</p>
+        </div>
+
+        <p class="marketplace-title">Projected Financials</h1>
+
+        <div id="cashflow" alt="cash flow projection"></div>
+        <div id="financialplan" alt="financial plan"></div>
+
     </div>
 
-</div>
-<script src="globalShoppingCartStuff-javascript.js"></script>
-<script src="globalDarkMode-javascript.js"></script>
+    <div class="footer">
+        <div id="newsletter-wrapper">
+            <div id="newsletter-text-wrapper">
+                <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+            </div>
 
+            <div class="newsletter-button-wrapper">
+                <div class="newsletter-button">
+                    <div class="newsletter-text-wrapper">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+                        </input>
+                        <h3 class="arrow">↗</h3>
+                    </div>
+                    <hr class="hr-transparent">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
 
 </body>
 
