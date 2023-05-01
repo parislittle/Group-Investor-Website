@@ -5,7 +5,10 @@
   <script></script>
   <link rel="stylesheet" href="tabbed-style.css">
   <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+  <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
   <link rel="stylesheet" href="about_us.css">
+
+  <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
   <style></style>
 
   <script>
@@ -104,38 +107,48 @@
 </head>
 
 <body>
+
+  <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
   <center>
-   <div id="cart-overlay" class="cart-overlay hidden">
+    <div id="cart-overlay" class="cart-overlay hidden">
       <div class="cart-overlay-content">
-          <h3 style="text-align:center">Your Cart</h3>
-          <hr>
-          <br>
-          <div id="cart-overlay-items"></div>
-          <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
-          <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        <h3 style="text-align:center">Your Cart</h3>
+        <hr>
+        <br>
+        <div id="cart-overlay-items"></div>
+        <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+        <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
       </div>
-  </div>
+    </div>
 
 
-  <!--<div id="outercontainer">
+    <!--<div id="outercontainer">
 
-      <div id="hero-section">--> 
-          <div class="navbar">
-              <a class="nav-left" href="tabbed-investor-site.html">
-                  <img class="tabbed-logo" src="TABBED.svg">
-              </a>
-              <div class="nav-right">
-                  <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                  <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                  <a class="nav-item" id="business" href="marketplace.html">Business</a>
-                  <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                  <div class="nav-item shopping-cart-wrapper">
-                      <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                      <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
-                  </div>
-              </div>
+      <div id="hero-section">-->
+    <div class="navbar">
+      <a class="nav-left" href="tabbed-investor-site.html">
+        <img class="tabbed-logo" src="TABBED.svg">
+      </a>
+      <div class="nav-right">
+        <a class="nav-item" id="about" href="about_us.html">About Us</a>
+        <a class="nav-item" id="shop" href="shop.html">Shop</a>
+        <div class="nav-item dropdown">
+          <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker"
+              src="dropdown.png" alt="Dropdown"></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+            <a class="dropdown-item" href="timeline.html">Timeline</a>
           </div>
-          <br><br><br>
+        </div>
+        <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+        <div class="nav-item shopping-cart-wrapper">
+          <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+          <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
 
     <h1> ABOUT US</h1>
 
@@ -272,28 +285,28 @@
   </center>
   <div class="footer">
     <div id="newsletter-wrapper">
-        <div id="newsletter-text-wrapper">
-            <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-        </div>
+      <div id="newsletter-text-wrapper">
+        <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
+      </div>
 
-        <div class="newsletter-button-wrapper">
-            <div class="newsletter-button">
-                <div class="newsletter-text-wrapper">
-                    <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-                    </input>
-                    <h3 class="arrow">↗</h3>
-                </div>
-                <hr class="hr-transparent">
-            </div>
+      <div class="newsletter-button-wrapper">
+        <div class="newsletter-button">
+          <div class="newsletter-text-wrapper">
+            <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
+            </input>
+            <h3 class="arrow">↗</h3>
+          </div>
+          <hr class="hr-transparent">
         </div>
+      </div>
     </div>
 
-</div>
-<script src="globalShoppingCartStuff-javascript.js"></script>
-<script src="globalDarkMode-javascript.js"></script>
+  </div>
+  <script src="globalShoppingCartStuff-javascript.js"></script>
+  <script src="globalDarkMode-javascript.js"></script>
 
-    // Initialize the member card with the first member's information
-    updateMemberCard();
+  // Initialize the member card with the first member's information
+  updateMemberCard();
   </script>
 </body>
 
