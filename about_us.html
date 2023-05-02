@@ -26,9 +26,13 @@
     }
 
     #animation-section {
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+      background-color: #FFFDF5;
+      color: #222222;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      margin: 0;
     }
 
     #buttons {
@@ -109,8 +113,8 @@
         transform:translate(-50%,-50%);
         z-index: -1;
         opacity: 0;
-
     }
+
 </style>
 <script>
     var sequence1 = function() {    
@@ -179,16 +183,18 @@
             opacity: 0
         })
 
-        $("#can").animate({
+        $("#can").delay(11500)
+        .animate({
           opacity: "1"
-        }).delay(11500).animate({
+        }).animate({
             top: "50vh"
         }, 2000, 'easeInOutQuad')
     
 
-        $("#f1").animate({
+        $("#f1").delay(2000)
+        .animate({
           opacity: "1"
-        }).delay(2000).animate({
+        }).animate({
             left: "8vw",
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -233,9 +239,10 @@
             left: "60vw"
         }, 1000, 'easeInQuint')
 
-        $("#f2").animate({
+        $("#f2").delay(2000)
+        .animate({
           opacity: "1"
-        }).delay(2000).animate({
+        }).animate({
             left: "-8vw",
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -261,9 +268,10 @@
             opacity: "0"
         }, 1000, 'easeInOutQuint')
 
-        $("#f3").animate({
+        $("#f3").delay(2100)
+        .animate({
           opacity: "1"
-        }).delay(2100).animate({
+        }).animate({
             left: "16vw",
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -293,9 +301,10 @@
         }, 1100)
         
 
-        $("#f4").animate({
+        $("#f4").delay(2100)
+        .animate({
           opacity: "1"
-        }).delay(2100).animate({
+        }).animate({
             left: "-16vw",
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -324,9 +333,10 @@
             opacity: "1"
         }, 1000)
 
-        $("#f5").animate({
+        $("#f5").delay(2200)
+        .animate({
           opacity: "1"
-        }).delay(2200).animate({
+        }).animate({
             left: "24vw",
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -355,9 +365,10 @@
             opacity: "1"
         }, 1000)
 
-        $("#f6").animate({
+        $("#f6").delay(2200)
+        .animate({
           opacity: "1"
-        }).delay(2200).animate({
+        }).animate({
             left: "-24vw"
         }, 2000, 'easeInOutQuint')
         .delay(0)
@@ -386,9 +397,10 @@
             opacity: "1"
         }, 1000)
 
-        $("#logo-side").animate({
+        $("#logo-side").delay(17500)
+        .animate({
           opacity: "1"
-        }).delay(17500).animate({
+        }).animate({
             left: "49vw"
         }, 2000, 'easeInOutQuint')
         
@@ -514,9 +526,27 @@
 </head>
 
 <body>
+    <div id="animation-section">
 
-  <div class="mode-button" onclick="toggleDarkModeAboutUs()"><img src=moon.png></div>
+      <h1 id="about-us"> ABOUT US</h1>
 
+      <img id="pill" src = "assets/SVG/pill_1.svg" alt="Pill SVG"/>
+      <img id="can" src = "assets/SVG/can_1.svg" alt="Can SVG"/>
+      <img id="logo-side" src = "assets/SVG/logo-side.svg" alt="Logo SVG"/>
+
+      <div id="group">
+          <img id="student" src = "assets/SVG/student_1.svg" alt="Student SVG"/>
+          <img class="friend" id="f1" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f1_red" src = "assets/SVG/friend_red.svg" alt="Friend Red SVG"/>
+          <img class="friend" id="f2" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f3" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f4" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f5" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f6" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+      </div>
+    </div>
+
+    <div class="mode-button" onclick="toggleDarkModeAboutUs()"><img src=moon.png></div>
   <center>
     <div id="cart-overlay" class="cart-overlay hidden">
       <div class="cart-overlay-content">
@@ -555,12 +585,12 @@
         </div>
       </div>
     </div>
-    <br><br><br>
 
-    <h1 id="about-us"> ABOUT US</h1>
+    <audio id="audio_1">
+        <source src="audio/audio_1.mp3">
+    </audio>
 
     <div id="about-section">
-
       <br><br>
       <h2> <strong>MEET THE TEAM</strong></h2><br><br>
 
@@ -693,26 +723,6 @@
     <div class="sequence_buttons" id="seq_1">PLAY</div>
   </div>
 
-  <div id="animation-section">
-      <img id="pill" src = "assets/SVG/pill_1.svg" alt="Pill SVG"/>
-      <img id="can" src = "assets/SVG/can_1.svg" alt="Can SVG"/>
-      <img id="logo-side" src = "assets/SVG/logo-side.svg" alt="Logo SVG"/>
-
-      <div id="group">
-          <img id="student" src = "assets/SVG/student_1.svg" alt="Student SVG"/>
-          <img class="friend" id="f1" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-          <img class="friend" id="f1_red" src = "assets/SVG/friend_red.svg" alt="Friend Red SVG"/>
-          <img class="friend" id="f2" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-          <img class="friend" id="f3" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-          <img class="friend" id="f4" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-          <img class="friend" id="f5" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-          <img class="friend" id="f6" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
-      </div>
-  </div>
-
-  <audio id="audio_1">
-      <source src="audio/audio_1.mp3">
-  </audio>
   <div class="footer">
     <div id="newsletter-wrapper">
       <div id="newsletter-text-wrapper">

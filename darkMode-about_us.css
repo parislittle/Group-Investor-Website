@@ -1,5 +1,4 @@
 body {
-    padding-top: 6vw;
 }
 
 .about-section {
@@ -194,11 +193,9 @@ h2 {
   margin: 5px;
   cursor: pointer;
   border-radius: 50%;
-  filter: grayscale(100%);
 }
 
 .nav-button-active {
-  filter: grayscale(0%);
   /* Remove the grayscale filter */
   /* Add any other styles you want for the active icon */
 }
@@ -374,4 +371,9 @@ h2 {
 
 .slide-out-up {
   animation: slideOutUp 0.35s ease-in-out forwards;
+}
+
+.nav-item {
+  color: black;
+  mix-blend-mode: exclusion;
 }
