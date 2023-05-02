@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Tabbed</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="tabbed-home.css">
         <link rel="stylesheet" href="problem_solution.css">
         <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
@@ -79,6 +80,30 @@
 
             .hidden {
                 display: none;
+            }
+            @media (max-width: 767px) { 
+            .essentials-wrapper {
+                width: 100vw;
+                margin-left: 4vw;
+                display: block;
+                margin-top: 100%;
+
+                        }
+                        .problem {
+                text-align: center;
+                background-color: #222222;
+                color: #FFFDF5;
+                padding: 2vw;
+                width:110%;
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer
+            {
+                width:110%;
+            }
             }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
