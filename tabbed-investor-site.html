@@ -1,246 +1,235 @@
 <html>
-    <head>
-        <title>Tabbed</title>
-        <link rel="stylesheet" href="tabbed-home.css">
-        <link rel="stylesheet" href="problem_solution.css">
-        <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
-        <meta charset="UTF-8">
-        <style>
-            /* Shopping Cart */
-            .shopping-cart-wrapper {
-                position: relative;
-                display: inline-block;
-            }
 
-            .shopping-cart-icon {
-                width: 24px;
-                vertical-align: middle;
-            }
+<head>
+    <title>Tabbed</title>
+    <link rel="stylesheet" href="tabbed-home.css">
+    <link rel="stylesheet" href="problem_solution.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <meta charset="UTF-8">
+    <style>
+        /* Shopping Cart */
+        .shopping-cart-wrapper {
+            position: relative;
+            display: inline-block;
+        }
 
-            .cart-quantity {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -35%);
-                font-size: 14px;
-                /* Adjust the font size as needed */
-                color: black;
-                z-index: -1;
-            }
+        .shopping-cart-icon {
+            width: 24px;
+            vertical-align: middle;
+        }
 
-            /* Shopping Cart Overlay */
-            .cart-overlay {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                width: 300px;
-                background-color: #ffffff;
-                z-index: 1000;
-                overflow-y: auto;
-                padding: 20px;
-                box-sizing: border-box;
-            }
+        .cart-quantity {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -35%);
+            font-size: 14px;
+            /* Adjust the font size as needed */
+            color: black;
+            z-index: -1;
+        }
 
-            .cart-overlay-content {
-                max-width: 100%;
-            }
+        /* Shopping Cart Overlay */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: #ffffff;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-            .cart-item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 10px;
-            }
+        .cart-overlay-content {
+            max-width: 100%;
+        }
 
-            .cart-item img {
-                width: 50px;
-                height: auto;
-                margin-right: 10px;
-            }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-            .cart-item-price {
-                margin-left: auto;
-            }
+        .cart-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
 
-            .cart-total-price {
-                margin-top: 20px;
-                font-weight: bold;
-            }
+        .cart-item-price {
+            margin-left: auto;
+        }
 
-            .view-full-cart-btn {
-                display: inline-block;
-                padding: 10px 20px;
-                background-color: #f0c14b;
-                text-decoration: none;
-                text-align: center;
-                margin-top: 20px;
-            }
+        .cart-total-price {
+            margin-top: 20px;
+            font-weight: bold;
+        }
 
-            .hidden {
-                display: none;
-            }
-        </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        .view-full-cart-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0c14b;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+        }
 
-    </head> 
-    <body>
-        <div class="navbar">
-            <a class="nav-left" href="tabbed-investor-site.html">
-                <img class="tabbed-logo" src="TABBED.svg">
-            </a>
-            <div class="nav-right">
-                <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                <div class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="marketplace.html">Marketplace</a>
-                        <a class="dropdown-item" href="timeline.html">Timeline</a>
-                    </div>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="nav-left" href="tabbed-investor-site.html">
+            <img class="tabbed-logo" src="TABBED.svg">
+        </a>
+        <div class="nav-right">
+            <a class="nav-item" id="about" href="about_us.html">About Us</a>
+            <a class="nav-item" id="shop" href="shop.html">Shop</a>
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
+                        class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                    <a class="dropdown-item" href="timeline.html">Timeline</a>
                 </div>
-                <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                <div class="nav-item shopping-cart-wrapper">
-                    <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                    <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+            </div>
+            <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+            <div class="nav-item shopping-cart-wrapper">
+                <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero-section">
+        <div class="hero-wrapper">
+            <div class="hero-text-wrapper">
+                <h1 class="hero-title">
+                    Safe sips, <br>
+                    Spirited Moments
+                </h1>
+                <h3 class="hero-subtitle">
+                    INDULGE WITH UNRIVALED CONFIDENCE
+                </h3>
+                <a class="learn-more-button" href="about_us.html">
+                    Learn More
+                </a>
+            </div>
+            <img class="hero-img" src="hero-img.jpeg">
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-context">
+            <p>There are VERY few products in the market dedicated towards drink spiking prevention. Current solutions
+                are expensive, unattractive, obvious at parties, and difficult to use. </p>
+        </div>
+        <div class="problem-title"> THE PROBLEM </div>
+
+    </div>
+
+    <div class="solution">
+        <div class="solution-title"> THE SOLUTION </div>
+        <div class="solution-context">
+            <h2 class="tabbed-title"><strong> Meet Tabbed.</strong></h2>
+
+
+            <strong>Aesthetic.</strong> How can we gear the design to make it attractive towards college students?<br>
+            <strong>Safe.</strong> We’re looking for the best materials and design to discourage drink spiking.<br>
+            <strong>Inconspicuous.</strong> What design aspects can we implement to disguise the drink spiking
+            prevention features?<br>
+            <strong>Convenient. </strong>How can we get our users to keep coming back to our product?
+            </p>
+        </div>
+    </div>
+
+    <div class="essentials-section">
+        <div class="essentials-wrapper">
+            <h2 class="year">2023</h2>
+            <h3 class="essentials-title">Summertime Essentials</h3>
+
+            <div class="flavors">
+                <div class="flavors-item">
+                    <div class="flavors-item-image-wrapper">
+                        <div class="flavors-item-image-inner">
+                            <img src="drink1.jpeg" alt="" class="flavors-item-image">
+                        </div>
+                    </div>
+                    <span class="flavors-item-text" id="lavender">
+                        <span class="flavors-item-innertext">LAVENDER LULLABY</span>
+                    </span>
+                </div>
+
+                <div class="flavors-item">
+                    <div class="flavors-item-image-wrapper">
+                        <div class="flavors-item-image-inner">
+                            <img src="drink 2.jpeg" alt="" class="flavors-item-image">
+                        </div>
+                    </div>
+                    <span class="flavors-item-text" id="grapefruit">
+                        <span class="flavors-item-innertext">GRAPEFRUIT GUSTO</span>
+                    </span>
+                </div>
+
+                <div class="flavors-item">
+                    <div class="flavors-item-image-wrapper">
+                        <div class="flavors-item-image-inner">
+                            <img src="drink 3.jpeg" alt="" class="flavors-item-image">
+                        </div>
+                    </div>
+                    <span class="flavors-item-text" id="cherry">
+                        <span class="flavors-item-innertext">CHERRY CASCADE </span>
+                    </span>
+                </div>
+
+                <div class="flavors-item">
+                    <div class="flavors-item-image-wrapper">
+                        <div class="flavors-item-image-inner">
+                            <img src="drink1.jpeg" alt="" class="flavors-item-image">
+                        </div>
+                    </div>
+                    <span class="flavors-item-text" id="mango">
+                        <span class="flavors-item-innertext">MANGO MOSAIC</span>
+                    </span>
+                </div>
+
+                <div class="flavors-item">
+                    <div class="flavors-item-image-wrapper">
+                        <div class="flavors-item-image-inner">
+                            <img src="drink 2.jpeg" alt="" class="flavors-item-image">
+                        </div>
+                    </div>
+                    <span class="flavors-item-text" id="citrus">
+                        <span class="flavors-item-innertext">CITRUS SYMPHONY</span>
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="hero-section">
-            <div class="hero-wrapper">
-                <div class="hero-text-wrapper">
-                    <h1 class="hero-title">
-                        Safe sips, <br>
-                        Spirited Moments
-                    </h1>
-                    <h3 class="hero-subtitle">
-                        INDULGE WITH UNRIVALED CONFIDENCE
-                    </h3>
-                    <a class="learn-more-button" href="about_us.html">
-                        Learn More
-                    </a>
-                </div>
-                <img class="hero-img" src="hero-img.jpeg">
+
+    <div class="footer">
+        <div id="newsletter-wrapper">
+            <div id="dev-link">
+                <a href="websiteteam.html" style="color:white; text-decoration: none;">
+                    <h3>Website Dev Team ↗</h3>
+                </a>
             </div>
         </div>
+    </div>
+    <script src="hover-script.js"></script>
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
 
-        <div class="problem">
-            <div class="problem-context">
-                <p>There are VERY few products in the market dedicated towards drink spiking prevention. Current solutions
-                    are expensive, unattractive, obvious at parties, and difficult to use. </p>
-            </div>
-            <div class="problem-title"> THE PROBLEM </div>
-    
-        </div>
-        
-        <div class="solution">
-            <div class="solution-title"> THE SOLUTION </div>
-            <div class="solution-context">
-                <h2 class="tabbed-title"><strong> Meet Tabbed.</strong></h2>
-    
-    
-                <strong>Aesthetic.</strong> How can we gear the design to make it attractive towards college students?<br>
-                <strong>Safe.</strong> We’re looking for the best materials and design to discourage drink spiking.<br>
-                <strong>Inconspicuous.</strong> What design aspects can we implement to disguise the drink spiking
-                prevention features?<br>
-                <strong>Convenient. </strong>How can we get our users to keep coming back to our product?
-                </p>
-            </div>
-        </div>
+</body>
 
-        <div class="essentials-section">
-            <div class="essentials-wrapper">
-                <h2 class="year">2023</h2>
-                <h3 class="essentials-title">Summertime Essentials</h3>
-
-                <div class="flavors">
-                    <div class="flavors-item">
-                        <div class="flavors-item-image-wrapper">
-                            <div class="flavors-item-image-inner">
-                                <img src="drink1.jpeg" alt="" class="flavors-item-image">
-                            </div>
-                        </div>
-                        <span class="flavors-item-text" id="lavender">
-                            <span class="flavors-item-innertext">LAVENDER LULLABY</span>
-                        </span>
-                    </div>
-
-                    <div class="flavors-item">
-                        <div class="flavors-item-image-wrapper">
-                            <div class="flavors-item-image-inner">
-                                <img src="drink 2.jpeg" alt="" class="flavors-item-image">
-                            </div>
-                        </div>
-                        <span class="flavors-item-text" id="grapefruit">
-                            <span class="flavors-item-innertext">GRAPEFRUIT GUSTO</span>
-                        </span>
-                    </div>
-
-                    <div class="flavors-item">
-                        <div class="flavors-item-image-wrapper">
-                            <div class="flavors-item-image-inner">
-                                <img src="drink 3.jpeg" alt="" class="flavors-item-image">
-                            </div>
-                        </div>
-                        <span class="flavors-item-text" id="cherry">
-                            <span class="flavors-item-innertext">CHERRY CASCADE </span>
-                        </span>
-                    </div>
-
-                    <div class="flavors-item">
-                        <div class="flavors-item-image-wrapper">
-                            <div class="flavors-item-image-inner">
-                                <img src="drink1.jpeg" alt="" class="flavors-item-image">
-                            </div>
-                        </div>
-                        <span class="flavors-item-text" id="mango">
-                            <span class="flavors-item-innertext">MANGO MOSAIC</span>
-                        </span>
-                    </div>
-
-                    <div class="flavors-item">
-                        <div class="flavors-item-image-wrapper">
-                            <div class="flavors-item-image-inner">
-                                <img src="drink 2.jpeg" alt="" class="flavors-item-image">
-                            </div>
-                        </div>
-                        <span class="flavors-item-text" id="citrus">
-                            <span class="flavors-item-innertext">CITRUS SYMPHONY</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="footer">
-            <div id="newsletter-wrapper">
-                <div id="newsletter-text-wrapper">
-                    <p id="newsletter-text">SUBSCRIBE TO BE THE FIRST TO RECEIVE UPDATES, discounts, AND MORE.</p>
-                </div>
-
-                <div class="newsletter-button-wrapper">
-                    <div class="newsletter-button">
-                        <div class="newsletter-text-wrapper">
-                            <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-button-text">
-                            </input>
-                            <h3 class="arrow">↗</h3>
-                        </div>
-                        <hr class="hr-transparent">
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div id="footer-ip">
-                COPYRIGHT © TABBED 2023
-                <a class="lil-links" href="">Privacy Policy</a>
-                <a class="lil-links" href="">Legal Terms</a>
-            </div> -->
-        </div>
-        <script src="hover-script.js"></script>
-        <script src="globalShoppingCartStuff-javascript.js"></script>
-        <script src="globalDarkMode-javascript.js"></script>
-
-    </body>
 </html>
