@@ -139,10 +139,10 @@ body {
     /*border: black solid 1px;*/
   }
 
-  /* Media query for devices with a pixel width of a phone */
+  /* Media query phone */
   @media (max-width: 767px) {
 
-    /* Your CSS styles for mobile devices go here */
+    
     #about {
       display: flex;
       margin: 5%;
