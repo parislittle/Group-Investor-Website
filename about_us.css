@@ -377,3 +377,7 @@ body {
   .slide-out-up {
     animation: slideOutUp 0.35s ease-in-out forwards;
   }
+
+  #about-section {
+    margin-top: 100vh;
+  }
