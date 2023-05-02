@@ -111,23 +111,20 @@
 #boxes {
     width: 100%;
     margin: auto;
-    margin-top: -700px;
 }
 
 #outercontainer {
     width: 100%;
-    height: auto;
     background-color: #FFFDF5;
     color: #222222;
     font-family: "Object Sans";
+    padding: 8vw 0vw 8vw 0vw;
 }
 
 #header {
     font-size: 18pt;
     text-align: center;
     position: relative;
-    top: -740px;
-
 }
 
 .add-to-cart-btn{

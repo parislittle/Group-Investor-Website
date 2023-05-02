@@ -136,8 +136,6 @@ h2 {
 }
 
 .nav-item {
-  background-color: rgba(255, 253, 245, .8);
-  border-radius: 3px;
   /*border: black solid 1px;*/
 }
 
@@ -174,7 +172,7 @@ h2 {
   padding-right: 1vw;
 }
 
-/* Sidebar for navigation */
+/* Sidebar forf navigation */
 .sidebar {
   background-color: #101010 !important;
   border: 1px solid white !important;

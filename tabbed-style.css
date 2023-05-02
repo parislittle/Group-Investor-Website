@@ -253,6 +253,7 @@ a.navbar {
 .essentials-title {
     font-family: "Agrandir Variable";
     font-size: 2vw;
+    margin: 0;
     padding-bottom: 1vw;
 }
 
