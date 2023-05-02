@@ -269,6 +269,9 @@ align-items: center;
 
 
 .gallery-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 100%;
     width: 25vw;
     border-radius: 25px;
