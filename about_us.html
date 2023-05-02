@@ -11,8 +11,409 @@
   <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
   <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
   <link id="dark-mode-about-us-stylesheet" rel="stylesheet" href="darkMode-about_us.css" disabled>
-  <style></style>
+ 
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <style>
 
+    #about-us {
+      position: absolute;
+      text-align: center;
+      top: 40%;
+      left: 50%;
+      transform:translate(-50%,-50%);
+
+    }
+
+    #animation-section {
+      background-color: #FFFDF5;
+      color: #222222;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    #buttons {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: flex;
+        transform:translate(-50%,-50%);
+        gap: 5px;
+    }
+
+    .sequence_buttons {
+        background-color: #222222;
+        color: #FFFDF5;
+        padding: 1vw 2vw 1vw 2vw;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #group {
+        position: absolute;
+        top: 120vh;
+        left: 50vw;
+        transform:translate(-50%,-50%);
+        opacity: 0;
+
+    }
+
+    #student {
+        width: 100px;
+        position: absolute;
+        z-index: 1;
+        transform:translate(-50%,-50%);
+        opacity: 0;
+
+    }
+
+    .friend {
+        width: 100px;
+        position: absolute;
+        transform:translate(-50%,-50%);
+        opacity: 0;
+
+
+    }
+
+    #f1_red {
+        opacity: 0;
+    }
+
+    #pill {
+        height: 50px;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform:translate(-50%,-50%);
+        opacity: 0;
+    }
+
+    #can {
+        width: 200px;
+        position: absolute;
+        top: 150vh;
+        left: 50vw;
+        transform:translate(-50%,-50%);
+        z-index: -2;
+        opacity: 0;
+
+    }
+
+    #logo-side {
+        height: 325px;
+        position: absolute;
+        top: 52vh;
+        left: 35vw;
+        transform:translate(-50%,-50%);
+        z-index: -1;
+        opacity: 0;
+    }
+
+</style>
+<script>
+    var sequence1 = function() {    
+        $("#audio_1").trigger("play");
+
+        $("#about-us").animate({	
+            opacity: "0",
+        }, 500, 'easeInOutQuint')
+
+        $("#buttons").animate({	
+            opacity: "0",
+        }, 500, 'easeInOutQuint')
+
+
+        $("#group").animate({
+          opacity: "1"
+        }).animate({	
+            top: "50vh",
+        }, 2000, 'easeInOutQuint')
+
+        
+
+        $("#student")
+        .animate({
+          opacity: "1"
+        })
+        .delay(3900)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(4100).animate({
+            width: "200px",
+            left: "-16vw"
+        }, 2000, 'easeInOutQuint')
+        .delay(200)
+        .animate({
+            left: "-60vw"
+        }, 1000, 'easeInQuint')
+        
+
+        $("#pill")
+        .delay(11500).animate({
+            opacity: "1",
+            height: "100px",
+            top: "20vh"
+        }, 1000, 'easeOutQuad')
+        .animate({
+            top: "50vh"
+        }, 1000, "easeInQuad")
+        .animate({
+            opacity: 0
+        })
+
+        $("#can").delay(11500)
+        .animate({
+          opacity: "1"
+        }).animate({
+            top: "50vh"
+        }, 2000, 'easeInOutQuad')
+    
+
+        $("#f1").delay(2000)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "8vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(100)
+        .animate({
+            opacity: "0"
+        }, 2000)
+        
+
+        $("#f1_red").delay(2000).animate({
+            left: "8vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(2000)
+        .animate({
+            opacity: "1"
+        }, 1000)
+        .delay(2700)
+        .animate({
+            left: "16vw",
+            width: "200px"
+        }, 2000, 'easeInOutQuint')
+        .delay(200)
+        .animate({
+            left: "60vw"
+        }, 1000, 'easeInQuint')
+
+        $("#f2").delay(2000)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "-8vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(4200).animate({
+            opacity: "0"
+        }, 1000, 'easeInOutQuint')
+
+        $("#f3").delay(2100)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "16vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(3850).animate({
+            opacity: "0"
+        }, 1000, 'easeInOutQuint')
+        .delay(2800).animate({
+            opacity: "1"
+        }, 1100)
+        
+
+        $("#f4").delay(2100)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "-16vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(3850).animate({
+            opacity: "0"
+        }, 1000, 'easeInOutQuint')
+        .delay(2900).animate({
+            opacity: "1"
+        }, 1000)
+
+        $("#f5").delay(2200)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "24vw",
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(3600).animate({
+            opacity: "0"
+        }, 1000, 'easeInOutQuint')
+        .delay(3000).animate({
+            opacity: "1"
+        }, 1000)
+
+        $("#f6").delay(2200)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "-24vw"
+        }, 2000, 'easeInOutQuint')
+        .delay(0)
+        .animate({
+            top: "-10vh"
+        }, 350, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 350, "easeInQuad") 
+        .animate({
+            top: "-5vh"
+        }, 250, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 250, "easeInQuad")
+        .animate({
+            top: "-2.5vh"
+        }, 200, "easeOutQuad") 
+        .animate({
+            top: "0vh"
+        }, 200, "easeInQuad") 
+        .delay(3600).animate({
+            opacity: "0"
+        }, 1000, 'easeInOutQuint')
+        .delay(3100).animate({
+            opacity: "1"
+        }, 1000)
+
+        $("#logo-side").delay(17500)
+        .animate({
+          opacity: "1"
+        }).animate({
+            left: "49vw"
+        }, 2000, 'easeInOutQuint')
+        
+    }
+
+    $(document).ready(function(){
+
+        $("#seq_1").on("click", function(){ 
+            sequence1();
+        });
+    });
+
+</script>
   <script>
     function initializeDarkMode() {
       // Get the value of the darkMode cookie
@@ -125,9 +526,27 @@
 </head>
 
 <body>
+    <div id="animation-section">
 
-  <div class="mode-button" onclick="toggleDarkModeAboutUs()"><img src=moon.png></div>
+      <h1 id="about-us"> ABOUT US</h1>
 
+      <img id="pill" src = "assets/SVG/pill_1.svg" alt="Pill SVG"/>
+      <img id="can" src = "assets/SVG/can_1.svg" alt="Can SVG"/>
+      <img id="logo-side" src = "assets/SVG/logo-side.svg" alt="Logo SVG"/>
+
+      <div id="group">
+          <img id="student" src = "assets/SVG/student_1.svg" alt="Student SVG"/>
+          <img class="friend" id="f1" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f1_red" src = "assets/SVG/friend_red.svg" alt="Friend Red SVG"/>
+          <img class="friend" id="f2" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f3" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f4" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f5" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+          <img class="friend" id="f6" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+      </div>
+    </div>
+
+    <div class="mode-button" onclick="toggleDarkModeAboutUs()"><img src=moon.png></div>
   <center>
     <div id="cart-overlay" class="cart-overlay hidden">
       <div class="cart-overlay-content">
@@ -157,6 +576,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="marketplace.html">Marketplace</a>
             <a class="dropdown-item" href="timeline.html">Timeline</a>
+            <a class="dropdown-item" href="productdescription.html">Product Description</a>
           </div>
         </div>
         <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
@@ -166,141 +586,144 @@
         </div>
       </div>
     </div>
-    <br><br><br>
 
-    <h1> ABOUT US</h1>
+    <audio id="audio_1">
+        <source src="audio/audio_1.mp3">
+    </audio>
 
+    <div id="about-section">
+      <br><br>
+      <h2> <strong>MEET THE TEAM</strong></h2><br><br>
 
-
-    <br><br>
-    <h2> <strong>MEET THE TEAM</strong></h2><br><br>
-
-    <div class="gallery-container">
-      <div id="sidebar-stuff-container">
-        <!-- Up arrow button -->
-        <button class="arrow-button up" onclick="navigateUp()">&#9650;</button>
-        <!-- Sidebar for navigation -->
-        <div class="sidebar" id="sidebar">
-          <!-- Member icons will be dynamically generated here -->
+      <div class="gallery-container">
+        <div id="sidebar-stuff-container">
+          <!-- Up arrow button -->
+          <button class="arrow-button up" onclick="navigateUp()">&#9650;</button>
+          <!-- Sidebar for navigation -->
+          <div class="sidebar" id="sidebar">
+            <!-- Member icons will be dynamically generated here -->
+          </div>
+          <!-- Down arrow button -->
+          <button class="arrow-button down" onclick="navigateDown()">&#9660;</button>
+          <!-- Main content area -->
         </div>
-        <!-- Down arrow button -->
-        <button class="arrow-button down" onclick="navigateDown()">&#9660;</button>
-        <!-- Main content area -->
-      </div>
-      <div class="content">
-        <!-- Business card container -->
-        <div class="business-card">
-          <img id="member-photo" src="member1_photo.jpg" alt="Member 1" class="member-photo">
-          <div class="member-info">
-            <div id="member-name" class="member-name">Member 1</div>
-            <div id="member-role" class="member-role">Role 1</div>
-            <a id="contact-button-link" href="mailto:member1@example.com">
-              <button class="contact-button">Contact</button>
-            </a>
+        <div class="content">
+          <!-- Business card container -->
+          <div class="business-card">
+            <img id="member-photo" src="member1_photo.jpg" alt="Member 1" class="member-photo">
+            <div class="member-info">
+              <div id="member-name" class="member-name">Member 1</div>
+              <div id="member-role" class="member-role">Role 1</div>
+              <a id="contact-button-link" href="mailto:member1@example.com">
+                <button class="contact-button">Contact</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <a class="a" href="Contact_us.html" target="-new">
-      <button class="bigbutton"><strong>CONTACT US</strong></button> </a>
-    <div class="blurb">
-      <h3 class="tag"><strong>Our Story</strong></h3>
-      <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed
-        because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to
-        prevents
-        drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
-        Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture!
-        Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a
-        game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small
-        device that can be attached to any drink container. It detects common date rape drugs and alerts the user in
-        real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink
-        safety
-        and hello to a fun and safe party experience with Tabbed - the must-have product for any college student
-        looking
-        to take control of their own safety. Join us in our mission to empower and protect young adults with this
-        revolutionary product!
-      </p>
-    </div>
-
-
-
-
-    <div id="behind">
-
-
-
-      <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt=" IN PROGRESS 1">
-
-      <img src="tabbed2.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 2">
-
-      <img src="tabbed3.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 3">
-
+      <a class="a" href="Contact_us.html" target="-new">
+        <button class="bigbutton"><strong>CONTACT US</strong></button> </a>
       <div class="blurb">
-        <h3 class="tag"><strong>Behind the Scenes</strong></h3><br>
-        <p>Behind the scenes of our startup, Tabbed, created by five college students passionate about creating a
-          solution to prevent drink spiking. Our team has been working hard to develop a product that is both
-          effective
-          and affordable, while also raising awareness about the dangers of drink spiking. Through our journey, we've
-          faced many challenges, but we've also had many successes. These photos capture some of the highlights and
-          moments from our journey so far.</p>
-      </div>
-      <img src="tabbed4.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 4">
-      <img src="tabbed5.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 5">
-      <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 6">
-
-      <br><br>
-      <!--<div class="column">
-      <img src="photo5.jpg" alt="Photo 5">
-    </div>
-    <div class="column">
-      <img src="photo6.jpg" alt="Photo 6">
-    </div>
-  </div>-->
-
-    </div><!--behind-->
-
-    <div class="flex" id="story">
-      <div id="s1" class="anec">
-
-        <p><strong class="strong">" </strong>Our team was working on the anti-drink spiking product when the web
-          developer on our team suggested a brilliant feature. He proposed that we add a "safe word" option to the
-          app,
-          where users could set a word that would alert their friends or emergency contacts if they suspected their
-          drink had been spiked. We were all so excited about the idea, and we ended up celebrating with a virtual
-          dance
-          party on Zoom. It was amazing to see how much fun we could have while working on such an important
-          project.<strong class="strong2">" </strong></p>
-        <h4>-JOANNA POON</h4>
-      </div>
-      <div id="s1" class="anec">
-
-        <p><strong class="strong">" </strong> One day during a team meeting, our product designer unveiled her latest
-          concept for the anti-drink spiking product. It was a small, sleek device that could detect certain drugs in
-          the user's drink and alert them with a vibration or flashing light. We were all amazed by the simplicity and
-          elegance of the design, and we couldn't help but feel a sense of pride and excitement for what we were
-          creating. After the meeting, we decided to treat ourselves to some delicious cupcakes to celebrate our
-          progress.
-          <strong class="strong2">" </strong>
-
+        <h3 class="tag"><strong>Our Story</strong></h3>
+        <p> We are a team of college students excited about cultivating a safer drinking culture. We started Tabbed
+          because we noticed the prevalence of drink spiking across college campuses. Our quest for a solution to
+          prevents
+          drink spiking led us to Tabbed: a carefully crafted drink with a re-designed lid.<br><br>
+          Introducing "Tabbed" - the ultimate solution to prevent drink spiking and ensure a safer party culture!
+          Developed by a group of forward-thinking college students turned entrepreneurs, this innovative product is a
+          game-changer in the fight against drink tampering. With its discreet and easy-to-use design, Tabbed is a small
+          device that can be attached to any drink container. It detects common date rape drugs and alerts the user in
+          real-time, providing a crucial tool to protect against potential harm. Say goodbye to worries about drink
+          safety
+          and hello to a fun and safe party experience with Tabbed - the must-have product for any college student
+          looking
+          to take control of their own safety. Join us in our mission to empower and protect young adults with this
+          revolutionary product!
         </p>
-        <h4>-LAUREN GRAHAM</h4>
-      </div>
-      <div id="s1" class="anec">
-
-        <p><strong class="strong">" </strong> As a team, we were working on the branding for our anti-drink spiking
-          product. One of the designers suggested the name "Guardian," which we all loved. It perfectly embodied the
-          idea of protection and safety that we wanted to convey. We spent the afternoon designing a logo and creating
-          a
-          website around the "Guardian" brand, and we couldn't help but feel a sense of joy and satisfaction at the
-          progress we were making. Later that day, we all went out for a picnic in the park to celebrate our hard work
-          and enjoy some time together in the sunshine.<strong class="strong2">" </strong></p>
-        <h4>-KYLER CALDWELL</h4>
       </div>
 
+
+
+
+      <div id="behind">
+        <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt=" IN PROGRESS 1">
+
+        <img src="tabbed2.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 2">
+
+        <img src="tabbed3.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 3">
+
+        <div class="blurb">
+          <h3 class="tag"><strong>Behind the Scenes</strong></h3><br>
+          <p>Behind the scenes of our startup, Tabbed, created by five college students passionate about creating a
+            solution to prevent drink spiking. Our team has been working hard to develop a product that is both
+            effective
+            and affordable, while also raising awareness about the dangers of drink spiking. Through our journey, we've
+            faced many challenges, but we've also had many successes. These photos capture some of the highlights and
+            moments from our journey so far.</p>
+        </div>
+        <img src="tabbed4.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 4">
+        <img src="tabbed5.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 5">
+        <img src="tabbed1.jpeg" class="fixed-image" width="30%" alt="IN PROGRESS 6">
+
+        <br><br>
+        <!--<div class="column">
+        <img src="photo5.jpg" alt="Photo 5">
+      </div>
+      <div class="column">
+        <img src="photo6.jpg" alt="Photo 6">
+      </div>
+    </div>-->
+
+      </div><!--behind-->
+
+      <div class="flex" id="story">
+        <div id="s1" class="anec">
+
+          <p><strong class="strong">" </strong>Our team was working on the anti-drink spiking product when the web
+            developer on our team suggested a brilliant feature. He proposed that we add a "safe word" option to the
+            app,
+            where users could set a word that would alert their friends or emergency contacts if they suspected their
+            drink had been spiked. We were all so excited about the idea, and we ended up celebrating with a virtual
+            dance
+            party on Zoom. It was amazing to see how much fun we could have while working on such an important
+            project.<strong class="strong2">" </strong></p>
+          <h4>-JOANNA POON</h4>
+        </div>
+        <div id="s1" class="anec">
+
+          <p><strong class="strong">" </strong> One day during a team meeting, our product designer unveiled her latest
+            concept for the anti-drink spiking product. It was a small, sleek device that could detect certain drugs in
+            the user's drink and alert them with a vibration or flashing light. We were all amazed by the simplicity and
+            elegance of the design, and we couldn't help but feel a sense of pride and excitement for what we were
+            creating. After the meeting, we decided to treat ourselves to some delicious cupcakes to celebrate our
+            progress.
+            <strong class="strong2">" </strong>
+
+          </p>
+          <h4>-LAUREN GRAHAM</h4>
+        </div>
+        <div id="s1" class="anec">
+
+          <p><strong class="strong">" </strong> As a team, we were working on the branding for our anti-drink spiking
+            product. One of the designers suggested the name "Guardian," which we all loved. It perfectly embodied the
+            idea of protection and safety that we wanted to convey. We spent the afternoon designing a logo and creating
+            a
+            website around the "Guardian" brand, and we couldn't help but feel a sense of joy and satisfaction at the
+            progress we were making. Later that day, we all went out for a picnic in the park to celebrate our hard work
+            and enjoy some time together in the sunshine.<strong class="strong2">" </strong></p>
+          <h4>-KYLER CALDWELL</h4>
+        </div>
+
+      </div>
     </div>
 
   </center>
+
+  <div id="buttons">
+    <div class="sequence_buttons" id="seq_1">PLAY</div>
+  </div>
+
   <div class="footer">
     <div id="newsletter-wrapper">
       <div id="dev-link">

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title>In-depth Product Description</title>
+
+    <meta charset="UTF-8">
+
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+    <style>
+        body {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            margin-bottom: 4vw;
+        }
+
+        #outercontainer {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #description {
+            width: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
+    <div id="cart-overlay" class="cart-overlay hidden">
+        <div class="cart-overlay-content">
+            <h3 style="text-align:center">Your Cart</h3>
+            <hr>
+            <br>
+            <div id="cart-overlay-items"></div>
+            <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+            <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a class="nav-left" href="tabbed-investor-site.html">
+            <img class="tabbed-logo" src="TABBED.svg">
+        </a>
+        <div class="nav-right">
+            <a class="nav-item" id="about" href="about_us.html">About Us</a>
+            <a class="nav-item" id="shop" href="shop.html">Shop</a>
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
+                        class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                    <a class="dropdown-item" href="timeline.html">Timeline</a>
+                    <a class="dropdown-item" href="productdescription.html">Product Description</a>
+                </div>
+            </div>
+            <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+            <div class="nav-item shopping-cart-wrapper">
+                <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div id="outercontainer">
+        <div id="description">
+            <h2>In-Depth Product Description</h2>
+
+            <br><br>
+
+            <p>Tabbed is an innovative product that provides a simple solution to the problem of drink spiking. It is a
+                can
+                of a
+                popular beverage, but with a twist. Each can has an aluminum tab that covers the drinking hole. When you
+                want to
+                take a sip, you simply flip the tab open and enjoy your drink. The tab snaps back into place once you
+                are
+                finished, ensuring that your drink remains secure from any potential spikers.</p>
+            <p>But Tabbed is not just about functionality; we also wanted to make sure that the product is enjoyable to
+                use.
+                That's why we offer a range of delicious flavors, including mango mosaic, grapefruit gusto and citrus
+                symphony,
+                to satisfy any taste buds. Our drinks are also made with natural ingredients and contain no artificial
+                sweeteners or preservatives, so you can feel good about what you're putting in your body.</p>
+            <p>At Tabbed, our primary focus is on college campuses. We know that these environments can be particularly
+                risky
+                when it comes to drink spiking, which is why we have made it our mission to provide a safe and enjoyable
+                experience for college students everywhere. Our product is perfect for parties, social gatherings, and
+                other
+                events where drinks are being served. With Tabbed, you can enjoy your night out with friends without
+                worrying
+                about the dangers of drink spiking.</p>
+            <p>One of the unique features of Tabbed is the aluminum tab itself. It is designed to be strong and durable,
+                so
+                you
+                can be sure that it will remain in place and protect your drink from spiking attempts. The tab is also
+                recyclable, so you can feel good about using a product that is environmentally friendly.</p>
+            <p>Another benefit of Tabbed is that it is incredibly easy to use. Simply pop open the tab to take a sip,
+                and
+                snap
+                it back into place when you're done. There's no need to worry about complicated mechanisms or special
+                instructions – Tabbed is designed to be intuitive and user-friendly.</p>
+            <p>We believe that Tabbed has the potential to revolutionize the way we think about drink safety. By
+                providing a
+                simple and effective solution to the problem of drink spiking, we hope to make a real difference in the
+                lives of
+                people everywhere. Our product is already generating a buzz on college campuses across the country, and
+                we're
+                excited to see where it goes from here.</p>
+            <p>In addition to providing a great product, we are also committed to giving back to the community. A
+                portion of
+                the
+                profits from each can of Tabbed sold goes to organizations that work to prevent drink spiking and
+                support
+                victims of this type of crime. We believe that everyone deserves to feel safe and protected when they go
+                out,
+                and we're proud to be doing our part to make that a reality.</p>
+            <p>Overall, Tabbed is an exciting new product that offers a simple, effective, and enjoyable solution to the
+                problem
+                of drink spiking. With its range of delicious flavors, durable aluminum tab, and user-friendly design,
+                it's
+                no
+                wonder that Tabbed is already becoming a favorite among college students and party-goers everywhere.
+                We're
+                thrilled to be bringing this innovative product to market, and we look forward to seeing the positive
+                impact
+                it
+                will have on communities around the world.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="newsletter-wrapper">
+            <div id="dev-link">
+                <a href="websiteteam.html" style="color:white; text-decoration: none;">
+                    <h3>Website Dev Team ↗</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
+
+</body>
+
+</html>

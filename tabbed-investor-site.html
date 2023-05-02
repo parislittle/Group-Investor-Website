@@ -1,17 +1,27 @@
 <html>
-    <head>
-        <title>Tabbed</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="tabbed-home.css">
-        <link rel="stylesheet" href="problem_solution.css">
-        <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
-        <meta charset="UTF-8">
-        <style>
-            /* Shopping Cart */
-            .shopping-cart-wrapper {
-                position: relative;
-                display: inline-block;
-            }
+
+<head>
+    <title>Tabbed</title>
+
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link rel="stylesheet" href="tabbed-home.css">
+
+
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+    <link rel="stylesheet" href="problem_solution.css">
+
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+
+    <meta charset="UTF-8">
+    <style>
+        /* Shopping Cart */
+        .shopping-cart-wrapper {
+            position: relative;
+            display: inline-block;
+        }
 
         .shopping-cart-icon {
             width: 24px;
@@ -98,22 +108,37 @@
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </head>
 
-<body>
-    <div class="navbar">
-        <a class="nav-left" href="tabbed-investor-site.html">
-            <img class="tabbed-logo" src="TABBED.svg">
-        </a>
-        <div class="nav-right">
-            <a class="nav-item" id="about" href="about_us.html">About Us</a>
-            <a class="nav-item" id="shop" href="shop.html">Shop</a>
-            <div class="nav-item dropdown">
-                <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img
-                        class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="marketplace.html">Marketplace</a>
-                    <a class="dropdown-item" href="timeline.html">Timeline</a>
+    <body>
+        <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
+        <div id="cart-overlay" class="cart-overlay hidden">
+            <div class="cart-overlay-content">
+                <h3 style="text-align:center">Your Cart</h3>
+                <hr>
+                <br>
+                <div id="cart-overlay-items"></div>
+                <div class="cart-total-price">Total: $<span id="cart-total"></span></div>
+                <a href="shoppingcart.html" class="view-full-cart-btn">View Full Cart</a>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <a class="nav-left" href="tabbed-investor-site.html">
+                <img class="tabbed-logo" src="TABBED.svg">
+            </a>
+            <div class="nav-right">
+                <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                <div class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                        <a class="dropdown-item" href="timeline.html">Timeline</a>
+                    </div>
                 </div>
             </div>
             <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>

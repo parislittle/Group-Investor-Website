@@ -7,11 +7,6 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
         <style>
-
-            #body {
-                height: 100vh;
-                overflow: hidden;
-            }
             #animation-section {
                 height: 100vh;
                 width: 100vw;
@@ -30,8 +25,7 @@
             .sequence_buttons {
                 background-color: #222222;
                 color: #FFFDF5;
-                height: 40px;
-                width: 40px;
+                padding: 1vw 2vw 1vw 2vw;
                 border-radius: 5px;
                 display: flex;
                 justify-content: center;
@@ -78,15 +72,16 @@
                 top: 150vh;
                 left: 50vw;
                 transform:translate(-50%,-50%);
+                z-index: -2;
             }
 
             #logo-side {
-                height: 100px;
+                height: 325px;
                 position: absolute;
-                top: 50vh;
-                left: 30vw;
+                top: 52vh;
+                left: 35vw;
                 transform:translate(-50%,-50%);
-                z-index: 1;
+                z-index: -1;
             }
         </style>
         <script>
@@ -135,6 +130,9 @@
                 .animate({
                     top: "50vh"
                 }, 1000, "easeInQuad")
+                .animate({
+                    opacity: 0
+                })
 
                 $("#can").delay(11500).animate({
                     top: "50vh"
@@ -237,9 +235,9 @@
                 .delay(3850).animate({
                     opacity: "0"
                 }, 1000, 'easeInOutQuint')
-                .delay(3100).animate({
+                .delay(2800).animate({
                     opacity: "1"
-                }, 2800)
+                }, 1100)
                 
 
                 $("#f4").delay(2100).animate({
@@ -328,6 +326,11 @@
                 .delay(3100).animate({
                     opacity: "1"
                 }, 1000)
+
+                $("#logo-side").delay(17500).animate({
+                    left: "49vw"
+                }, 2000, 'easeInOutQuint')
+                
             }
 
             $(document).ready(function(){
@@ -354,10 +357,7 @@
         </div>
 
         <div id="buttons">
-            <div class="sequence_buttons" id="seq_1">1</div>
-            <div class="sequence_buttons" id="seq_2">2</div>
-            <div class="sequence_buttons" id="seq_3">3</div>
-            <div class="sequence_buttons" id="stop">STOP</div>
+            <div class="sequence_buttons" id="seq_1">PLAY</div>
         </div>
 
         <div id="animation-section">

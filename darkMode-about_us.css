@@ -1,379 +1,379 @@
 body {
-    padding-top: 6vw;
-  }
+}
 
-  .about-section {
+.about-section {
+  display: flex;
+  margin: 5%;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section div {
+  width: 30%;
+  object-position: center;
+}
+
+.member {
+  width: 30%;
+  padding: 1%;
+  display: inline-block;
+}
+
+.meet {
+  border-radius: 40px;
+  width: 80%;
+}
+
+#blurb {
+  font-size: 12pt;
+  width: 70%
+}
+
+.bigbutton {
+  font-family: "Object Sans";
+  font-weight: 400;
+  src: url(PPObjectSans-Thin.woff2);
+  background-color: #101010 !important;
+  border: white solid 2px !important;
+  border-radius: 5px;
+  width: 20%;
+  height: 8%;
+  color: white !important;
+}
+
+.button {
+  font-family: "Object Sans";
+  font-weight: 300;
+  src: url(PPObjectSans-Thin.woff2);
+  background-color: #101010 !important;
+  border: white solid 1px !important;
+  border-radius: 5px;
+  color: white !important;
+}
+
+h2 {
+
+  margin-left: 10%;
+  text-decoration: solid;
+  margin: auto;
+
+}
+
+.h3 {
+  font-size: 50%;
+  text-decoration: solid;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 10pt;
+  text-align: center;
+  margin: 0;
+}
+
+.blurb {
+  margin: 7%;
+}
+
+#blurb {
+  font-size: 11pt;
+  width: 85%;
+}
+
+.strong {
+  font-size: 19pt;
+}
+
+.strong2 {
+  font-size: 19pt;
+  text-align: right;
+}
+
+/*.fixed-image {
+            position: fixed;
+            background-image: url("joanna_pfp.jpeg");
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width:100%;
+            display:inline-block*/
+
+/*#behind{
+          background-image: url("tabbed5.jpeg");
+          background-size: 100%;
+          width: 100%;
+          margin:none;
+          display: flex;
+
+        }*/
+.container {
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.anec {
+  width: 30%;
+  padding: 10px;
+
+}
+
+#story {
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  font-size: 30px;
+  text-decoration: solid;
+  text-align: left;
+}
+
+.nav-item {
+  /*border: black solid 1px;*/
+}
+
+/* Media query for devices with a pixel width of a phone */
+@media (max-width: 767px) {
+
+  /* Your CSS styles for mobile devices go here */
+  #about {
     display: flex;
     margin: 5%;
-    margin-top: 20px;
+    margin-top: 10px;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about-section div {
-    width: 30%;
-    object-position: center;
   }
 
   .member {
-    width: 30%;
-    padding: 1%;
-    display: inline-block;
+    width: 90%;
+    margin-top: 20%;
+  }
+}
+/* Container for the entire gallery */
+.gallery-container {
+  position: relative;
+  /* Set the position property to relative */
+  display: flex;
+  align-items: center;
+  width: 50vw;
+}
+
+#sidebar-stuff-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5vw;
+  padding-right: 1vw;
+}
+
+/* Sidebar forf navigation */
+.sidebar {
+  background-color: #101010 !important;
+  border: 1px solid white !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  height: 36vh;
+  width: 5vw;
+}
+
+/* Navigation buttons */
+.nav-button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav-button-active {
+  /* Remove the grayscale filter */
+  /* Add any other styles you want for the active icon */
+}
+
+
+/* Main content area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Business card container */
+.business-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 35vw;
+  border-radius: 2vh;
+  padding: 3.5vw;
+}
+
+/* Member photo */
+.member-photo {
+  height: 13vw;
+  border-radius: 1vh;
+  margin-right: 10px;
+}
+
+/* Member info container */
+.member-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 25vh;
+  border-radius: 1vh;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* Member name */
+.member-name {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Member role */
+.member-role {
+  font-size: 1vw;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Contact button */
+.contact-button {
+  margin-top: 5vh;
+  background-color: white !important;
+  color: #222222 !important;
+  border: none;
+  border-radius: 0.5vw;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #222222;
+}
+
+/* Arrow buttons */
+.arrow-button {
+  position: absolute;
+  /* Use absolute positioning */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  /* Background color for the arrow buttons */
+  text-align: center;
+  /* Center the arrow character */
+  line-height: 30px;
+  /* Align the arrow character vertically */
+}
+
+/* Position the up arrow button above the sidebar */
+.arrow-button.up {
+  top: -20px;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+}
+
+/* Position the down arrow button below the sidebar */
+.arrow-button.down {
+  bottom: -20px;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-25%);
+    opacity: 0;
   }
 
-  .meet {
-    border-radius: 40px;
-    width: 80%;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  #blurb {
-    font-size: 12pt;
-    width: 70%
+  100% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
   }
 
-  .bigbutton {
-    font-family: "Object Sans";
-    font-weight: 400;
-    src: url(PPObjectSans-Thin.woff2);
-    background-color: black !important;
-    border: white solid 2px !important;
-    border-radius: 5px;
-    width: 20%;
-    height: 8%;
-    color: white !important;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  .button {
-    font-family: "Object Sans";
-    font-weight: 300;
-    src: url(PPObjectSans-Thin.woff2);
-    background-color: black !important;
-    border: white solid 1px !important;
-    border-radius: 5px;
-    color: white !important;
+  100% {
+    transform: translateY(-25%);
+    opacity: 0;
   }
+}
 
-  h2 {
+.slide-in-down {
+  animation: slideInDown 0.35s ease-in-out forwards;
+}
 
-    margin-left: 10%;
-    text-decoration: solid;
-    margin: auto;
+.slide-out-down {
+  animation: slideOutDown 0.35s ease-in-out forwards;
+}
 
-  }
+.slide-in-up {
+  animation: slideInUp 0.35s ease-in-out forwards;
+}
 
-  .h3 {
-    font-size: 50%;
-    text-decoration: solid;
-    font-weight: bold;
-  }
+.slide-out-up {
+  animation: slideOutUp 0.35s ease-in-out forwards;
+}
 
-  .title {
-    font-size: 10pt;
-    text-align: center;
-    margin: 0;
-  }
-
-  .blurb {
-    margin: 7%;
-  }
-
-  #blurb {
-    font-size: 11pt;
-    width: 85%;
-  }
-
-  .strong {
-    font-size: 19pt;
-  }
-
-  .strong2 {
-    font-size: 19pt;
-    text-align: right;
-  }
-
-  /*.fixed-image {
-              position: fixed;
-              background-image: url("joanna_pfp.jpeg");
-              top: 0;
-              left: 50%;
-              transform: translateX(-50%);
-              z-index: 999;
-              width:100%;
-              display:inline-block*/
-
-  /*#behind{
-            background-image: url("tabbed5.jpeg");
-            background-size: 100%;
-            width: 100%;
-            margin:none;
-            display: flex;
-
-          }*/
-  .container {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .anec {
-    width: 30%;
-    padding: 10px;
-
-  }
-
-  #story {
-    margin: 5%;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .tag {
-    font-size: 30px;
-    text-decoration: solid;
-    text-align: left;
-  }
-
-  .nav-item {
-    background-color: rgba(255, 253, 245, .8);
-    border-radius: 3px;
-    /*border: black solid 1px;*/
-  }
-
-  /* Media query for devices with a pixel width of a phone */
-  @media (max-width: 767px) {
-
-    /* Your CSS styles for mobile devices go here */
-    #about {
-      display: flex;
-      margin: 5%;
-      margin-top: 10px;
-      flex-direction: row;
-    }
-
-    .member {
-      width: 90%;
-      margin-top: 20%;
-    }
-  }
-  /* Container for the entire gallery */
-  .gallery-container {
-    position: relative;
-    /* Set the position property to relative */
-    display: flex;
-    align-items: center;
-    width: 50vw;
-  }
-
-  #sidebar-stuff-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 5vw;
-    padding-right: 1vw;
-  }
-
-  /* Sidebar for navigation */
-  .sidebar {
-    background-color: black !important;
-    border: 1px solid white !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin-right: 10px;
-    overflow: hidden;
-    height: 36vh;
-    width: 5vw;
-  }
-
-  /* Navigation buttons */
-  .nav-button {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 50%;
-    filter: grayscale(100%);
-  }
-
-  .nav-button-active {
-    filter: grayscale(0%);
-    /* Remove the grayscale filter */
-    /* Add any other styles you want for the active icon */
-  }
-
-
-  /* Main content area */
-  .content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-
-  /* Business card container */
-  .business-card {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 35vw;
-    border-radius: 2vh;
-    padding: 3.5vw;
-  }
-
-  /* Member photo */
-  .member-photo {
-    height: 13vw;
-    border-radius: 1vh;
-    margin-right: 10px;
-  }
-
-  /* Member info container */
-  .member-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 25vh;
-    border-radius: 1vh;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-  }
-
-  /* Member name */
-  .member-name {
-    font-size: 2vw;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  /* Member role */
-  .member-role {
-    font-size: 1vw;
-    color: #777;
-    margin-bottom: 10px;
-  }
-
-  /* Contact button */
-  .contact-button {
-    margin-top: 5vh;
-    background-color: white !important;
-    color: black !important;
-    border: none;
-    border-radius: 0.5vw;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .contact-button:hover {
-    background-color: #222222;
-  }
-
-  /* Arrow buttons */
-  .arrow-button {
-    position: absolute;
-    /* Use absolute positioning */
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    filter: grayscale(100%);
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    /* Background color for the arrow buttons */
-    text-align: center;
-    /* Center the arrow character */
-    line-height: 30px;
-    /* Align the arrow character vertically */
-  }
-
-  /* Position the up arrow button above the sidebar */
-  .arrow-button.up {
-    top: -20px;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #ddd;
-    border: none;
-    border-radius: 50%;
-  }
-
-  /* Position the down arrow button below the sidebar */
-  .arrow-button.down {
-    bottom: -20px;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #ddd;
-    border: none;
-    border-radius: 50%;
-  }
-
-  @keyframes slideInDown {
-    0% {
-      transform: translateY(-25%);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideOutDown {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateY(25%);
-      opacity: 0;
-    }
-  }
-
-  @keyframes slideInUp {
-    0% {
-      transform: translateY(25%);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideOutUp {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateY(-25%);
-      opacity: 0;
-    }
-  }
-
-  .slide-in-down {
-    animation: slideInDown 0.35s ease-in-out forwards;
-  }
-
-  .slide-out-down {
-    animation: slideOutDown 0.35s ease-in-out forwards;
-  }
-
-  .slide-in-up {
-    animation: slideInUp 0.35s ease-in-out forwards;
-  }
-
-  .slide-out-up {
-    animation: slideOutUp 0.35s ease-in-out forwards;
-  }
+.nav-item {
+  color: black;
+  mix-blend-mode: exclusion;
+}
