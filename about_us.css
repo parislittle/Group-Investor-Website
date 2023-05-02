@@ -216,13 +216,14 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 35vh;
+    width: 35vw;
     border-radius: 2vh;
+    padding: 3.5vw;
   }
 
   /* Member photo */
   .member-photo {
-    height: 25vh;
+    height: 13vw;
     border-radius: 1vh;
     margin-right: 10px;
   }
