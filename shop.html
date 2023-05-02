@@ -34,24 +34,27 @@
 
 
     <div id="outercontainer">
-        <div class="navbar">
-            <a class="nav-left" href="tabbed-investor-site.html">
-                <img class="tabbed-logo" src="TABBED.svg">
-            </a>
-            <div class="nav-right">
-                <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                <div class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="marketplace.html">Marketplace</a>
-                        <a class="dropdown-item" href="timeline.html">Timeline</a>
+
+        <div id="hero-section">
+            <div class="navbar">
+                <a class="nav-left" href="tabbed-investor-site.html">
+                    <img class="tabbed-logo" src="TABBED.svg">
+                </a>
+                <div class="nav-right">
+                    <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                    <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                    <div class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                            <a class="dropdown-item" href="timeline.html">Timeline</a>
+                        </div>
                     </div>
-                </div>
-                <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                <div class="nav-item shopping-cart-wrapper">
-                    <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                    <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+                    <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+                    <div class="nav-item shopping-cart-wrapper">
+                        <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                        <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,26 +64,66 @@
             <p class="essentials-title">SUMMERTIME SIPPING ESSENTIALS</p>
         </div>
 
+
+
+
+
+
         <div id="boxes">
 
             <div class="products">
 
-                <div class="flavors" id="drink2" alt = "Mango Mosaic Drink">
+                <div class="flavors" id="drink2">
                     <div class="flavorname">MANGO MOSAIC</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">ADD TO CART</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(2, 'Mango Mosaic', 24, 'drink 2.jpeg')">Add
+                        to
+                        Cart</button>
                 </div>
 
-                <div class="flavors" id="drink3" alt = "Grapefruit Gusto Drink">
+                <div class="flavors" id="drink3">
                     <div class="flavorname">GRAPEFRUIT GUSTO</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">ADD TO CART</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(3, 'Grapefruit Gusto', 24, 'drink 3.jpeg')">Add
+                        to Cart</button>
                 </div>
 
-                <div class="flavors" id="drink1" alt = "Citrus Symphony Drink">
+                <div class="flavors" id="drink1">
                     <div class="flavorname">CITRUS SYMPHONY</div>
                     <div class="price">$24/CASE</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">ADD TO CART</button>
+                    <button class="add-to-cart-btn" onclick="addToCart(1, 'Citrus Symphony', 24, 'drink1.jpeg')">Add
+                        to
+                        Cart</button>
+                </div>
+
+                <div class="flavors" id="drink4">
+                    <div class="flavorname">CITRUS SYMPHONY</div>
+                    <div class="price">$24/CASE</div>
+                </div>
+
+                <div class="flavors" id="drink5">
+                    <div class="flavorname">MANGO MOSAIC</div>
+                    <div class="price">$24/CASE</div>
+                </div>
+
+                <div class="flavors" id="drink6">
+                    <div class="flavorname">GRAPEFRUIT GUSTO</div>
+                    <div class="price">$24/CASE</div>
+                </div>
+
+                <div class="flavors" id="drink7">
+                    <div class="flavorname">GRAPEFRUIT GUSTO</div>
+                    <div class="price">$24/CASE</div>
+                </div>
+
+                <div class="flavors" id="drink8">
+                    <div class="flavorname">CITRUS SYMPHONY</div>
+                    <div class="price">$24/CASE</div>
+                </div>
+
+                <div class="flavors" id="drink9">
+                    <div class="flavorname">MANGO MOSAIC</div>
+                    <div class="price">$24/CASE</div>
                 </div>
 
             </div>
@@ -109,21 +152,6 @@
 
         <script src="globalShoppingCartStuff-javascript.js"></script>
         <script src="globalDarkMode-javascript.js"></script>
-        <script>
-        function initializeDarkMode() {
-            // Get the value of the darkMode cookie
-            const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
-            const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
-          
-            // If the darkMode cookie is set to "true", enable dark mode
-            if (darkModeValue === 'true') {
-              toggleDarkMode();
-            }
-          }
-          
-          // Call the initializeDarkMode function when the page loads
-          window.addEventListener('DOMContentLoaded', initializeDarkMode);
-        </script>
 
 </body>
 
