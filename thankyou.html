@@ -14,17 +14,26 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            width: 100vw;;
             margin: 0;
-            flex-direction: column; /* Stack items vertically */
+            flex-direction: column;
         }
 
         .thank-you-container {
             text-align: center;
-            font-size: 36px;
+            font-size: 3vw;
             animation: bounce 2s infinite;
         }
 
+        #logo-animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20vw;
+        }
+
         @keyframes bounce {
+
             0%,
             20%,
             50%,
@@ -32,9 +41,11 @@
             100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(-30px);
             }
+
             60% {
                 transform: translateY(-15px);
             }
@@ -43,7 +54,9 @@
 </head>
 
 <body>
-    <img src="logo-animation.gif" alt="Tabbed Logo Animation">
+    <div id="logo-animation">
+        <img src="logo-animation.gif" alt="Tabbed Logo Animation">
+    </div>
     <div class="thank-you-container">
         <p>Thank You</p>
         <p>for your part</p>
