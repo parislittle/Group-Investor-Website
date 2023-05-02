@@ -85,5 +85,6 @@ button{
     text-align: center;
     justify-content: center;
     align-items: center;
+    border: 1px solid white
 }
 
