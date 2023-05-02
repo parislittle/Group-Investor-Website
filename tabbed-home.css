@@ -351,3 +351,9 @@ align-items: center;
 .flavors-item:hover #citrus {
     color: #CCE18F;
 }
+/* Media query phone */
+@media (max-width: 767px) {
+    
+
+
+}
