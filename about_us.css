@@ -91,6 +91,11 @@ body {
     text-align: right;
   }
 
+  .fixed-image {
+    border-radius: 2vw;
+    margin: 1vw;
+  }
+
   /*.fixed-image {
               position: fixed;
               background-image: url("joanna_pfp.jpeg");

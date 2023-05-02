@@ -3,8 +3,341 @@
         <title>Tabbed</title>
         <link rel="stylesheet" href="tabbed-style.css">
         <meta charset="UTF-8">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
         <style>
+
+            #body {
+                height: 100vh;
+                overflow: hidden;
+            }
+            #animation-section {
+                height: 100vh;
+                width: 100vw;
+                overflow: hidden;
+            }
+
+            #buttons {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                padding: 2vw;
+                display: flex;
+                gap: 5px;
+            }
+
+            .sequence_buttons {
+                background-color: #222222;
+                color: #FFFDF5;
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #group {
+                position: absolute;
+                top: 120vh;
+                left: 50vw;
+                transform:translate(-50%,-50%);
+            }
+
+            #student {
+                width: 100px;
+                position: absolute;
+                z-index: 1;
+                transform:translate(-50%,-50%);
+            }
+
+            .friend {
+                width: 100px;
+                position: absolute;
+                transform:translate(-50%,-50%);
+
+            }
+
+            #f1_red {
+                opacity: 0;
+            }
+
+            #pill {
+                height: 50px;
+                position: absolute;
+                top: 50vh;
+                left: 50vw;
+                transform:translate(-50%,-50%);
+                opacity: 0;
+            }
+
+            #can {
+                width: 200px;
+                position: absolute;
+                top: 150vh;
+                left: 50vw;
+                transform:translate(-50%,-50%);
+            }
+
+            #logo-side {
+                height: 100px;
+                position: absolute;
+                top: 50vh;
+                left: 30vw;
+                transform:translate(-50%,-50%);
+                z-index: 1;
+            }
         </style>
+        <script>
+            var sequence1 = function() {    
+                $("#audio_1").trigger("play");
+
+                $("#group").animate({	
+                    top: "50vh",
+                }, 2000, 'easeInOutQuint')
+
+                $("#student")
+                .delay(3900)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(4100).animate({
+                    width: "200px",
+                    left: "-16vw"
+                }, 2000, 'easeInOutQuint')
+                .delay(200)
+                .animate({
+                    left: "-60vw"
+                }, 1000, 'easeInQuint')
+                
+
+                $("#pill").delay(11500).animate({
+                    opacity: "1",
+                    height: "100px",
+                    top: "20vh"
+                }, 1000, 'easeOutQuad')
+                .animate({
+                    top: "50vh"
+                }, 1000, "easeInQuad")
+
+                $("#can").delay(11500).animate({
+                    top: "50vh"
+                }, 2000, 'easeInOutQuad')
+            
+
+                $("#f1").delay(2000).animate({
+                    left: "8vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(100)
+                .animate({
+                    opacity: "0"
+                }, 2000)
+                
+
+                $("#f1_red").delay(2000).animate({
+                    left: "8vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(2000)
+                .animate({
+                    opacity: "1"
+                }, 1000)
+                .delay(2700)
+                .animate({
+                    left: "16vw",
+                    width: "200px"
+                }, 2000, 'easeInOutQuint')
+                .delay(200)
+                .animate({
+                    left: "60vw"
+                }, 1000, 'easeInQuint')
+
+                $("#f2").delay(2000).animate({
+                    left: "-8vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(4200).animate({
+                    opacity: "0"
+                }, 1000, 'easeInOutQuint')
+
+                $("#f3").delay(2100).animate({
+                    left: "16vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(3850).animate({
+                    opacity: "0"
+                }, 1000, 'easeInOutQuint')
+                .delay(3100).animate({
+                    opacity: "1"
+                }, 2800)
+                
+
+                $("#f4").delay(2100).animate({
+                    left: "-16vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(3850).animate({
+                    opacity: "0"
+                }, 1000, 'easeInOutQuint')
+                .delay(2900).animate({
+                    opacity: "1"
+                }, 1000)
+
+                $("#f5").delay(2200).animate({
+                    left: "24vw",
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(3600).animate({
+                    opacity: "0"
+                }, 1000, 'easeInOutQuint')
+                .delay(3000).animate({
+                    opacity: "1"
+                }, 1000)
+
+                $("#f6").delay(2200).animate({
+                    left: "-24vw"
+                }, 2000, 'easeInOutQuint')
+                .delay(0)
+                .animate({
+                    top: "-10vh"
+                }, 350, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 350, "easeInQuad") 
+                .animate({
+                    top: "-5vh"
+                }, 250, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 250, "easeInQuad")
+                .animate({
+                    top: "-2.5vh"
+                }, 200, "easeOutQuad") 
+                .animate({
+                    top: "0vh"
+                }, 200, "easeInQuad") 
+                .delay(3600).animate({
+                    opacity: "0"
+                }, 1000, 'easeInOutQuint')
+                .delay(3100).animate({
+                    opacity: "1"
+                }, 1000)
+            }
+
+            $(document).ready(function(){
+
+                $("#seq_1").on("click", function(){ 
+                    sequence1();
+                });
+            });
+
+        </script>
     </head> 
     <body>
         <div class="navbar">
@@ -20,10 +353,32 @@
             </div>
         </div>
 
-        <div id="animation-section">
-            
+        <div id="buttons">
+            <div class="sequence_buttons" id="seq_1">1</div>
+            <div class="sequence_buttons" id="seq_2">2</div>
+            <div class="sequence_buttons" id="seq_3">3</div>
+            <div class="sequence_buttons" id="stop">STOP</div>
         </div>
 
+        <div id="animation-section">
+            <img id="pill" src = "assets/SVG/pill_1.svg" alt="Pill SVG"/>
+            <img id="can" src = "assets/SVG/can_1.svg" alt="Can SVG"/>
+            <img id="logo-side" src = "assets/SVG/logo-side.svg" alt="Logo SVG"/>
+
+            <div id="group">
+                <img id="student" src = "assets/SVG/student_1.svg" alt="Student SVG"/>
+                <img class="friend" id="f1" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+                <img class="friend" id="f1_red" src = "assets/SVG/friend_red.svg" alt="Friend Red SVG"/>
+                <img class="friend" id="f2" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+                <img class="friend" id="f3" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+                <img class="friend" id="f4" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+                <img class="friend" id="f5" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+                <img class="friend" id="f6" src = "assets/SVG/friend_1.svg" alt="Friend SVG"/>
+            </div>
         </div>
+
+        <audio id="audio_1">
+            <source src="audio/audio_1.mp3">
+        </audio>
     </body>
 </html>

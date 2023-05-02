@@ -149,9 +149,6 @@ a.navbar {
     opacity: 100%;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: rgba(255, 253, 245, .8);
-    border-radius: 3px;
-    /*border: black solid 1px;*/
     /* mix-blend-mode: difference; */
 }
 
@@ -169,10 +166,6 @@ a.navbar {
 
 .tabbed-logo {
     width: 6.5vw;
-    background-color: rgba(255, 253, 245, .8);
-    border-radius: 3px;
-    padding: 5px;
-
 }
 
 .footer {
@@ -248,7 +241,8 @@ a.navbar {
     color: black;
     padding: 20px;
     height: 200px;
-    width: 100%;
+    width: fit-content;
+    border-radius: 20px;
     justify-content: center;
     display: flex;
 }

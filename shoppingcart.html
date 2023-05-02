@@ -4,44 +4,60 @@
 <head>
     <title>Shopping Cart</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="tabbed-style.css">
+
+    <link id="global-stylesheet" rel="stylesheet" href="tabbed-style.css">
+    <link id="shopping-cart-stylesheet" rel="stylesheet" href="globalShoppingCartStuff.css">
+    <link rel="stylesheet" href="globalDarkMode-stylesheet.css">
+
+    <!--Dark Mode Stylesheets-->
+    <link id="dark-mode-shopping-cart-stylesheet" rel="stylesheet" href="darkMode-globalShoppingCartStuff.css" disabled>
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="darkmode.css" disabled>
+
     <link rel="stylesheet" href="shoppingcart2.css">
     <link rel="stylesheet" href="shoppingcart.css">
-    <style>
-
-        button{
-            font-family: "Object Sans";
-            font-weight: 300;
-            font-size: 10pt;
-        }
-
-        .item-total-price-{
-            
-        }
-
-        
-       
-    </style>
+    <script>
+        function initializeDarkMode() {
+            // Get the value of the darkMode cookie
+            const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
+            const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
+          
+            // If the darkMode cookie is set to "true", enable dark mode
+            if (darkModeValue === 'true') {
+              toggleDarkMode();
+            }
+          }
+          
+          // Call the initializeDarkMode function when the page loads
+          window.addEventListener('DOMContentLoaded', initializeDarkMode);
+    </script>
 </head>
 
 <body>
+    <div class="mode-button" onclick="toggleDarkMode()"><img src=moon.png></div>
+
     <div id="hero-section">
 
-        <div class="navbar">
-            <a class="nav-left" href="tabbed-investor-site.html">
-                <img class="tabbed-logo" src="TABBED.svg" alt="tabbed logo">
-            </a>
-            <div class="nav-right">
-                <a class="nav-item" id="about" href="about_us.html">About Us</a>
-                <a class="nav-item" id="shop" href="shop.html">Shop</a>
-                <a class="nav-item" id="business" href="business.html">Business</a>
-                <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
-                <div class="nav-item shopping-cart-wrapper">
-                    <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
-                    <span id="cart-quantity" class="cart-quantity">0</span>
+       <div class="navbar">
+                <a class="nav-left" href="tabbed-investor-site.html">
+                    <img class="tabbed-logo" src="TABBED.svg">
+                </a>
+                <div class="nav-right">
+                    <a class="nav-item" id="about" href="about_us.html">About Us</a>
+                    <a class="nav-item" id="shop" href="shop.html">Shop</a>
+                    <div class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#"><span style="margin-right:0px">Business</span><img class="dropdown-marker" src="dropdown.png" alt="Dropdown"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="marketplace.html">Marketplace</a>
+                            <a class="dropdown-item" href="timeline.html">Timeline</a>
+                        </div>
+                    </div>
+                    <a class="nav-item" id="ourask" href="ask.html">Our Ask</a>
+                    <div class="nav-item shopping-cart-wrapper">
+                        <img class="shopping-cart-icon" src="shoppingcarticon.png" alt="Shopping Cart">
+                        <span id="cart-quantity" class="cart-quantity"><a>0</a></span>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <div id="outercontainer">
             <div id="cart-container">
@@ -52,7 +68,7 @@
                 <hr>
                 <div id="cart"></div>
             </div>
-            <a href="thankyou.html" id="checkout">Checkout</a>
+            <a href="thankyou.html" target="_blank" id="checkout">Checkout</a>
         </div>
 
     </div>
@@ -201,6 +217,23 @@
             // Save the cart to a cookie
             document.cookie = `shoppingCart=${encodeURIComponent(JSON.stringify(shoppingCart))}; path=/; max-age=86400`;
         }       
+    </script>
+    <script src="globalShoppingCartStuff-javascript.js"></script>
+    <script src="globalDarkMode-javascript.js"></script>
+    <script>
+    function initializeDarkMode() {
+        // Get the value of the darkMode cookie
+        const darkModeCookie = document.cookie.split('; ').find(row => row.startsWith('darkMode='));
+        const darkModeValue = darkModeCookie ? darkModeCookie.split('=')[1] : null;
+      
+        // If the darkMode cookie is set to "true", enable dark mode
+        if (darkModeValue === 'true') {
+          toggleDarkMode();
+        }
+      }
+      
+      // Call the initializeDarkMode function when the page loads
+      window.addEventListener('DOMContentLoaded', initializeDarkMode);
     </script>
 
     
