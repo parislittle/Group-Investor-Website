@@ -354,3 +354,7 @@ align-items: center;
 .flavors-item:hover #citrus {
     color: #CCE18F;
 }
+
+.problem {
+    background-image: none;
+}
